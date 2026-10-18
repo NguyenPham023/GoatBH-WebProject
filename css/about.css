@@ -1,12 +1,10 @@
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
-/* 1. Group Info Details Section*/
 
+/* 1. Group Info Details Section */
 .team-section {
     padding: 60px 20px;
-    /* background-color: #f4f7f6; */
     color: #333;
 }
 
@@ -45,10 +43,9 @@
     justify-content: space-between;
     gap: 40px;
     flex-wrap: wrap;
-    /* Stacks nicely on smaller screens */
 }
 
-/* Details List styling */
+/* Details List & Nested List Styling */
 .team-details-list {
     list-style: none;
     padding: 0;
@@ -57,43 +54,79 @@
     min-width: 280px;
 }
 
-.team-details-list li {
-    font-size: 1.28rem;
+.team-details-list>li {
+    font-size: 1.15rem;
     padding: 12px 16px;
     margin-bottom: 10px;
     background-color: #f8fafc;
-    /* border-left: 4px solid #0066cc; */
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
-.team-details-list li strong {
+.team-details-list>li strong {
     color: #222;
 }
 
-/* Image Section Styling */
+.nested-members-list {
+    list-style-type: disc;
+    margin-top: 8px;
+    padding-left: 20px;
+}
+
+.nested-members-list li {
+    font-size: 1rem;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 3px 0;
+    margin-bottom: 4px;
+    color: #4a5568;
+}
+
+/* Styled Student IDs */
+.student-id {
+    font-size: 0.85rem;
+    color: #0066cc;
+    background-color: #e2e8f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-left: 6px;
+}
+
+/* Bordered Figure Section Styling */
 .image-section {
     flex: 1;
     min-width: 280px;
     text-align: center;
+    border: 2px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #fafbfc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin: 0;
 }
 
 .image-section img {
     width: 100%;
-    max-width: 450px;
+    max-width: 420px;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #94a3b8;
+    border-radius: 6px;
     object-fit: cover;
 }
 
+.image-section figcaption {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #4a5568;
+    font-style: italic;
+    font-weight: 600;
+}
 
-/* Team Section */
 
+/* Team Section Cards */
 .team {
     padding: 60px 20px;
-    /* background-color: #f9f9f9; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
@@ -141,6 +174,7 @@
     flex-direction: column;
     gap: 10px;
     flex-grow: 1;
+    margin: 0;
 }
 
 .card-name {
@@ -173,12 +207,12 @@
     border-top: 1px solid #edf2f7;
 }
 
-/* Styling based on professional web table design */
+
+/* Team Fun Facts Table & Hover Effect */
 .fun-facts-section {
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .fun-facts-section h2 {
@@ -222,10 +256,16 @@
 
 .content-table tbody tr {
     border-bottom: 1px solid #dddddd;
+    transition: background-color 0.2s ease;
 }
 
 .content-table tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
+}
+
+/* Table Hover Effect */
+.content-table tbody tr:hover {
+    background-color: #e2f0ec;
 }
 
 .content-table tbody tr:last-of-type {
@@ -235,4 +275,41 @@
 .content-table tbody tr.active-row {
     font-weight: bold;
     color: #009879;
+}
+
+/* ---------- Responsive + accessibility ---------- */
+.card {
+    max-width: 100%;
+}
+
+.content-table {
+    min-width: 0;
+}
+
+.card-img img {
+    object-position: center top;
+}
+
+@media (max-width: 600px) {
+    .team-container {
+        padding: 20px;
+    }
+
+    .content-table th,
+    .content-table td {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .card,
+    .content-table tbody tr {
+        transition: none;
+    }
+
+    .card:hover {
+        transform: none;
+    }
 }

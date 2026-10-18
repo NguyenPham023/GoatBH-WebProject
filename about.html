@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="EdTech, education, technology, school, online learning">
     <meta name="author" content="GoatBH - Phuong Nguyen">
-    <meta name="description" content="Learn about our team GroupBH, our memebrs and our mission behind the EduTech platform">
+    <meta name="description"
+        content="Learn about our team GroupBH, our members and our mission behind the EduTech platform">
     <title>About Us</title>
     <!-- Link for reference style css -->
     <link rel="stylesheet" href="css/about.css">
 </head>
+
 <body>
 
     <header>
@@ -18,22 +21,14 @@
                 EdTech
             </div>
             <ul class="nav-links">
-                <li><a href="#">
-                        Home</a>
-                </li>
-                <li><a href="#">
-                        About</a>
-                </li>
-                <li><a href="#">
-                        Services</a>
-                </li>
-                <li><a href="#">
-                        Contact</a>
-                </li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <main>
 
         <!-- Group Info Details -->
@@ -41,137 +36,110 @@
             <div class="team-container">
                 <h2>About Us</h2>
                 <div class="team-content-wrapper">
-                    <!-- Left Side: Details -->
+                    <!-- Left Side: Nested Details List -->
                     <ul class="team-details-list">
                         <li><strong>Group Name:</strong> GoatBH</li>
                         <li><strong>Class Name:</strong> COS10026 Web Technology Project</li>
                         <li><strong>Class Schedule:</strong> Saturday 10:00 AM (Lab 02)</li>
                         <li><strong>Lecturer:</strong> Nguyen Bao Hoang</li>
+                        <li><strong>Team Members:</strong>
+                            <ul class="nested-members-list">
+                                <li>Pham Phuong Nguyen <span class="student-id">ID: 103456789</span></li>
+                                <li>Dao Duy Kha <span class="student-id">ID: 103987654</span></li>
+                                <li>Phung Ngoc Anh Thu <span class="student-id">ID: 103112233</span></li>
+                            </ul>
+                        </li>
                     </ul>
-                    <!-- Right Side: Group Photo -->
-                    <div class="image-section">
-                        <img src="images/group-team-members.jpg" alt="This is our group photo">
-                    </div>
+
+                    <!-- Right Side: Bordered Group Photo with Figure & Caption -->
+                    <figure class="image-section">
+                        <img src="images/group-team-members.jpg"
+                            alt="Group GoatBH members collaborating together during the web technology project lab session">
+                        <figcaption>Group GoatBH - Web Technology Project Team</figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
 
-        <!-- <section id="Group-info">
-            <h2>Team Overview</h2>
-            <ul>
-                <li><strong>Group Name:</strong> GoatBH</li>
-                <li><strong>Class Schedule:</strong> Saturday 10:00 AM (Lab 02)</li>
-                <li><strong>Lecture:</strong> Nguyen Bao Hoang</li>
-                <li><strong>Team Members:</strong>
-                    <ul>
-                        <li>Student 1 <span class="student-id">(ID: 103456789)</span> - Team Lead</li>
-                        <li>Student 2 <span class="student-id">(ID: 103987654)</span> - Form Engineer</li>
-                        <li>Student 3 <span class="student-id">(ID: 103112233)</span> - Content Specialist</li>
-                    </ul>
-                </li>
-            </ul>
-        </section> -->
+        <!-- Member Contribution and Quotes (Valid Definition List) -->
+        <section class="team">
+            <h1>Meet Our Team</h1>
+            <div class="team-cards">
 
-        <!-- Member Contribution and Quotes -->
-    <section class="team">
-        <h1>Meet Our Team</h1>
-        <div class="team-cards">
-    
-            <!-- Card 1: hương Nguyên -->
-            <div class="card">
-                <div class="card-img">
-                    <img src="images/phuong-nguyen-member.jpg" alt="Pham Phuong Nguyen's photo">
+                <!-- Card 1: Phuong Nguyen -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="images/phuong-nguyen-member.jpg" alt="Pham Phuong Nguyen's portrait photo">
+                    </div>
+                    <dl class="card-info">
+                        <dt class="card-name">Pham Phuong Nguyen</dt>
+                        <dd class="card-role">Content Specialist &amp; QA Lead</dd>
+                        <dd class="card-contribution">
+                            <strong>Contributions:</strong> Informational web pages (jobs.html, about.html), semantic
+                            structure,
+                            media optimization, W3C validation, and WCAG accessibility compliance.
+                        </dd>
+                        <dd class="card-quote">
+                            <strong>Native Quote:</strong>
+                            <q lang="vi">Hành trình ngàn dặm bắt đầu bằng một bước chân.</q>
+                        </dd>
+                        <dd class="card-quote">
+                            <strong>English Translation:</strong>
+                            <q>A journey of a thousand miles begins with a single step.</q>
+                        </dd>
+                    </dl>
                 </div>
-                <div class="card-info">
-                    <dt class="card-name">
-                        Pham Phuong Nguyen
-                    </dt>
-                    <dd class="card-role">Content Specialist & QA Lead</dd>
-                    <dd class="card-contribution">
-                        <strong>Contributions:</strong> Informational web pages (jobs.html, about.html), semantic structure,
-                        media optimization, W3C validation, and WCAG accessibility compliance.
-                    </dd>
-                    <dd class="card-quote">
-                        <strong>Native Quote:</strong>
-                        <q lang="vi">Hành trình ngàn dặm bắt đầu bằng một bước chân.</q>
-                    </dd>
-                    <dd class="card-quote">
-                        <strong>English Translation:</strong>
-                        <q>A journey of a thousand miles begins with a single step.</q>
-                    </dd>
-                </div>
-            </div>
-    
-            <!-- Card 2: Duy Kha -->
-            <div class="card">
-                <div class="card-img">
-                    <img src="images/duy-kha-member.jpg" alt="Duy Kha's photo">
-                </div>
-                <div class="card-info">
-                    <dt class="card-name">
-                        Dao Duy Kha
-                    </dt>
-                    <dd class="card-role">Front-End Lead & Infrastructure Developer</dd>
-                    <dd class="card-contribution">
-                        <strong>Contributions:</strong> Homepage architecture (index.html), shared navigation & footer
-                        components, Acknowledgement of Country, and Jira agile tracking.
-                    </dd>
-                    <dd class="card-quote">
-                        <strong>Native Quote:</strong>
-                        <q lang="vi">Kiên trì là chìa khóa của mọi thành công.</q>
-                    </dd>
-                    <dd class="card-quote">
-                        <strong>English Translation:</strong>
-                        <q>Persistence is the key to all success.</q>
-                    </dd>
-                </div>
-            </div>
-    
-            <!-- Card 3: Anh Thư -->
-            <div class="card">
-                <div class="card-img">
-                    <img src="images/anh-thu-member.jpg" alt="Anh Thu's photo">
-                </div>
-                <div class="card-info">
-                    <dt class="card-name">
-                        Phung Ngoc Anh Thu
-                    </dt>
-                    <dd class="card-role">Form Engineer & Git Administrator</dd>
-                    <dd class="card-contribution">
-                        <strong>Contributions:</strong> Advanced HTML5 form validation (apply.html), CSS layout engineering,
-                        repository workflow management, and GitHub Pages deployment.
-                    </dd>
-                    <dd class="card-quote">
-                        <strong>Native Quote:</strong>
-                        <q lang="vi">Chi tiết nhỏ tạo nên sự khác biệt lớn.</q>
-                    </dd>
-                    <dd class="card-quote">
-                        <strong>English Translation:</strong>
-                        <q>Small details make a big difference.</q>
-                    </dd>
-                </div>
-            </div>
-    
-        </div>
-    </section>
 
-        <!-- <section id="Contribution-Quotes">
-            <h2>Member Contributions &amp; Quotes</h2>
-            <dl>
-                <dt><strong>Student 1 (Team Lead &amp; Home Page Developer)</strong></dt>
-                    <dd>Developed the index.html page structure, common navigation header, and Jira sprint board.</dd>
-                    <dd><em>Quote ():</em> "Học, học nữa, học mãi."</dd>
-                    <dd><em>Translation (English):</em> "Study, study more, study forever."</dd>
-                <dt><strong>Student 2 (Form Engineer &amp; GitHub Admin)</strong></dt>
-                    <dd>Designed the job application form on apply.html with full HTML5 validation and Flexbox layout.</dd>
-                    <dd><em>Quote (Spanish):</em> "El kiến thức es poder."</dd>
-                    <dd><em>Translation (English):</em> "Knowledge is power."</dd>
-                <dt><strong>Student 3 (Content Specialist &amp; QA)</strong></dt>
-                    <dd>Created realistic job descriptions on jobs.html and formatted the team about.html details.</dd>
-                    <dd><em>Quote (French):</em> "Petit à petit, l'oiseau fait son nid."</dd>
-                    <dd><em>Translation (English):</em> "Little by little, the bird makes its nest."</dd>
-            </dl>
-        </section> -->
+                <!-- Card 2: Duy Kha -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="images/duy-kha-member.jpg" alt="Duy Kha's portrait photo">
+                    </div>
+                    <dl class="card-info">
+                        <dt class="card-name">Dao Duy Kha</dt>
+                        <dd class="card-role">Front-End Lead &amp; Infrastructure Developer</dd>
+                        <dd class="card-contribution">
+                            <strong>Contributions:</strong> Homepage architecture (index.html), shared navigation &amp;
+                            footer
+                            components, Acknowledgement of Country, and Jira agile tracking.
+                        </dd>
+                        <dd class="card-quote">
+                            <strong>Native Quote:</strong>
+                            <q lang="vi">Kiên trì là chìa khóa của mọi thành công.</q>
+                        </dd>
+                        <dd class="card-quote">
+                            <strong>English Translation:</strong>
+                            <q>Persistence is the key to all success.</q>
+                        </dd>
+                    </dl>
+                </div>
+
+                <!-- Card 3: Anh Thu -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="images/anh-thu-member.jpg" alt="Anh Thu's portrait photo">
+                    </div>
+                    <dl class="card-info">
+                        <dt class="card-name">Phung Ngoc Anh Thu</dt>
+                        <dd class="card-role">Form Engineer &amp; Git Administrator</dd>
+                        <dd class="card-contribution">
+                            <strong>Contributions:</strong> Advanced HTML5 form validation (apply.html), CSS layout
+                            engineering,
+                            repository workflow management, and GitHub Pages deployment.
+                        </dd>
+                        <dd class="card-quote">
+                            <strong>Native Quote:</strong>
+                            <q lang="vi">Chi tiết nhỏ tạo nên sự khác biệt lớn.</q>
+                        </dd>
+                        <dd class="card-quote">
+                            <strong>English Translation:</strong>
+                            <q>Small details make a big difference.</q>
+                        </dd>
+                    </dl>
+                </div>
+
+            </div>
+        </section>
 
         <!-- Team Fun Facts -->
         <section class="fun-facts-section">
@@ -211,10 +179,11 @@
     </main>
 
     <footer>
-        <p>© 2026 EduTech Solutions. All rights reserved.</p>
-        <p> <a href="https://jira.swinburne.edu.au" rel="noopener">Jira Board</a> | <a href="https://github.com/YourRepo"
-                rel="noopener">GitHub Repository</a> | <a href="mailto:info@edutechsolutions.com">Contact Us</a> </p>
+        <p>&copy; 2026 EduTech Solutions. All rights reserved.</p>
+        <p><a href="https://jira.swinburne.edu.au" rel="noopener">Jira Board</a> | <a href="https://github.com/YourRepo"
+                rel="noopener">GitHub Repository</a> | <a href="mailto:info@edutechsolutions.com">Contact Us</a></p>
     </footer>
 
 </body>
+
 </html>
