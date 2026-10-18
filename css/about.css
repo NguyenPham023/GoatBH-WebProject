@@ -1,9 +1,12 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
 /* 1. Group Info Details Section*/
 
 .team-section {
     padding: 60px 20px;
-    background-color: #f4f7f6;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-color: #f4f7f6; */
     color: #333;
 }
 
@@ -88,66 +91,148 @@
 /* Team Section */
 
 .team {
-    padding: 30px 0;
+    padding: 60px 20px;
+    /* background-color: #f9f9f9; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
 .team h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
 }
 
 .team-cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .card {
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
-    width: 18rem;
-    height: 25rem;
-    margin-top: 10px;
+    width: 370px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
-}
-
-.card-img {
-    width: 18rem;
-    height: 12rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .card-img img {
     width: 100%;
-    height: 100%;
-    object-fit: fill;
+    height: 200px;
+    object-fit: cover;
 }
 
-.card-info button {
-    margin: 2rem 1rem;
+.card-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
 }
 
 .card-name {
-    font-size: 2rem;
-    margin: 10px 0;
+    font-size: 1.3rem;
+    margin: 0;
+    color: #111;
+    font-weight: bold;
 }
 
 .card-role {
-    font-size: 1rem;
-    color: #888;
-    margin: 5px 0;
+    font-weight: 600;
+    color: #0066cc;
+    font-size: 0.95rem;
+    margin: 0;
 }
 
-.card-email {
-    font-size: 1rem;
-    color: #555;
+.card-contribution {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.card-quote {
+    font-size: 0.85rem;
+    color: #718096;
+    font-style: italic;
+    margin: auto 0 0 0;
+    padding-top: 12px;
+    border-top: 1px solid #edf2f7;
+}
+
+/* Styling based on professional web table design */
+.fun-facts-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fun-facts-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.95em;
+    min-width: 400px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+}
+
+.content-table caption {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #333;
+    text-align: left;
+}
+
+.content-table th {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
 }
