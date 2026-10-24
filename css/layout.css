@@ -1,0 +1,31 @@
+/* --- Page Layout & Structural Floats --- */
+
+/* Sidebar Aside */
+.sidebar-aside {
+    float: right;
+    width: 25%;
+    margin: 10px 0 20px 20px;
+    padding: 15px;
+    border: 2px solid #2C3E50;
+    border-radius: 6px;
+    background-color: #F8F9FA;
+    box-sizing: border-box;
+}
+
+/* Clearfix for main layout after floated elements */
+main::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Job Containers Layout */
+.job-container {
+    width: 70%;
+    float: left;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #BDC3C7;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+}

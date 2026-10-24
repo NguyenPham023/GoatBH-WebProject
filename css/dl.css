@@ -1,8 +1,4 @@
-* {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* 1. Group Info Details Section */
+/* --- Group Info Details Section --- */
 .team-section {
     padding: 60px 20px;
     color: #333;
@@ -17,7 +13,6 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
-/* Section Header */
 .team-section h2 {
     font-size: 2.2rem;
     margin-bottom: 30px;
@@ -36,7 +31,6 @@
     border-radius: 2px;
 }
 
-/* Flexbox Layout for Text & Image side-by-side */
 .team-content-wrapper {
     display: flex;
     align-items: center;
@@ -45,7 +39,6 @@
     flex-wrap: wrap;
 }
 
-/* Details List & Nested List Styling */
 .team-details-list {
     list-style: none;
     padding: 0;
@@ -82,7 +75,6 @@
     color: #4a5568;
 }
 
-/* Styled Student IDs */
 .student-id {
     font-size: 0.85rem;
     color: #0066cc;
@@ -93,7 +85,6 @@
     margin-left: 6px;
 }
 
-/* Bordered Figure Section Styling */
 .image-section {
     flex: 1;
     min-width: 280px;
@@ -123,8 +114,7 @@
     font-weight: 600;
 }
 
-
-/* Team Section Cards */
+/* Team Section & Hover Overlay Cards */
 .team {
     padding: 60px 20px;
     text-align: center;
@@ -132,8 +122,14 @@
 
 .team h1 {
     font-size: 2.2rem;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     color: #2c3e50;
+}
+
+.section-hint {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 40px;
 }
 
 .team-cards {
@@ -151,35 +147,54 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     width: 370px;
+    position: relative;
     text-align: left;
     display: flex;
     flex-direction: column;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-img {
+    width: 100%;
+    height: 380px;
 }
 
 .card-img img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
 }
 
 .card-info {
-    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(6px);
+    padding: 22px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    flex-grow: 1;
+    gap: 8px;
+    height: 100%;
+    overflow-y: auto;
+    transform: translateY(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     margin: 0;
+    box-sizing: border-box;
+}
+
+.card:hover .card-info {
+    transform: translateY(0);
 }
 
 .card-name {
     font-size: 1.3rem;
-    margin: 0;
+    margin: 0 0 4px 0;
     color: #111;
     font-weight: bold;
 }
@@ -188,27 +203,26 @@
     font-weight: 600;
     color: #0066cc;
     font-size: 0.95rem;
-    margin: 0;
+    margin: 0 0 8px 0;
 }
 
 .card-contribution {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: #4a5568;
-    margin: 0;
+    margin: 0 0 8px 0;
     line-height: 1.4;
 }
 
 .card-quote {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: #718096;
     font-style: italic;
-    margin: auto 0 0 0;
-    padding-top: 12px;
+    margin: 0;
+    padding-top: 8px;
     border-top: 1px solid #edf2f7;
 }
 
-
-/* Team Fun Facts Table & Hover Effect */
+/* Team Fun Facts Table */
 .fun-facts-section {
     max-width: 900px;
     margin: 40px auto;
@@ -263,7 +277,6 @@
     background-color: #f3f3f3;
 }
 
-/* Table Hover Effect */
 .content-table tbody tr:hover {
     background-color: #e2f0ec;
 }
@@ -277,39 +290,17 @@
     color: #009879;
 }
 
-/* ---------- Responsive + accessibility ---------- */
-.card {
-    max-width: 100%;
+/* Apply Button Styling */
+.apply-btn {
+    display: inline-block;
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
 }
 
-.content-table {
-    min-width: 0;
-}
-
-.card-img img {
-    object-position: center top;
-}
-
-@media (max-width: 600px) {
-    .team-container {
-        padding: 20px;
-    }
-
-    .content-table th,
-    .content-table td {
-        padding: 8px;
-        font-size: 0.85rem;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-    .card,
-    .content-table tbody tr {
-        transition: none;
-    }
-
-    .card:hover {
-        transform: none;
-    }
+.apply-btn:hover {
+    background-color: #1A252F;
 }
