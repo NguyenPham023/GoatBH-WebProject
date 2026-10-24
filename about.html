@@ -10,7 +10,9 @@
         content="Learn about our team GroupBH, our members and our mission behind the EduTech platform">
     <title>About Us</title>
     <!-- Link for reference style css -->
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/dl.css">
 </head>
 
 <body>
@@ -30,6 +32,107 @@
     </header>
 
     <main>
+        <!--  Hero Section  -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <p class="hero-slogan" style="font-style: italic;">Learning without limits.</p>
+                    <h1 id="hero-title">About Our Team and Mission</h1>
+                    <p class="hero-mission">
+                        Our mission is to bridge the gap in digital education by providing
+                        accessible, AI-powered learning tools to students and educators globally.
+                    </p>
+                    <a class="hero-btn" href="#Group-info">Meet the Team</a>
+                </div>
+        
+                <figure class="hero-visual">
+                    <img src="images/hero-about.jpg"
+                        alt="Students and a teacher collaborating around a laptop in a bright classroom" width="800"
+                        height="533">
+                    <figcaption>Collaborative learning is at the heart of what we build.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ===== Core Values ===== -->
+        <section class="values-section" aria-labelledby="values-title">
+            <div class="values-container">
+                <h2 id="values-title">Our Core Values</h2>
+                <p class="values-intro">The principles that guide how we build products and how we work together.</p>
+        
+                <ul class="values-grid">
+        
+                    <li class="value-card">
+                        <svg class="value-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M3 17l6-6 4 4 8-8" />
+                            <path d="M15 7h6v6" />
+                        </svg>
+                        <h3>Impact First</h3>
+                        <p>We measure success by student growth and real educational outcomes.</p>
+                    </li>
+        
+                    <li class="value-card">
+                        <svg class="value-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M2 5h7a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H2z" />
+                            <path d="M22 5h-7a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h8z" />
+                        </svg>
+                        <h3>Continuous Learning</h3>
+                        <p>We nurture curiosity and growth, for our users and for our own team.</p>
+                    </li>
+        
+                    <li class="value-card">
+                        <svg class="value-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z" />
+                        </svg>
+                        <h3>Empathy &amp; Inclusion</h3>
+                        <p>We design accessible tools that work for diverse learners everywhere.</p>
+                    </li>
+        
+                    <li class="value-card">
+                        <svg class="value-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M9 18h6" />
+                            <path d="M10 21h4" />
+                            <path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z" />
+                        </svg>
+                        <h3>Innovation with Purpose</h3>
+                        <p>We use AI and data analytics to solve real classroom problems, not to chase trends.</p>
+                    </li>
+        
+                </ul>
+            </div>
+        </section>
+
+        <!-- Company Story -->
+        <section class="story-section" aria-labelledby="story-title">
+            <div class="story-container">
+
+                <!-- Left Column: Visuals / Image Collage -->
+                <div class="story-visuals">
+                    <div class="image-collage">
+                        <img src="images/student-dev-colab.jpg" alt="Students and developers collaborating" class="collage-img img-top">
+                        <img src="images/learner-use-tech.jpg" alt="Learner using accessible technology" class="collage-img img-main">
+                        <img src="images/classroom-setting.png" alt="Classroom setting" class="collage-img img-bottom">
+                    </div>
+                </div>
+
+                <!-- Right Column: Text Content -->
+                <div class="story-content">
+                    <h2 id="story-title">Our Story</h2>
+
+                    <article class="story-origin">
+                        <p>EduTech Solutions began when a small group of students and developers
+                            noticed the same problem in online classes: the tools delivered content
+                            and did little to keep learners engaged, and many were hard to use with
+                            assistive technology.</p>
+                        <p>We set out to build learning tools that are accessible first and smart
+                            second, so lessons adapt to the learner rather than the other way round.</p>
+                        <p>We started with a few lightweight classroom tools and listened closely
+                            to teachers and students. Their feedback still helps shape every release.</p>
+                    </article>
+                </div>
+
+            </div>
+        </section>
 
         <!-- Group Info Details -->
         <section id="Group-info" class="team-section">
