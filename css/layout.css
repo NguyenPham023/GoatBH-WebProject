@@ -131,3 +131,50 @@ main::after {
     /* buttons stack on narrow screens */
     margin-top: 28px;
 }
+
+/* ===== Layout: jobs banner and role cards ===== */
+.page-banner {
+    padding: 56px 24px;
+    margin-bottom: 32px;
+    clear: both;
+}
+
+.quick-facts {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 24px 0 0;
+    padding: 0;
+}
+
+.role-nav {
+    clear: both;
+    margin-bottom: 40px;
+    margin: 40px 
+}
+
+.role-cards {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 992px) {
+    .role-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .role-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .page-banner {
+        padding: 40px 16px;
+    }
+}
