@@ -111,3 +111,23 @@ main::after {
     border-radius: 6px;
     background-color: #FFFFFF;
 }
+
+/* --- Layout: call to action --- */
+.cta-section {
+    padding: 70px 20px;
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    /* buttons stack on narrow screens */
+    margin-top: 28px;
+}

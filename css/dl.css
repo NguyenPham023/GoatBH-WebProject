@@ -515,3 +515,64 @@
 .apply-btn:hover {
     background-color: #1A252F;
 }
+
+/* --- Components: call to action --- */
+.cta-section {
+    background-color: #0b1f33;
+    background-image: linear-gradient(135deg, #1a3a5c 0%, #0b1f33 100%);
+    color: #ffffff;
+}
+
+.cta-section h2 {
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    line-height: 1.2;
+    margin: 0 0 14px;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #dbe4ee;
+    margin: 0 auto;
+    max-width: 55ch;
+}
+
+.cta-btn {
+    display: inline-block;
+    min-width: 200px;
+    padding: 14px 28px;
+    border: 2px solid #ffd166;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Primary: solid yellow */
+.cta-primary {
+    background-color: #ffd166;
+    color: #1a252f;
+}
+
+.cta-primary:hover {
+    background-color: #ffe08f;
+    border-color: #ffe08f;
+}
+
+/* Secondary: outline */
+.cta-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.cta-secondary:hover {
+    background-color: #ffffff;
+    color: #1a252f;
+}
+
+.cta-btn:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
