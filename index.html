@@ -7,7 +7,6 @@
     <meta name="author" content="GoatBH">
     <title>EdTech | Learn skills that move you forward</title>
     <link rel="stylesheet" href="css/home.css">
-    <script src="js/home.js" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -18,13 +17,6 @@
                 <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
                 <span>EdTech</span>
             </a>
-
-            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
-                <span class="sr-only">Toggle navigation</span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </button>
 
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-links">
@@ -60,30 +52,31 @@
                     </ul>
                 </div>
 
-                <div class="code-card" aria-label="Interactive coding lesson preview">
+                <div class="code-card" aria-label="HTML lesson preview">
                     <div class="code-card-topbar">
                         <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                        <span>lesson.js</span>
+                        <span>index.html</span>
                         <span class="lesson-count">01 / 05</span>
                     </div>
                     <div class="lesson-panel">
-                        <p class="lesson-kicker">JavaScript foundations</p>
-                        <h2>Make your first greeting</h2>
-                        <p>Complete the line so the browser displays your message.</p>
+                        <p class="lesson-kicker">HTML foundations</p>
+                        <h2>Build your first content card</h2>
+                        <p>Use semantic HTML to give your page a clear structure.</p>
                     </div>
                     <div class="editor" role="region" aria-label="Code example">
                         <div class="line-numbers" aria-hidden="true">1<br>2<br>3<br>4</div>
-                        <pre><code><span class="code-keyword">const</span> learner = <span class="code-string">"you"</span>;
-
-<span class="code-function">console.log</span>(<span class="code-string">`Hello, ${learner}!`</span>);</code></pre>
+                        <pre><code><span class="code-keyword">&lt;article</span> <span class="code-function">class</span>=<span class="code-string">"welcome"</span><span class="code-keyword">&gt;</span>
+  <span class="code-keyword">&lt;h2&gt;</span>Hello, learner!<span class="code-keyword">&lt;/h2&gt;</span>
+  <span class="code-keyword">&lt;p&gt;</span>Your first page is live.<span class="code-keyword">&lt;/p&gt;</span>
+<span class="code-keyword">&lt;/article&gt;</span></code></pre>
                     </div>
                     <div class="code-card-footer">
-                        <span class="status"><span aria-hidden="true">●</span> Ready to run</span>
-                        <button class="run-button" type="button">Run code <span aria-hidden="true">→</span></button>
+                        <span class="status"><span aria-hidden="true">●</span> Example completed</span>
+                        <span class="run-label">Preview <span aria-hidden="true">↓</span></span>
                     </div>
-                    <div class="console-output" aria-live="polite" hidden>
-                        <span>Console</span>
-                        <strong>Hello, you!</strong>
+                    <div class="console-output">
+                        <span>Browser</span>
+                        <strong>Hello, learner! Your first page is live.</strong>
                     </div>
                 </div>
             </div>
@@ -108,15 +101,15 @@
                     <p>Choose a subject and start with a clear, practical course. No experience required for beginner lessons.</p>
                 </div>
 
-                <div class="subject-tabs" role="tablist" aria-label="Course subjects">
-                    <button class="subject-tab active" type="button" role="tab" aria-selected="true" data-filter="all">Popular</button>
-                    <button class="subject-tab" type="button" role="tab" aria-selected="false" data-filter="web">Web development</button>
-                    <button class="subject-tab" type="button" role="tab" aria-selected="false" data-filter="data">Data &amp; AI</button>
-                    <button class="subject-tab" type="button" role="tab" aria-selected="false" data-filter="design">Design</button>
-                </div>
+                <ul class="subject-list" aria-label="Course subjects">
+                    <li class="subject-pill active">Popular</li>
+                    <li class="subject-pill">Web development</li>
+                    <li class="subject-pill">Data &amp; AI</li>
+                    <li class="subject-pill">Design</li>
+                </ul>
 
                 <div class="course-grid">
-                    <article class="course-card" data-category="web">
+                    <article class="course-card">
                         <div class="course-card-accent accent-yellow" aria-hidden="true">HTML</div>
                         <div class="course-card-body">
                             <p class="course-type">Beginner course</p>
@@ -127,7 +120,7 @@
                         </div>
                     </article>
 
-                    <article class="course-card" data-category="data">
+                    <article class="course-card">
                         <div class="course-card-accent accent-purple" aria-hidden="true">PY</div>
                         <div class="course-card-body">
                             <p class="course-type">Beginner course</p>
@@ -138,7 +131,7 @@
                         </div>
                     </article>
 
-                    <article class="course-card" data-category="data">
+                    <article class="course-card">
                         <div class="course-card-accent accent-cyan" aria-hidden="true">AI</div>
                         <div class="course-card-body">
                             <p class="course-type">Skill builder</p>
@@ -149,7 +142,7 @@
                         </div>
                     </article>
 
-                    <article class="course-card" data-category="design">
+                    <article class="course-card">
                         <div class="course-card-accent accent-pink" aria-hidden="true">UX</div>
                         <div class="course-card-body">
                             <p class="course-type">Beginner course</p>
@@ -160,7 +153,6 @@
                         </div>
                     </article>
                 </div>
-                <p class="empty-filter" hidden>No courses match this subject yet.</p>
             </div>
         </section>
 
@@ -180,7 +172,7 @@
                     </li>
                     <li>
                         <span class="step-number">02</span>
-                        <div><p>Core skills</p><h3>Add interaction</h3><span>JavaScript · DOM · Git</span></div>
+                        <div><p>Core skills</p><h3>Add responsive design</h3><span>CSS · Flexbox · Git</span></div>
                         <span class="step-status current" aria-label="In progress">2/6</span>
                     </li>
                     <li>
@@ -225,14 +217,10 @@ result = [n <span class="code-keyword">for</span> n <span class="code-keyword">i
                     <h2>Ready to make progress?</h2>
                     <p>Join the list for learning tips and updates from the GoatBH team.</p>
                 </div>
-                <form class="signup-form" novalidate>
-                    <label for="email">Email address</label>
-                    <div class="input-row">
-                        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
-                        <button class="button" type="submit">Join the list</button>
-                    </div>
-                    <p class="form-message" aria-live="polite"></p>
-                </form>
+                <div class="newsletter-actions">
+                    <a class="button" href="#catalog">Browse courses</a>
+                    <a class="button button-secondary" href="about.html">Meet our team</a>
+                </div>
             </div>
         </section>
     </main>
@@ -253,8 +241,8 @@ result = [n <span class="code-keyword">for</span> n <span class="code-keyword">i
             </nav>
         </div>
         <div class="container footer-bottom">
-            <p>&copy; <span id="current-year">2026</span> GoatBH. Student project.</p>
-            <p>Built with HTML, CSS &amp; JavaScript.</p>
+            <p>&copy; 2026 GoatBH. Student project.</p>
+            <p>Built with HTML &amp; CSS.</p>
         </div>
     </footer>
 </body>
