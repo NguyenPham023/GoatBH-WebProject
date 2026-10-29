@@ -576,3 +576,279 @@
     outline: 3px solid #ffffff;
     outline-offset: 3px;
 }
+
+/* ===== Components: jobs banner ===== */
+.page-banner {
+    color: #ffffff;
+    background-color: #0b1f33;
+    background-image:
+        radial-gradient(circle at 90% 20%, rgba(255, 209, 102, 0.22) 0, rgba(255, 209, 102, 0.22) 110px, transparent 111px),
+        radial-gradient(circle at 8% 90%, rgba(255, 255, 255, 0.10) 0, rgba(255, 255, 255, 0.10) 90px, transparent 91px),
+        linear-gradient(135deg, #1a3a5c 0%, #0b1f33 100%);
+}
+
+.banner-tag {
+    display: inline-block;
+    margin: 0 0 12px;
+    padding: 4px 14px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1a252f;
+    background-color: #ffd166;
+    border-radius: 999px;
+}
+
+.page-banner h1 {
+    margin: 0 0 12px;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.15;
+}
+
+.banner-text {
+    max-width: 60ch;
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #dbe4ee;
+}
+
+.quick-facts li {
+    padding: 8px 16px;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+}
+
+.quick-facts strong {
+    color: #ffd166;
+    margin-right: 4px;
+}
+
+/* ===== Components: role cards ===== */
+.role-nav h2 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.role-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dde3ea;
+    border-top: 4px solid #0066cc;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.role-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.role-ref {
+    align-self: flex-start;
+    padding: 2px 10px;
+    font-size: 0.85rem;
+    color: #1a252f;
+    background-color: #e8f0fe;
+    border: 1px solid #0066cc;
+    border-radius: 4px;
+}
+
+.role-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #1a252f;
+}
+
+.role-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.role-tags span {
+    padding: 2px 10px;
+    font-size: 0.8rem;
+    color: #1a252f;
+    background-color: #f1f3f5;
+    border-radius: 999px;
+}
+
+.role-card a {
+    margin-top: 0px;
+    /* pushes the link to the card bottom */
+    font-weight: 600;
+    color: #0b4f9c;
+}
+
+/* arrow */
+.role-card a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Components: job sections ===== */
+.job-section {
+    margin-bottom: 24px;
+}
+
+.job-section h3 {
+    margin: 0 0 8px;
+    padding-bottom: 6px;
+    color: #2c3e50;
+}
+
+.job-section h4 {
+    margin: 16px 0 6px;
+    color: #1a252f;
+}
+
+.job-section ul {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.job-section li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.salary-line {
+    padding: 10px 14px;
+    background-color: #e8f0fe;
+    border-left: 4px solid #0066cc;
+    border-radius: 4px;
+}
+
+/* ===== Components: job header ===== */
+.job-ref {
+    display: inline-block;
+    margin: 0 0 8px;
+    padding: 3px 10px;
+    font-size: 0.9rem;
+    font-family: 'Courier New', monospace;
+    color: #1a252f;
+    background-color: #e8f0fe;
+    border: 1px solid #0066cc;
+    border-radius: 4px;
+}
+
+.job-header h2 {
+    margin: 0 0 8px;
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+/* Metadata bar */
+.meta-item {
+    margin: 0;
+    padding: 10px 14px;
+    background-color: #f8f9fa;
+    /* border-left: 4px solid #0066cc; */
+    border-radius: 4px;
+}
+
+.meta-item dt {
+    margin: 0 0 2px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #4a5568;
+}
+
+.meta-item dd {
+    margin: 0;
+    font-weight: 600;
+    color: #1a252f;
+}
+
+/* Larger Apply button (extends your existing .apply-btn from jobs.css) */
+.apply-btn-large {
+    padding: 14px 32px;
+    font-size: 1.1rem;
+}
+
+.apply-btn:focus-visible {
+    outline: 3px solid #0066cc;
+    outline-offset: 3px;
+}
+
+/* ===== Components: sidebar ===== */
+.sidebar-aside h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+.sidebar-aside h3 {
+    margin: 20px 0 8px;
+    font-size: 1rem;
+    color: #1a252f;
+}
+
+.sidebar-aside .apply-btn {
+    display: block;
+    text-align: center;
+}
+
+.apply-steps {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.share-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.share-list a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 4px;
+    color: #0b4f9c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.share-list a:hover {
+    text-decoration: underline;
+}
+
+.share-list a:focus-visible {
+    outline: 3px solid #0066cc;
+    outline-offset: 2px;
+}
+
+.share-list svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Text for screen readers only */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

@@ -86,7 +86,7 @@
 .sidebar-aside {
     float: right;
     width: 25%;
-    margin: 10px 0 20px 20px;
+    margin: 0px 40px 20px 20px;
     padding: 15px;
     border: 2px solid #2C3E50;
     border-radius: 6px;
@@ -101,15 +101,80 @@ main::after {
     clear: both;
 }
 
+/* ===== Layout: jobs list + sticky sidebar ===== */
+
 /* Job Containers Layout */
 .job-container {
-    width: 70%;
+    width: 95%;
     float: left;
     margin-bottom: 30px;
+    margin-left: 40px;
     padding: 20px;
     border: 1px solid #BDC3C7;
     border-radius: 6px;
     background-color: #FFFFFF;
+}
+
+.jobs-list {
+    float: left;
+    width: 70%;
+}
+
+.jobs-list .job-container {
+    float: none;
+}
+
+.sidebar-aside {
+    position: sticky;
+    /* follows the reader while scrolling */
+    top: 20px;
+}
+
+main::after {
+    /* clearfix so main contains the floats */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 768px) {
+
+    .jobs-list,
+    .sidebar-aside {
+        float: none;
+        width: 100%;
+    }
+
+    .sidebar-aside {
+        position: static;
+    }
+
+    /* sticky is unhelpful on phones */
+}
+
+/* ===== Layout: job header ===== */
+.job-header {
+    margin-bottom: 24px;
+}
+
+.job-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 per row on desktop */
+    gap: 12px;
+    margin: 20px 0 24px;
+}
+
+@media (max-width: 768px) {
+    .job-meta {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .job-meta {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* --- Layout: call to action --- */
@@ -130,4 +195,51 @@ main::after {
     flex-wrap: wrap;
     /* buttons stack on narrow screens */
     margin-top: 28px;
+}
+
+/* ===== Layout: jobs banner and role cards ===== */
+.page-banner {
+    padding: 56px 24px;
+    margin-bottom: 32px;
+    clear: both;
+}
+
+.quick-facts {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 24px 0 0;
+    padding: 0;
+}
+
+.role-nav {
+    clear: both;
+    margin-bottom: 40px;
+    margin: 40px 
+}
+
+.role-cards {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 992px) {
+    .role-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .role-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .page-banner {
+        padding: 40px 16px;
+    }
 }
