@@ -1,4 +1,30 @@
 /* --- Page Layout & Structural Floats --- */
+/* Header & Footer Layouts */
+.site-header {
+    background-color: var(--white);
+    border-bottom: 2px solid var(--navy);
+}
+
+.nav {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.site-footer {
+    padding: 36px 0;
+    color: var(--white);
+    background-color: var(--navy);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
 
 /*  Layout: hero  */
 .hero {

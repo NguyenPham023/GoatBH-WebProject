@@ -1,16 +1,71 @@
+:root {
+    --navy: #10162f;
+    --purple: #3a10e5;
+    --cream: #fff0e5;
+    --yellow: #ffd400;
+    --white: #ffffff;
+    --grey: #565b6d;
+    --container: 1120px;
+}
+
 /* Universal */
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
 
-* {
-    box-sizing: border-box;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    line-height: 1.5;
-    color: #333333;
+    color: var(--navy);
+    background-color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    width: min(92%, var(--container));
+    margin: 0 auto;
+}
+
+/* Accessible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: 3px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -60px;
+    left: 16px;
+    z-index: 100;
+    padding: 10px 14px;
+    color: var(--white);
+    background-color: var(--navy);
+}
+
+.skip-link:focus {
+    top: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 a:focus-visible {
