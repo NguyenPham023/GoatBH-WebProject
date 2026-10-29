@@ -23,3 +23,92 @@ a:focus-visible {
         transition: none !important;
     }
 }
+
+/* ==================================================
+   Homepage: variables, typography and accessibility
+   ================================================== */
+
+:root {
+    --navy: #10162f;
+    --purple: #3a10e5;
+    --cream: #fff0e5;
+    --yellow: #ffd400;
+    --white: #ffffff;
+    --grey: #565b6d;
+    --container: 1120px;
+}
+
+.home-page {
+    color: var(--navy);
+    background-color: var(--white);
+}
+
+.home-page img {
+    display: block;
+    max-width: 100%;
+}
+
+.home-page a {
+    color: inherit;
+}
+
+.home-page h1,
+.home-page h2,
+.home-page h3,
+.home-page p {
+    margin-top: 0;
+}
+
+.home-page h1 {
+    margin-bottom: 22px;
+    font-size: clamp(2.6rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.home-page h2 {
+    margin-bottom: 16px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+}
+
+.home-page a:focus-visible,
+.home-page button:focus-visible,
+.home-page input:focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: 3px;
+}
+
+.home-page .skip-link {
+    position: absolute;
+    top: -60px;
+    left: 16px;
+    z-index: 100;
+    padding: 10px 14px;
+    color: var(--white);
+    background-color: var(--navy);
+}
+
+.home-page .skip-link:focus {
+    top: 12px;
+}
+
+.home-page .eyebrow {
+    margin: 0 0 10px;
+    color: var(--purple);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.home-page .hero-content > p:not(.eyebrow) {
+    max-width: 58ch;
+    color: #34394d;
+    font-size: 1.1rem;
+}
+
+.home-page .section-heading > p:not(.eyebrow) {
+    color: var(--grey);
+    font-size: 1.05rem;
+}

@@ -577,6 +577,312 @@
     outline-offset: 3px;
 }
 
+/* ==================================================
+   Homepage: colours, borders and reusable components
+   ================================================== */
+
+.home-page .site-header {
+    background-color: var(--white);
+    border-bottom: 2px solid var(--navy);
+}
+
+.home-page .logo {
+    font-size: 1.15rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.home-page .logo-mark {
+    display: grid;
+    width: 42px;
+    height: 38px;
+    place-items: center;
+    color: var(--white);
+    background-color: var(--purple);
+    border: 2px solid var(--navy);
+}
+
+.home-page .nav-links,
+.home-page .footer-links {
+    list-style: none;
+}
+
+.home-page .nav-links a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.home-page .nav-links a:hover,
+.home-page .nav-links a.active {
+    color: var(--purple);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.home-page .hero {
+    color: var(--navy);
+    background-color: var(--cream);
+    background-image:
+        linear-gradient(rgba(16, 22, 47, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 22, 47, 0.08) 1px, transparent 1px);
+    background-size: 32px 32px;
+    border-bottom: 2px solid var(--navy);
+}
+
+.home-page .hero h1 {
+    margin: 0 0 22px;
+    font-size: clamp(2.6rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.home-page .button,
+.home-page button {
+    display: inline-block;
+    padding: 12px 22px;
+    color: var(--white);
+    background-color: var(--purple);
+    border: 2px solid var(--navy);
+    border-radius: 0;
+    box-shadow: 4px 4px 0 var(--navy);
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.home-page .button:hover,
+.home-page button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--navy);
+}
+
+.home-page .button-light {
+    color: var(--navy);
+    background-color: var(--white);
+}
+
+.home-page .button-yellow {
+    color: var(--navy);
+    background-color: var(--yellow);
+    border-color: var(--white);
+    box-shadow: 4px 4px 0 var(--white);
+}
+
+.home-page .hero-image {
+    margin: 0;
+}
+
+.home-page .hero-image img {
+    width: 100%;
+    border: 3px solid var(--navy);
+    border-radius: 0;
+    box-shadow: 10px 10px 0 var(--yellow);
+}
+
+.home-page .hero-image figcaption {
+    margin-top: 14px;
+    color: var(--grey);
+    font-size: 0.9rem;
+}
+
+.home-page .search-section {
+    color: var(--white);
+    background-color: var(--navy);
+}
+
+.home-page .search-section .eyebrow,
+.home-page .acknowledgement .eyebrow,
+.home-page .cta .eyebrow {
+    color: var(--yellow);
+}
+
+.home-page .search-section h2 {
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+
+.home-page .job-search label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.home-page .search-row input {
+    padding: 12px;
+    border: 2px solid var(--white);
+    font: inherit;
+}
+
+.home-page .search-row button {
+    border-color: var(--yellow);
+    box-shadow: none;
+}
+
+.home-page .card {
+    position: static;
+    display: block;
+    width: auto;
+    padding: 28px;
+    overflow: visible;
+    background: var(--white);
+    border: 2px solid var(--navy);
+    border-radius: 0;
+    box-shadow: 6px 6px 0 var(--navy);
+    text-align: left;
+}
+
+.home-page .card-number {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: var(--purple);
+    font-weight: bold;
+}
+
+.home-page .card h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.home-page .card p {
+    margin-bottom: 0;
+    color: var(--grey);
+}
+
+.home-page .voices-section {
+    background-color: #f7f7fb;
+}
+
+.home-page .voices-heading {
+    text-align: center;
+}
+
+.home-page .voices-heading p:last-child {
+    color: var(--grey);
+}
+
+.home-page .voice-card {
+    padding: 30px;
+    background-color: var(--white);
+    border: 1px solid #d9dae1;
+    box-shadow: 0 5px 16px rgba(16, 22, 47, 0.1);
+    text-align: center;
+}
+
+.home-page .voice-card img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 24px;
+    border: 5px solid #5684ed;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.home-page .voice-card blockquote {
+    min-height: 120px;
+    margin: 0 0 24px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    line-height: 1.45;
+}
+
+.home-page .voice-card h3 {
+    margin-bottom: 2px;
+}
+
+.home-page .voice-card p {
+    margin-bottom: 0;
+    color: var(--grey);
+    font-style: italic;
+}
+
+.home-page .vacancies-section {
+    background-color: var(--white);
+}
+
+.home-page table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+}
+
+.home-page caption {
+    padding: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.home-page th,
+.home-page td {
+    padding: 15px;
+    border: 1px solid #9ca0ae;
+    text-align: left;
+}
+
+.home-page thead tr:first-child th {
+    color: var(--white);
+    background-color: var(--purple);
+    text-align: center;
+}
+
+.home-page thead tr:nth-child(2) th {
+    background-color: var(--yellow);
+}
+
+.home-page tbody tr:hover {
+    background-color: var(--cream);
+}
+
+.home-page .table-note {
+    margin-top: 18px;
+}
+
+.home-page .table-note a {
+    color: var(--purple);
+    font-weight: bold;
+}
+
+.home-page .acknowledgement {
+    color: var(--white);
+    background-color: #174c3c;
+}
+
+.home-page .acknowledgement p:last-child {
+    max-width: 80ch;
+    margin-bottom: 0;
+}
+
+.home-page .cta {
+    color: var(--white);
+    background-color: var(--purple);
+}
+
+.home-page .cta h2 {
+    max-width: 700px;
+    margin-bottom: 0;
+}
+
+.home-page .site-footer {
+    color: var(--white);
+    background-color: var(--navy);
+}
+
+.home-page .footer-content p {
+    margin: 5px 0 0;
+    color: #bdc1d0;
+    font-size: 0.9rem;
+}
+
+.home-page .footer-links a {
+    color: var(--white);
+    text-underline-offset: 4px;
+}
+
+.home-page .footer-links a:hover {
+    color: var(--yellow);
+}
+
 /* ===== Components: jobs banner ===== */
 .page-banner {
     color: #ffffff;
