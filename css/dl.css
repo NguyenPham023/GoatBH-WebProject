@@ -8,26 +8,26 @@
         linear-gradient(135deg, #1a3a5c 0%, #0b1f33 100%);
     color: #ffffff;
 }
-
+ 
 .hero-slogan {
     color: #ffd166;
     font-size: 1.1rem;
     margin: 0 0 8px;
 }
-
+ 
 .hero h1 {
     font-size: clamp(2rem, 5vw, 3.2rem);
     line-height: 1.15;
     margin: 0 0 16px;
 }
-
+ 
 .hero-mission {
     font-size: 1.15rem;
     line-height: 1.6;
     max-width: 55ch;
     margin: 0 0 28px;
 }
-
+ 
 .hero-btn {
     display: inline-block;
     background-color: #ffd166;
@@ -37,16 +37,16 @@
     font-weight: bold;
     text-decoration: none;
 }
-
+ 
 .hero-btn:hover {
     background-color: #ffe08f;
 }
-
+ 
 .hero-btn:focus-visible {
     outline: 3px solid #ffffff;
     outline-offset: 3px;
 }
-
+ 
 .hero-visual img {
     display: block;
     width: 100%;
@@ -54,13 +54,13 @@
     border: 4px solid #ffffff;
     border-radius: 10px;
 }
-
+ 
 .hero-visual figcaption {
     margin-top: 8px;
     font-size: 0.9rem;
     color: #dbe4ee;
 }
-
+ 
 /*  Components: core values  */
 .values-section h2 {
     text-align: center;
@@ -68,14 +68,14 @@
     color: #2c3e50;
     margin: 0 0 10px;
 }
-
+ 
 .values-intro {
     text-align: center;
     color: #4a5568;
     max-width: 60ch;
     margin: 0 auto;
 }
-
+ 
 .value-card {
     background-color: #ffffff;
     padding: 24px 20px;
@@ -83,12 +83,12 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
+ 
 .value-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
-
+ 
 .value-icon {
     width: 48px;
     height: 48px;
@@ -104,117 +104,68 @@
     stroke-linecap: round;
     stroke-linejoin: round;
 }
-
+ 
 .value-card h3 {
     margin: 0 0 8px;
     font-size: 1.15rem;
     color: #1a252f;
 }
-
+ 
 .value-card p {
     margin: 0;
     font-size: 0.95rem;
     line-height: 1.6;
     color: #4a5568;
 }
-
+ 
 /*  Components: story & vision  */
+/* (grid, padding and column layout moved to layout.css) */
 .story-section {
-    padding: 6rem 2rem;
     background-color: #f4f4f4;
 }
-
-.story-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-
+ 
 /* Visuals - Collage styling */
-.story-visuals {
-    position: relative;
-    width: 100%;
-}
-
-.image-collage {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 1.25rem;
-    width: 100%;
-    align-items: center;
-}
-
 .collage-img {
     width: 100%;
     object-fit: cover;
     border-radius: 8px;
 }
-
+ 
 .img-top {
     aspect-ratio: 4 / 3;
 }
-
+ 
 .img-bottom {
     aspect-ratio: 1 / 1;
 }
-
-.img-main {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    height: 372px;
-}
-
+ 
 /* Content styling */
-.story-content {
-    display: grid;
-}
-
 .story-content h2 {
     font-size: 2.5rem;
     font-weight: 700;
     color: #111;
     margin-bottom: 1.5rem;
 }
-
+ 
 .story-origin h3 {
     font-size: 1.25rem;
     color: #555;
     margin-bottom: 1rem;
 }
-
+ 
 .story-origin p {
     font-size: 1rem;
     line-height: 1.6;
     color: #444;
     margin-bottom: 1rem;
 }
-
-/* Responsive design for mobile screens */
-@media (max-width: 768px) {
-    .story-container {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-    }
-
-    .img-top,
-    .img-bottom {
-        height: 150px;
-    }
-
-    .img-main {
-        height: 250px;
-    }
-}
-
+ 
 /* --- Group Info Details Section --- */
 .team-section {
     padding: 60px 20px;
     color: #333;
 }
-
+ 
 .team-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -223,7 +174,7 @@
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
-
+ 
 .team-section h2 {
     font-size: 2.2rem;
     margin-bottom: 30px;
@@ -231,7 +182,7 @@
     text-align: center;
     position: relative;
 }
-
+ 
 .team-section h2::after {
     content: '';
     display: block;
@@ -241,7 +192,7 @@
     margin: 10px auto 0;
     border-radius: 2px;
 }
-
+ 
 .team-content-wrapper {
     display: flex;
     align-items: center;
@@ -249,7 +200,7 @@
     gap: 40px;
     flex-wrap: wrap;
 }
-
+ 
 .team-details-list {
     list-style: none;
     padding: 0;
@@ -257,7 +208,7 @@
     flex: 1;
     min-width: 280px;
 }
-
+ 
 .team-details-list>li {
     font-size: 1.15rem;
     padding: 12px 16px;
@@ -266,17 +217,17 @@
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
-
+ 
 .team-details-list>li strong {
     color: #222;
 }
-
+ 
 .nested-members-list {
     list-style-type: disc;
     margin-top: 8px;
     padding-left: 20px;
 }
-
+ 
 .nested-members-list li {
     font-size: 1rem;
     background-color: transparent;
@@ -285,7 +236,7 @@
     margin-bottom: 4px;
     color: #4a5568;
 }
-
+ 
 .student-id {
     font-size: 0.85rem;
     color: #0066cc;
@@ -295,7 +246,7 @@
     font-weight: 600;
     margin-left: 6px;
 }
-
+ 
 .image-section {
     flex: 1;
     min-width: 280px;
@@ -307,7 +258,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     margin: 0;
 }
-
+ 
 .image-section img {
     width: 100%;
     max-width: 420px;
@@ -316,7 +267,7 @@
     border-radius: 6px;
     object-fit: cover;
 }
-
+ 
 .image-section figcaption {
     margin-top: 10px;
     font-size: 0.95rem;
@@ -324,25 +275,25 @@
     font-style: italic;
     font-weight: 600;
 }
-
+ 
 /* Team Section & Hover Overlay Cards */
 .team {
     padding: 60px 20px;
     text-align: center;
 }
-
+ 
 .team h1 {
     font-size: 2.2rem;
     margin-bottom: 10px;
     color: #2c3e50;
 }
-
+ 
 .section-hint {
     color: #64748b;
     font-size: 0.95rem;
     margin-bottom: 40px;
 }
-
+ 
 .team-cards {
     display: flex;
     justify-content: center;
@@ -351,7 +302,7 @@
     max-width: 1300px;
     margin: 0 auto;
 }
-
+ 
 .card {
     background: #ffffff;
     border-radius: 10px;
@@ -364,22 +315,22 @@
     flex-direction: column;
     transition: box-shadow 0.3s ease;
 }
-
+ 
 .card:hover {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
-
+ 
 .card-img {
     width: 100%;
     height: 380px;
 }
-
+ 
 .card-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
+ 
 .card-info {
     position: absolute;
     bottom: 0;
@@ -398,32 +349,32 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+ 
 .card:hover .card-info {
     transform: translateY(0);
 }
-
+ 
 .card-name {
     font-size: 1.3rem;
     margin: 0 0 4px 0;
     color: #111;
     font-weight: bold;
 }
-
+ 
 .card-role {
     font-weight: 600;
     color: #0066cc;
     font-size: 0.95rem;
     margin: 0 0 8px 0;
 }
-
+ 
 .card-contribution {
     font-size: 0.88rem;
     color: #4a5568;
     margin: 0 0 8px 0;
     line-height: 1.4;
 }
-
+ 
 .card-quote {
     font-size: 0.82rem;
     color: #718096;
@@ -432,21 +383,21 @@
     padding-top: 8px;
     border-top: 1px solid #edf2f7;
 }
-
+ 
 /* Team Fun Facts Table */
 .fun-facts-section {
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
 }
-
+ 
 .fun-facts-section h2 {
     text-align: center;
     color: #2c3e50;
     margin-bottom: 20px;
     font-size: 2rem;
 }
-
+ 
 .content-table {
     border-collapse: collapse;
     margin: 25px 0;
@@ -458,7 +409,7 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
 }
-
+ 
 .content-table caption {
     font-size: 1.1rem;
     font-weight: bold;
@@ -466,41 +417,41 @@
     color: #333;
     text-align: left;
 }
-
+ 
 .content-table th {
     background-color: #009879;
     color: #ffffff;
     text-align: left;
     font-weight: bold;
 }
-
+ 
 .content-table th,
 .content-table td {
     padding: 12px 15px;
 }
-
+ 
 .content-table tbody tr {
     border-bottom: 1px solid #dddddd;
     transition: background-color 0.2s ease;
 }
-
+ 
 .content-table tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
-
+ 
 .content-table tbody tr:hover {
     background-color: #e2f0ec;
 }
-
+ 
 .content-table tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
 }
-
+ 
 .content-table tbody tr.active-row {
     font-weight: bold;
     color: #009879;
 }
-
+ 
 /* Apply Button Styling */
 .apply-btn {
     display: inline-block;
@@ -511,24 +462,24 @@
     border-radius: 4px;
     font-weight: bold;
 }
-
+ 
 .apply-btn:hover {
     background-color: #1A252F;
 }
-
+ 
 /* --- Components: call to action --- */
 .cta-section {
     background-color: #0b1f33;
     background-image: linear-gradient(135deg, #1a3a5c 0%, #0b1f33 100%);
     color: #ffffff;
 }
-
+ 
 .cta-section h2 {
     font-size: clamp(1.7rem, 4vw, 2.4rem);
     line-height: 1.2;
     margin: 0 0 14px;
 }
-
+ 
 .cta-section p {
     font-size: 1.1rem;
     line-height: 1.6;
@@ -536,7 +487,7 @@
     margin: 0 auto;
     max-width: 55ch;
 }
-
+ 
 .cta-btn {
     display: inline-block;
     min-width: 200px;
@@ -548,50 +499,50 @@
     text-align: center;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
-
+ 
 /* Primary: solid yellow */
 .cta-primary {
     background-color: #ffd166;
     color: #1a252f;
 }
-
+ 
 .cta-primary:hover {
     background-color: #ffe08f;
     border-color: #ffe08f;
 }
-
+ 
 /* Secondary: outline */
 .cta-secondary {
     background-color: transparent;
     color: #ffffff;
     border-color: #ffffff;
 }
-
+ 
 .cta-secondary:hover {
     background-color: #ffffff;
     color: #1a252f;
 }
-
+ 
 .cta-btn:focus-visible {
     outline: 3px solid #ffffff;
     outline-offset: 3px;
 }
-
+ 
 /* ==================================================
    Homepage: colours, borders and reusable components
    ================================================== */
-
+ 
 .home-page .site-header {
     background-color: var(--white);
     border-bottom: 2px solid var(--navy);
 }
-
+ 
 .home-page .logo {
     font-size: 1.15rem;
     font-weight: bold;
     text-decoration: none;
 }
-
+ 
 .home-page .logo-mark {
     display: grid;
     width: 42px;
@@ -601,24 +552,24 @@
     background-color: var(--purple);
     border: 2px solid var(--navy);
 }
-
+ 
 .home-page .nav-links,
 .home-page .footer-links {
     list-style: none;
 }
-
+ 
 .home-page .nav-links a {
     font-weight: bold;
     text-decoration: none;
 }
-
+ 
 .home-page .nav-links a:hover,
 .home-page .nav-links a.active {
     color: var(--purple);
     text-decoration: underline;
     text-underline-offset: 6px;
 }
-
+ 
 .home-page .hero {
     color: var(--navy);
     background-color: var(--cream);
@@ -628,14 +579,14 @@
     background-size: 32px 32px;
     border-bottom: 2px solid var(--navy);
 }
-
+ 
 .home-page .hero h1 {
     margin: 0 0 22px;
     font-size: clamp(2.6rem, 6vw, 5rem);
     line-height: 1;
     letter-spacing: -0.05em;
 }
-
+ 
 .home-page .button,
 .home-page button {
     display: inline-block;
@@ -651,75 +602,75 @@
     text-align: center;
     text-decoration: none;
 }
-
+ 
 .home-page .button:hover,
 .home-page button:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 var(--navy);
 }
-
+ 
 .home-page .button-light {
     color: var(--navy);
     background-color: var(--white);
 }
-
+ 
 .home-page .button-yellow {
     color: var(--navy);
     background-color: var(--yellow);
     border-color: var(--white);
     box-shadow: 4px 4px 0 var(--white);
 }
-
+ 
 .home-page .hero-image {
     margin: 0;
 }
-
+ 
 .home-page .hero-image img {
     width: 100%;
     border: 3px solid var(--navy);
     border-radius: 0;
     box-shadow: 10px 10px 0 var(--yellow);
 }
-
+ 
 .home-page .hero-image figcaption {
     margin-top: 14px;
     color: var(--grey);
     font-size: 0.9rem;
 }
-
+ 
 .home-page .search-section {
     color: var(--white);
     background-color: var(--navy);
 }
-
+ 
 .home-page .search-section .eyebrow,
 .home-page .acknowledgement .eyebrow,
 .home-page .cta .eyebrow {
     color: var(--yellow);
 }
-
+ 
 .home-page .search-section h2 {
     margin-bottom: 0;
     font-size: 2rem;
 }
-
+ 
 .home-page .job-search label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
 }
-
+ 
 .home-page .search-row input {
     padding: 12px;
     border: 2px solid var(--white);
     font: inherit;
 }
-
+ 
 .home-page .search-row button {
     border-color: var(--yellow);
     box-shadow: none;
 }
-
+ 
 .home-page .card {
     position: static;
     display: block;
@@ -732,36 +683,36 @@
     box-shadow: 6px 6px 0 var(--navy);
     text-align: left;
 }
-
+ 
 .home-page .card-number {
     display: inline-block;
     margin-bottom: 24px;
     color: var(--purple);
     font-weight: bold;
 }
-
+ 
 .home-page .card h3 {
     margin-bottom: 10px;
     font-size: 1.3rem;
 }
-
+ 
 .home-page .card p {
     margin-bottom: 0;
     color: var(--grey);
 }
-
+ 
 .home-page .voices-section {
     background-color: #f7f7fb;
 }
-
+ 
 .home-page .voices-heading {
     text-align: center;
 }
-
+ 
 .home-page .voices-heading p:last-child {
     color: var(--grey);
 }
-
+ 
 .home-page .voice-card {
     padding: 30px;
     background-color: var(--white);
@@ -769,7 +720,7 @@
     box-shadow: 0 5px 16px rgba(16, 22, 47, 0.1);
     text-align: center;
 }
-
+ 
 .home-page .voice-card img {
     width: 150px;
     height: 150px;
@@ -778,7 +729,7 @@
     border-radius: 50%;
     object-fit: cover;
 }
-
+ 
 .home-page .voice-card blockquote {
     min-height: 120px;
     margin: 0 0 24px;
@@ -786,103 +737,103 @@
     font-weight: bold;
     line-height: 1.45;
 }
-
+ 
 .home-page .voice-card h3 {
     margin-bottom: 2px;
 }
-
+ 
 .home-page .voice-card p {
     margin-bottom: 0;
     color: var(--grey);
     font-style: italic;
 }
-
+ 
 .home-page .vacancies-section {
     background-color: var(--white);
 }
-
+ 
 .home-page table {
     width: 100%;
     border-collapse: collapse;
     background-color: var(--white);
 }
-
+ 
 .home-page caption {
     padding: 12px;
     font-weight: bold;
     text-align: left;
 }
-
+ 
 .home-page th,
 .home-page td {
     padding: 15px;
     border: 1px solid #9ca0ae;
     text-align: left;
 }
-
+ 
 .home-page thead tr:first-child th {
     color: var(--white);
     background-color: var(--purple);
     text-align: center;
 }
-
+ 
 .home-page thead tr:nth-child(2) th {
     background-color: var(--yellow);
 }
-
+ 
 .home-page tbody tr:hover {
     background-color: var(--cream);
 }
-
+ 
 .home-page .table-note {
     margin-top: 18px;
 }
-
+ 
 .home-page .table-note a {
     color: var(--purple);
     font-weight: bold;
 }
-
+ 
 .home-page .acknowledgement {
     color: var(--white);
     background-color: #174c3c;
 }
-
+ 
 .home-page .acknowledgement p:last-child {
     max-width: 80ch;
     margin-bottom: 0;
 }
-
+ 
 .home-page .cta {
     color: var(--white);
     background-color: var(--purple);
 }
-
+ 
 .home-page .cta h2 {
     max-width: 700px;
     margin-bottom: 0;
 }
-
+ 
 .home-page .site-footer {
     color: var(--white);
     background-color: var(--navy);
 }
-
+ 
 .home-page .footer-content p {
     margin: 5px 0 0;
     color: #bdc1d0;
     font-size: 0.9rem;
 }
-
+ 
 .home-page .footer-links a {
     color: var(--white);
     text-underline-offset: 4px;
 }
-
+ 
 .home-page .footer-links a:hover {
     color: var(--yellow);
 }
-
+ 
 /* ===== Components: jobs banner ===== */
 .page-banner {
     color: #ffffff;
@@ -892,7 +843,7 @@
         radial-gradient(circle at 8% 90%, rgba(255, 255, 255, 0.10) 0, rgba(255, 255, 255, 0.10) 90px, transparent 91px),
         linear-gradient(135deg, #1a3a5c 0%, #0b1f33 100%);
 }
-
+ 
 .banner-tag {
     display: inline-block;
     margin: 0 0 12px;
@@ -905,13 +856,13 @@
     background-color: #ffd166;
     border-radius: 999px;
 }
-
+ 
 .page-banner h1 {
     margin: 0 0 12px;
     font-size: clamp(2rem, 5vw, 3rem);
     line-height: 1.15;
 }
-
+ 
 .banner-text {
     max-width: 60ch;
     margin: 0;
@@ -919,7 +870,7 @@
     line-height: 1.6;
     color: #dbe4ee;
 }
-
+ 
 .quick-facts li {
     padding: 8px 16px;
     color: #ffffff;
@@ -927,18 +878,18 @@
     border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 8px;
 }
-
+ 
 .quick-facts strong {
     color: #ffd166;
     margin-right: 4px;
 }
-
+ 
 /* ===== Components: role cards ===== */
 .role-nav h2 {
     margin: 0;
     color: #2c3e50;
 }
-
+ 
 .role-card {
     display: flex;
     flex-direction: column;
@@ -951,12 +902,12 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
+ 
 .role-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
-
+ 
 .role-ref {
     align-self: flex-start;
     padding: 2px 10px;
@@ -966,19 +917,19 @@
     border: 1px solid #0066cc;
     border-radius: 4px;
 }
-
+ 
 .role-card h3 {
     margin: 0;
     font-size: 1.1rem;
     color: #1a252f;
 }
-
+ 
 .role-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
 }
-
+ 
 .role-tags span {
     padding: 2px 10px;
     font-size: 0.8rem;
@@ -986,52 +937,52 @@
     background-color: #f1f3f5;
     border-radius: 999px;
 }
-
+ 
 .role-card a {
     margin-top: 0px;
     /* pushes the link to the card bottom */
     font-weight: 600;
     color: #0b4f9c;
 }
-
+ 
 /* arrow */
 .role-card a:hover {
     text-decoration: underline;
 }
-
+ 
 /* ===== Components: job sections ===== */
 .job-section {
     margin-bottom: 24px;
 }
-
+ 
 .job-section h3 {
     margin: 0 0 8px;
     padding-bottom: 6px;
     color: #2c3e50;
 }
-
+ 
 .job-section h4 {
     margin: 16px 0 6px;
     color: #1a252f;
 }
-
+ 
 .job-section ul {
     margin: 0;
     padding-left: 22px;
 }
-
+ 
 .job-section li {
     margin-bottom: 8px;
     line-height: 1.6;
 }
-
+ 
 .salary-line {
     padding: 10px 14px;
     background-color: #e8f0fe;
     border-left: 4px solid #0066cc;
     border-radius: 4px;
 }
-
+ 
 /* ===== Components: job header ===== */
 .job-ref {
     display: inline-block;
@@ -1044,13 +995,13 @@
     border: 1px solid #0066cc;
     border-radius: 4px;
 }
-
+ 
 .job-header h2 {
     margin: 0 0 8px;
     font-size: 1.8rem;
     color: #2c3e50;
 }
-
+ 
 /* Metadata bar */
 .meta-item {
     margin: 0;
@@ -1059,7 +1010,7 @@
     /* border-left: 4px solid #0066cc; */
     border-radius: 4px;
 }
-
+ 
 .meta-item dt {
     margin: 0 0 2px;
     font-size: 0.8rem;
@@ -1068,54 +1019,54 @@
     letter-spacing: 0.5px;
     color: #4a5568;
 }
-
+ 
 .meta-item dd {
     margin: 0;
     font-weight: 600;
     color: #1a252f;
 }
-
+ 
 /* Larger Apply button (extends your existing .apply-btn from jobs.css) */
 .apply-btn-large {
     padding: 14px 32px;
     font-size: 1.1rem;
 }
-
+ 
 .apply-btn:focus-visible {
     outline: 3px solid #0066cc;
     outline-offset: 3px;
 }
-
+ 
 /* ===== Components: sidebar ===== */
 .sidebar-aside h2 {
     margin-top: 0;
     font-size: 1.3rem;
     color: #2c3e50;
 }
-
+ 
 .sidebar-aside h3 {
     margin: 20px 0 8px;
     font-size: 1rem;
     color: #1a252f;
 }
-
+ 
 .sidebar-aside .apply-btn {
     display: block;
     text-align: center;
 }
-
+ 
 .apply-steps {
     margin: 0;
     padding-left: 20px;
     line-height: 1.6;
 }
-
+ 
 .share-list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
+ 
 .share-list a {
     display: flex;
     align-items: center;
@@ -1125,16 +1076,16 @@
     text-decoration: none;
     font-weight: 600;
 }
-
+ 
 .share-list a:hover {
     text-decoration: underline;
 }
-
+ 
 .share-list a:focus-visible {
     outline: 3px solid #0066cc;
     outline-offset: 2px;
 }
-
+ 
 .share-list svg {
     width: 20px;
     height: 20px;
@@ -1145,7 +1096,7 @@
     stroke-linecap: round;
     stroke-linejoin: round;
 }
-
+ 
 /* Text for screen readers only */
 .visually-hidden {
     position: absolute;
@@ -1158,3 +1109,319 @@
     white-space: nowrap;
     border: 0;
 }
+ 
+/* =========================================================
+   ===== APPLY PAGE =====  (paste at the END of css/dl.css)
+   Components for apply.html only (scoped to .apply-page).
+   Reuses the team's look: .page-banner, .role-card style,
+   .job-ref chips and .apply-btn.
+   ========================================================= */
+ 
+/* ----- Banner text width (banner colours come from .page-banner) ----- */
+.apply-page .apply-banner .banner-text {
+  max-width: 60ch;
+}
+ 
+/* ----- Form card: same style as .role-card on the Jobs page ----- */
+.apply-page .form-card {
+  padding: 48px 56px;
+  background-color: #ffffff;
+  border: 1px solid var(--ap-border);
+  border-top: 4px solid var(--ap-blue);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+ 
+@media (max-width: 768px) {
+  .apply-page .form-card {
+    padding: 28px 20px;
+  }
+}
+ 
+/* ----- Section headings, auto-numbered with a CSS counter ----- */
+.apply-page .app-form {
+  counter-reset: section;
+}
+ 
+.apply-page .form-section {
+  counter-increment: section;
+}
+ 
+.apply-page .form-section > legend {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding-bottom: 10px;
+  margin-bottom: 1.75rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--ap-heading);
+  border-bottom: 1px solid var(--ap-border);
+}
+ 
+/* Number chip, same style as the .job-ref / .role-ref chips */
+.apply-page .form-section > legend::before {
+  content: counter(section);
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  font-size: 0.95rem;
+  color: var(--ap-ink);
+  background-color: var(--ap-blue-tint);
+  border: 1px solid var(--ap-blue);
+  border-radius: 4px;
+}
+ 
+/* ----- Labels ----- */
+.apply-page .q-label {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--ap-ink);
+}
+ 
+.apply-page legend.q-label {
+  margin-bottom: 0.6rem;
+}
+ 
+.apply-page .sublabel {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--ap-text);
+}
+ 
+.apply-page .form-note {
+  margin: 0;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  color: var(--ap-ink);
+  background-color: var(--ap-blue-tint);
+  border-left: 4px solid var(--ap-blue);    /* same as .salary-line */
+  border-radius: 4px;
+}
+ 
+/* ----- Inputs, select, textarea ----- */
+.apply-page .app-form input[type="text"],
+.apply-page .app-form input[type="email"],
+.apply-page .app-form input[type="tel"],
+.apply-page .app-form input[type="date"],
+.apply-page .app-form select,
+.apply-page .app-form textarea {
+  width: 100%;
+  min-height: 48px;
+  margin: 0;
+  padding: 10px 14px;
+  background-color: #ffffff;
+  border: 1px solid #b8c2cf;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color var(--ap-transition), box-shadow var(--ap-transition);
+}
+ 
+.apply-page .app-form textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+ 
+.apply-page .app-form input::placeholder,
+.apply-page .app-form textarea::placeholder {
+  color: #94a3b8;
+}
+ 
+/* Dropdown with a custom chevron */
+.apply-page .app-form select {
+  appearance: none;
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%232c3e50' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  cursor: pointer;
+}
+ 
+/* Date input: grey text until a date is picked */
+.apply-page .app-form input[type="date"]:invalid {
+  color: #94a3b8;
+}
+ 
+/* Focus state: blue accent */
+.apply-page .app-form input:focus,
+.apply-page .app-form select:focus,
+.apply-page .app-form textarea:focus {
+  outline: none;
+  border-color: var(--ap-blue);
+  box-shadow: 0 0 0 3px var(--ap-blue-tint);
+}
+ 
+/* ----- Validation feedback -----
+   Red only once the user has typed something invalid. */
+.apply-page .app-form :is([type="text"], [type="email"], [type="tel"]):not(:placeholder-shown):invalid,
+.apply-page .app-form input[type="date"]:user-invalid {
+  border-color: var(--ap-invalid);
+  background-color: #fdf4f4;
+}
+ 
+.apply-page .app-form :is([type="text"], [type="email"], [type="tel"]):not(:placeholder-shown):invalid:focus {
+  box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.15);
+}
+ 
+/* ----- Radio & checkbox options ----- */
+.apply-page .opt {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--ap-ink);
+  cursor: pointer;
+}
+ 
+.apply-page .opt input {
+  appearance: none;
+  flex-shrink: 0;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0;
+  background-color: #ffffff;
+  border: 2px solid #b8c2cf;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background-color var(--ap-transition), border-color var(--ap-transition);
+}
+ 
+.apply-page .opt input[type="radio"] {
+  border-radius: 50%;
+}
+ 
+.apply-page .opt input[type="checkbox"] {
+  border-radius: 4px;
+}
+ 
+.apply-page .opt:hover input {
+  border-color: var(--ap-blue);
+}
+ 
+.apply-page .opt input:checked {
+  background-color: var(--ap-blue);
+  border-color: var(--ap-blue);
+}
+ 
+/* Radio: white centre dot */
+.apply-page .opt input[type="radio"]:checked::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+ 
+/* Checkbox: white tick */
+.apply-page .opt input[type="checkbox"]:checked::before {
+  content: "";
+  width: 0.3rem;
+  height: 0.6rem;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: translateY(-1px) rotate(45deg);
+}
+ 
+.apply-page .opt input:focus-visible {
+  outline: 3px solid var(--ap-blue);
+  outline-offset: 2px;
+}
+ 
+/* ----- "Other skills" expandable textarea (pure CSS) ----- */
+.apply-page .other-skills {
+  margin-top: 0.85rem;
+}
+ 
+.apply-page .other-skills .toggle {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+ 
+.apply-page .toggle-label::before {
+  content: "";
+  flex-shrink: 0;
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 2px solid #b8c2cf;
+  border-radius: 4px;
+  background-color: #ffffff;
+  transition: background-color var(--ap-transition), border-color var(--ap-transition);
+}
+ 
+.apply-page .toggle:checked + .toggle-label::before {
+  background-color: var(--ap-blue);
+  border-color: var(--ap-blue);
+  box-shadow: inset 0 0 0 3px #ffffff;
+}
+ 
+.apply-page .toggle:focus-visible + .toggle-label {
+  outline: 3px solid var(--ap-blue);
+  outline-offset: 2px;
+}
+ 
+.apply-page .expand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.35s ease, margin-top 0.35s ease;
+}
+ 
+.apply-page .toggle:checked ~ .expand {
+  max-height: 260px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+ 
+/* ----- Buttons -----
+   Submit uses the team's .apply-btn + .apply-btn-large;
+   these lines only make it work on an <input> element. */
+.apply-page .form-actions .apply-btn {
+  color: #ffffff;
+  border: 0;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+ 
+.apply-page .form-actions .apply-btn:focus-visible {
+  outline: 3px solid var(--ap-blue);
+  outline-offset: 3px;
+}
+ 
+.apply-page .form-actions .apply-btn-large {
+  padding: 14px 32px;
+  font-size: 1.1rem;
+}
+ 
+/* Reset: outline version in the same navy */
+.apply-page .btn-reset {
+  padding: 13px 28px;
+  color: var(--ap-heading);
+  background-color: transparent;
+  border: 2px solid var(--ap-heading);
+  border-radius: 4px;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color var(--ap-transition), color var(--ap-transition);
+}
+ 
+.apply-page .btn-reset:hover {
+  color: #ffffff;
+  background-color: var(--ap-heading);
+}
+ 
+.apply-page .btn-reset:focus-visible {
+  outline: 3px solid var(--ap-blue);
+  outline-offset: 3px;
+}
+ 
