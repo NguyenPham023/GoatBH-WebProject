@@ -131,3 +131,201 @@ main::after {
     /* buttons stack on narrow screens */
     margin-top: 28px;
 }
+
+/* ==================================================
+   Homepage: layout, grids and responsive rules
+   ================================================== */
+
+.home-page .container {
+    width: min(92%, var(--container));
+    margin: 0 auto;
+}
+
+.home-page .nav,
+.home-page .logo,
+.home-page .nav-links,
+.home-page .footer-links,
+.home-page .hero-actions,
+.home-page .search-row,
+.home-page .cta-content,
+.home-page .footer-content {
+    display: flex;
+}
+
+.home-page .nav {
+    min-height: 72px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.home-page .logo {
+    align-items: center;
+    gap: 10px;
+}
+
+.home-page .nav-links,
+.home-page .footer-links {
+    gap: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+.home-page .hero {
+    padding: 80px 0;
+}
+
+.home-page .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.home-page .hero-actions {
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.home-page .search-section {
+    padding: 40px 0;
+}
+
+.home-page .search-box {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: end;
+    gap: 50px;
+}
+
+.home-page .search-row input {
+    min-width: 0;
+    flex: 1;
+}
+
+.home-page .section {
+    padding: 85px 0;
+}
+
+.home-page .section-heading {
+    max-width: 680px;
+    margin-bottom: 36px;
+}
+
+.home-page .benefit-grid,
+.home-page .voices-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.home-page .benefit-grid {
+    gap: 22px;
+}
+
+.home-page .voices-heading {
+    max-width: 780px;
+    margin: 0 auto 42px;
+}
+
+.home-page .voices-grid {
+    gap: 28px;
+}
+
+.home-page .table-wrapper {
+    overflow-x: auto;
+}
+
+.home-page .acknowledgement {
+    padding: 70px 0;
+}
+
+.home-page .acknowledgement .container {
+    padding-left: 28px;
+}
+
+.home-page .cta {
+    padding: 65px 0;
+}
+
+.home-page .cta-content {
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.home-page .site-footer {
+    padding: 36px 0;
+}
+
+.home-page .footer-content {
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.home-page .footer-links {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+@media (max-width: 800px) {
+    .home-page .nav,
+    .home-page .footer-content {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px 0;
+    }
+
+    .home-page .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .home-page .hero-grid,
+    .home-page .search-box,
+    .home-page .benefit-grid,
+    .home-page .voices-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-page .voice-card blockquote {
+        min-height: auto;
+    }
+
+    .home-page .cta-content {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .home-page .footer-links {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 520px) {
+    .home-page .hero {
+        padding: 55px 0;
+    }
+
+    .home-page .nav-links {
+        flex-wrap: wrap;
+    }
+
+    .home-page .hero-actions,
+    .home-page .search-row {
+        flex-direction: column;
+    }
+
+    .home-page .button,
+    .home-page button {
+        width: 100%;
+    }
+
+    .home-page th,
+    .home-page td {
+        padding: 10px;
+        font-size: 0.88rem;
+    }
+}
