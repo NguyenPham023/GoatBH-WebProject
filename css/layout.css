@@ -1,6 +1,16 @@
-/* --- Page Layout & Structural Floats --- */
+/* =========================================================
+   layout.css — Page Layout & Structural Floats
+   
+   ========================================================= */
 
-/*  Layout: hero  */
+/* Clearfix: <main> always contains floated children */
+main::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ===== Layout: hero ===== */
 .hero {
     padding: 80px 20px;
 }
@@ -50,25 +60,31 @@
 }
 
 @media (max-width: 992px) {
-    .values-grid { grid-template-columns: repeat(2, 1fr); }
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 560px) {
-    .values-grid { grid-template-columns: 1fr; }
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-/*  --- Layout: story & vision --- */
+/* ===== Layout: story & vision =====
+   (moved here from dl.css so the grid is only defined once) */
 .story-section {
-    padding: 60px 20px;
+    padding: 6rem 2rem;
 }
 
 .story-container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* origin | vision side by side */
-    gap: 40px;
+    /* visuals | text side by side */
+    gap: 4rem;
+    align-items: center;
 }
 
 /* The section heading spans both columns */
@@ -76,65 +92,84 @@
     grid-column: 1 / -1;
 }
 
+.story-visuals {
+    position: relative;
+    width: 100%;
+}
+
+.image-collage {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 1.25rem;
+    width: 100%;
+    align-items: center;
+}
+
+.img-main {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    height: 372px;
+}
+
+.story-content {
+    display: grid;
+}
+
 @media (max-width: 768px) {
+    .story-section {
+        padding: 60px 20px;
+    }
+
     .story-container {
         grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
-}
 
-/* --- Sidebar Aside --- */
-.sidebar-aside {
-    float: right;
-    width: 25%;
-    margin: 0px 40px 20px 20px;
-    padding: 15px;
-    border: 2px solid #2C3E50;
-    border-radius: 6px;
-    background-color: #F8F9FA;
-    box-sizing: border-box;
-}
+    .img-top,
+    .img-bottom {
+        height: 150px;
+    }
 
-/* Clearfix for main layout after floated elements */
-main::after {
-    content: "";
-    display: table;
-    clear: both;
+    .img-main {
+        height: 250px;
+    }
 }
 
 /* ===== Layout: jobs list + sticky sidebar ===== */
 
-/* Job Containers Layout */
-.job-container {
-    width: 95%;
+/* Main column: 70% on desktop */
+.jobs-list {
     float: left;
+    width: 70%;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+/* Each job box fills its column (no more overflow) */
+.job-container {
+    box-sizing: border-box;
+    width: 100%;
     margin-bottom: 30px;
-    margin-left: 40px;
     padding: 20px;
     border: 1px solid #BDC3C7;
     border-radius: 6px;
     background-color: #FFFFFF;
 }
 
-.jobs-list {
-    float: left;
-    width: 70%;
-}
-
-.jobs-list .job-container {
-    float: none;
-}
-
+/* Sidebar: the remaining 30% minus its side margins,
+   so it always fits next to the jobs list */
 .sidebar-aside {
+    float: right;
+    width: calc(30% - 60px);
+    margin: 0 40px 20px 20px;
+    padding: 15px;
+    border: 2px solid #2C3E50;
+    border-radius: 6px;
+    background-color: #F8F9FA;
+    box-sizing: border-box;
     position: sticky;
     /* follows the reader while scrolling */
     top: 20px;
-}
-
-main::after {
-    /* clearfix so main contains the floats */
-    content: "";
-    display: table;
-    clear: both;
 }
 
 @media screen and (max-width: 768px) {
@@ -145,11 +180,16 @@ main::after {
         width: 100%;
     }
 
-    .sidebar-aside {
-        position: static;
+    .jobs-list {
+        padding: 0 16px;
     }
 
-    /* sticky is unhelpful on phones */
+    .sidebar-aside {
+        width: auto;
+        margin: 0 16px 24px;
+        position: static;
+        /* sticky is unhelpful on phones */
+    }
 }
 
 /* ===== Layout: job header ===== */
@@ -177,7 +217,7 @@ main::after {
     }
 }
 
-/* --- Layout: call to action --- */
+/* ===== Layout: call to action ===== */
 .cta-section {
     padding: 70px 20px;
 }
@@ -195,4 +235,187 @@ main::after {
     flex-wrap: wrap;
     /* buttons stack on narrow screens */
     margin-top: 28px;
+}
+
+/* =========================================================
+   ===== SHARED HEADER & FOOTER (all pages) =====
+   Same header/footer structure on Home, Jobs, About, Apply.
+   ========================================================= */
+
+/* Centred content width used by the header and footer */
+.container {
+    width: min(100% - 40px, var(--container));
+    margin-inline: auto;
+}
+
+/* Header: logo on the left, links on the right */
+.site-header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+    padding: 16px 0;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer: text on the left, links on the right */
+.site-footer {
+    padding: 28px 0;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 600px) {
+    .site-header .nav {
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 8px 20px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* =========================================================
+   ===== APPLY PAGE =====
+   Structure & grid for apply.html only (scoped to .apply-page),
+   using the same widths and breakpoints as the pages above.
+   ========================================================= */
+
+/* Banner: same padding rhythm as .hero / .cta-section */
+.apply-page .apply-banner {
+    padding: 70px 20px 90px;
+}
+
+.apply-page .apply-banner-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Form card: centred, overlapping the banner slightly */
+.apply-page .form-card {
+    box-sizing: border-box;
+    position: relative;
+    width: calc(100% - 40px);
+    max-width: 1000px;
+    margin: -40px auto 60px;
+}
+
+/* Form: sections stacked vertically */
+.apply-page .app-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+}
+
+/* Each section stacks its questions */
+.apply-page .form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* A question: label on top, then the input(s) */
+.apply-page .q {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+/* Two equal columns (CSS Grid) */
+.apply-page .row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem 40px;
+    margin: 0;
+}
+
+/* Smaller gap for the State + Postcode pair */
+.apply-page .row-tight {
+    gap: 1.25rem;
+}
+
+/* Input with its sub-label underneath */
+.apply-page .sub {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+/* Radio / checkbox options: 2-column grid */
+.apply-page .options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem 40px;
+}
+
+/* Buttons row, same flex pattern as .cta-buttons */
+.apply-page .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .apply-page .apply-banner {
+        padding: 48px 16px 72px;
+    }
+
+    .apply-page .form-card {
+        width: calc(100% - 32px);
+    }
+
+    .apply-page .row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Keep State + Postcode side by side even on phones */
+    .apply-page .row-tight {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .apply-page .options {
+        grid-template-columns: 1fr;
+    }
+
+    .apply-page .form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
 }

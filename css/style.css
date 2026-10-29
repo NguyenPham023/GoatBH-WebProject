@@ -1,34 +1,65 @@
-/* Universal */
-* {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* =========================================================
+   style.css — Global & Base Styles
+   Universal rules, shared colour variables, base typography
+   and default element styling for ALL pages.
+   ========================================================= */
 
-* {
+/* ===== Universal ===== */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
+/* One font for the whole site (set once on body, inherited everywhere) */
 body {
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
     color: #333333;
 }
 
-a:focus-visible {
-    outline: 3px solid #0066cc;
+/* Form controls don't inherit the font by default, so force it */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* Images never overflow their container */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Visible keyboard focus on every interactive element */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--site-blue);
     outline-offset: 3px;
 }
 
+/* Respect users who turn off animations */
 @media (prefers-reduced-motion: reduce) {
-    * {
+    *,
+    *::before,
+    *::after {
         transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
     }
 }
 
 /* ==================================================
-   Homepage: variables, typography and accessibility
+   Shared colour variables
    ================================================== */
 
 :root {
+    /* Homepage palette */
     --navy: #10162f;
     --purple: #3a10e5;
     --cream: #fff0e5;
@@ -36,7 +67,28 @@ a:focus-visible {
     --white: #ffffff;
     --grey: #565b6d;
     --container: 1120px;
+
+    /* Jobs / About / Apply palette (same colours used in dl.css) */
+    --site-navy: #0b1f33;        /* .page-banner, .cta-section background */
+    --site-heading: #2c3e50;     /* section headings, .apply-btn */
+    --site-ink: #1a252f;         /* main dark text */
+    --site-text: #4a5568;        /* secondary text */
+    --site-blue: #0066cc;        /* accent: borders, focus, chips */
+    --site-blue-dark: #0b4f9c;   /* links (.role-card a, .share-list a) */
+    --site-blue-tint: #e8f0fe;   /* soft accent (.job-ref, .salary-line) */
+    --site-gold: #ffd166;        /* .banner-tag, .hero-btn */
+    --site-border: #dde3ea;      /* .role-card border */
+    --site-soft: #f8f9fa;        /* .meta-item, .sidebar-aside */
+    --site-navy-light: #1a3a5c;  /* banner / CTA gradient */
+    --site-gold-light: #ffe08f;  /* gold button hover */
+    --site-banner-text: #dbe4ee; /* light text on navy banners */
+    --site-line: #bdc3c7;        /* .job-container border */
+    --site-teal: #009879;        /* About: fun facts table */
 }
+
+/* ==================================================
+   Homepage: typography and accessibility
+   ================================================== */
 
 .home-page {
     color: var(--navy);
@@ -111,4 +163,56 @@ a:focus-visible {
 .home-page .section-heading > p:not(.eyebrow) {
     color: var(--grey);
     font-size: 1.05rem;
+}
+
+/* ==================================================
+   Apply page: base styles
+   Scoped to <body class="apply-page">; uses the same
+   --site-* colours as the Jobs page so both match.
+   ================================================== */
+
+.apply-page {
+    --ap-navy: var(--site-navy);
+    --ap-heading: var(--site-heading);
+    --ap-ink: var(--site-ink);
+    --ap-text: var(--site-text);
+    --ap-blue: var(--site-blue);
+    --ap-blue-dark: var(--site-blue-dark);
+    --ap-blue-tint: var(--site-blue-tint);
+    --ap-yellow: var(--site-gold);
+    --ap-border: var(--site-border);
+    --ap-soft: var(--site-soft);
+    --ap-invalid: #c62828;
+    --ap-transition: 0.2s ease;
+}
+
+.apply-page .form-card {
+    line-height: 1.5;
+    color: var(--ap-ink);
+}
+
+.apply-page .form-card p {
+    margin: 0 0 1rem;
+}
+
+.apply-page .form-card a {
+    color: var(--ap-blue-dark);
+    font-weight: 600;
+}
+
+.apply-page .form-card input,
+.apply-page .form-card select,
+.apply-page .form-card textarea {
+    color: inherit;
+}
+
+.apply-page .form-card fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    min-width: 0;
+}
+
+.apply-page .form-card legend {
+    padding: 0;
 }
