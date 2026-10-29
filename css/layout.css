@@ -114,9 +114,9 @@
     width: 25%;
     margin: 0px 40px 20px 20px;
     padding: 15px;
-    border: 2px solid #2C3E50;
+    border: 2px solid var(--navy);
     border-radius: 6px;
-    background-color: #F8F9FA;
+    background-color: var(--cream);
     box-sizing: border-box;
 }
 
@@ -136,11 +136,11 @@ main::after {
     margin-bottom: 30px;
     margin-left: 40px;
     padding: 20px;
-    border: 1px solid #BDC3C7;
+    border: 1px solid rgba(86, 91, 109, 0.25);
+    /* Replaced #BDC3C7 using --grey with opacity */
     border-radius: 6px;
-    background-color: #FFFFFF;
+    background-color: var(--white);
 }
-
 .jobs-list {
     float: left;
     width: 70%;

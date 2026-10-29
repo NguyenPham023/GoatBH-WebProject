@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EduTech Solutions careers: help us build accessible and inclusive digital learning tools.">
+    <meta name="keywords" content="EdTech careers, web developer jobs, UX design jobs, accessible education">
+    <meta name="author" content="GoatBH">
+    <title>EduTech Solutions | Careers</title>
+
+    <!-- Main external stylesheet required by the assignment -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Required embedded CSS example: used only on this page -->
+    <style>
+        .home-callout {
+            border-left: 6px solid #ffd400;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="logo" href="index.html" aria-label="EduTech Solutions home">
+                <span class="logo-mark" aria-hidden="true">ET</span>
+                <span>EduTech Solutions</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="apply.html">Apply</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Company introduction -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <!-- Required inline CSS example -->
+                    <p class="eyebrow" style="font-style: italic;">Learning without limits</p>
+                    <h1>Build technology that helps everyone learn.</h1>
+                    <p>
+                        EduTech Solutions creates accessible digital learning tools for students
+                        and educators. We are recruiting web developers and designers who want to
+                        make online education more inclusive.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button" href="jobs.html">View vacancies</a>
+                        <a class="button button-light" href="apply.html">Apply now</a>
+                    </div>
+                </div>
+
+                <figure class="hero-image">
+                    <img src="images/student-dev-colab.jpg"
+                         alt="Students and developers collaborating on a digital learning project"
+                         width="596" height="335">
+                    <figcaption>Our team designs learning tools through collaboration.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Static job search: submits the search term to jobs.html -->
+        <section class="search-section" aria-labelledby="search-title">
+            <div class="container search-box">
+                <div>
+                    <p class="eyebrow">Find your opportunity</p>
+                    <h2 id="search-title">Search our vacancies</h2>
+                </div>
+
+                <form class="job-search" action="jobs.html" method="get" role="search">
+                    <label for="job-search">Search by job title or skill</label>
+                    <div class="search-row">
+                        <input type="search" id="job-search" name="keyword"
+                               placeholder="Example: web developer" required>
+                        <button type="submit">Search jobs</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Short company benefits -->
+        <section class="section" aria-labelledby="benefits-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Why work with us?</p>
+                    <h2 id="benefits-title">Make a useful difference</h2>
+                    <p>Join a supportive team focused on thoughtful design and real educational outcomes.</p>
+                </div>
+
+                <div class="benefit-grid">
+                    <article class="card">
+                        <span class="card-number" aria-hidden="true">01</span>
+                        <h3>Inclusive products</h3>
+                        <p>Design services that support different learners, devices and accessibility needs.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="card-number" aria-hidden="true">02</span>
+                        <h3>Practical teamwork</h3>
+                        <p>Work with educators, developers and designers on clear shared goals.</p>
+                    </article>
+
+                    <article class="card">
+                        <span class="card-number" aria-hidden="true">03</span>
+                        <h3>Room to grow</h3>
+                        <p>Develop technical and professional skills through feedback and project experience.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fictional team voices inspired by the supplied layout reference -->
+        <section class="section voices-section" aria-labelledby="voices-title">
+            <div class="container">
+                <div class="voices-heading">
+                    <p class="eyebrow">Meet the demo team</p>
+                    <h2 id="voices-title">EduTech Voices</h2>
+                    <p>Three fictional team members share what matters to them when building inclusive learning experiences.</p>
+                </div>
+
+                <div class="voices-grid">
+                    <article class="voice-card">
+                        <img src="images/sukuna.jpeg" alt="Anime portrait of Ryomen Sukuna"
+                             width="600" height="600">
+                        <blockquote>
+                            “Clear code and strong structure make every learning experience easier to use.”
+                        </blockquote>
+                        <h3>Ryomen Sukuna</h3>
+                        <p>Front-End Developer</p>
+                    </article>
+
+                    <article class="voice-card">
+                        <img src="images/gojo.jpeg" alt="Anime portrait of Satoru Gojo"
+                             width="600" height="600">
+                        <blockquote>
+                            “The best interfaces feel simple because every design detail has a purpose.”
+                        </blockquote>
+                        <h3>Satoru Gojo</h3>
+                        <p>UX/UI Designer</p>
+                    </article>
+
+                    <article class="voice-card">
+                        <img src="images/toji.jpeg" alt="Anime portrait of Toji Fushiguro"
+                             width="600" height="600">
+                        <blockquote>
+                            “Accessibility testing helps us make sure no learner is left behind.”
+                        </blockquote>
+                        <h3>Toji Fushiguro</h3>
+                        <p>Accessibility QA Specialist</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Required table with merged cells: colspan and rowspan -->
+        <section class="section vacancies-section" aria-labelledby="vacancies-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Current opportunities</p>
+                    <h2 id="vacancies-title">Roles at a glance</h2>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <caption>Summary of current EduTech Solutions vacancies</caption>
+                        <thead>
+                            <tr>
+                                <th colspan="5">2026 Recruitment Overview</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">Team</th>
+                                <th scope="col">Reference</th>
+                                <th scope="col">Role</th>
+                                <th scope="col">Work type</th>
+                                <th scope="col">Location</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="4" scope="rowgroup">Digital Learning</th>
+                                <td><strong>WD101</strong></td>
+                                <td>Front-End Developer</td>
+                                <td>Full-time</td>
+                                <td>Melbourne / Hybrid</td>
+                            </tr>
+                            <tr>
+                                <td><strong>UX202</strong></td>
+                                <td>UX/UI Designer</td>
+                                <td>Full-time</td>
+                                <td>Melbourne / Hybrid</td>
+                            </tr>
+                            <tr>
+                                <td><strong>AQ303</strong></td>
+                                <td>Accessibility QA Specialist</td>
+                                <td>Full-time</td>
+                                <td>Melbourne / Hybrid</td>
+                            </tr>
+                            <tr>
+                                <td><strong>LC404</strong></td>
+                                <td>Learning Content Developer</td>
+                                <td>Full-time</td>
+                                <td>Melbourne / Hybrid</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="table-note">See the full responsibilities and requirements on our <a href="jobs.html">Job Descriptions page</a>.</p>
+            </div>
+        </section>
+
+        <!-- Meaningful First Nations acknowledgement and employment commitment -->
+        <section class="acknowledgement">
+            <div class="container home-callout">
+                <p class="eyebrow">Acknowledgement and inclusion</p>
+                <h2>Acknowledgement of Country</h2>
+                <p>
+                    EduTech Solutions acknowledges the Wurundjeri people of the Kulin Nation as
+                    the Traditional Custodians of the lands on which our Melbourne team works. We
+                    pay respect to Elders past and present. We are committed to inclusive employment
+                    pathways and warmly encourage Aboriginal and Torres Strait Islander peoples to apply.
+                </p>
+            </div>
+        </section>
+
+        <section class="cta" aria-labelledby="cta-title">
+            <div class="container cta-content">
+                <div>
+                    <p class="eyebrow">Join our team</p>
+                    <h2 id="cta-title">Help shape accessible online education.</h2>
+                </div>
+                <a class="button button-yellow" href="apply.html">Start your application</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <strong>EduTech Solutions</strong>
+                <p>&copy; 2026 GoatBH. Student project.</p>
+            </div>
+
+            <ul class="footer-links">
+                <li><a href="https://jira.swinburne.edu.au">Jira project</a></li>
+                <li><a href="https://github.com/NguyenPham023/GoatBH-WebProject">GitHub repository</a></li>
+                <li><a href="mailto:info@edutechsolutions.com">info@edutechsolutions.com</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
