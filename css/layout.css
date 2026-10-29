@@ -238,6 +238,77 @@ main::after {
 }
 
 /* =========================================================
+   ===== SHARED HEADER & FOOTER (all pages) =====
+   Same header/footer structure on Home, Jobs, About, Apply.
+   ========================================================= */
+
+/* Centred content width used by the header and footer */
+.container {
+    width: min(100% - 40px, var(--container));
+    margin-inline: auto;
+}
+
+/* Header: logo on the left, links on the right */
+.site-header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+    padding: 16px 0;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer: text on the left, links on the right */
+.site-footer {
+    padding: 28px 0;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 600px) {
+    .site-header .nav {
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 8px 20px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* =========================================================
    ===== APPLY PAGE =====
    Structure & grid for apply.html only (scoped to .apply-page),
    using the same widths and breakpoints as the pages above.
