@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply for a position at EduTech Solutions">
+  <meta name="keywords" content="jobs, apply, application, careers">
+  <meta name="author" content="Anh Thu">
+  <title>Apply | Job Application</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/dl.css">
+</head>
+<body>
+
+  <!-- ===== Header & Navigation (shared across team pages) ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">EduTech<span>Solutions</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="apply.html" class="active" aria-current="page">Apply</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Main Content ===== -->
+  <main class="container page-main">
+    <article class="form-card">
+
+      <header class="form-title">
+        <h1>Job Application Form</h1>
+        <p>
+          We are delighted by your interest in joining our team.
+          Please complete every section below, from your personal details
+          through to the position you wish to apply for.
+        </p>
+      </header>
+
+      <form class="app-form"
+            action="https://mercury.swin.edu.au/it000000/formtest.php"
+            method="post">
+
+        <!-- ================= 1. Personal Information ================= -->
+        <fieldset class="form-section">
+          <legend>Personal Information</legend>
+
+          <!-- Full Name: one question, two boxes with sub-labels -->
+          <fieldset class="q">
+            <legend class="q-label">Full Name</legend>
+            <div class="row">
+              <div class="sub">
+                <input type="text" id="firstname" name="firstname"
+                       pattern="[A-Za-z]{1,20}" maxlength="20"
+                       title="Up to 20 letters only" placeholder=" " required>
+                <label for="firstname" class="sublabel">First Name</label>
+              </div>
+              <div class="sub">
+                <input type="text" id="lastname" name="lastname"
+                       pattern="[A-Za-z]{1,20}" maxlength="20"
+                       title="Up to 20 letters only" placeholder=" " required>
+                <label for="lastname" class="sublabel">Last Name</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="row">
+            <div class="q">
+              <label for="dob" class="q-label">Date of Birth</label>
+              <input type="text" id="dob" name="dob" placeholder="DD/MM/YYYY"
+                     pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}"
+                     title="Use the format dd/mm/yyyy" required>
+            </div>
+
+            <!-- Gender: semantic fieldset + legend -->
+            <fieldset class="q">
+              <legend class="q-label">Gender</legend>
+              <div class="options">
+                <label class="opt"><input type="radio" name="gender" value="female" required> <span>Female</span></label>
+                <label class="opt"><input type="radio" name="gender" value="male"> <span>Male</span></label>
+                <label class="opt"><input type="radio" name="gender" value="other"> <span>Other</span></label>
+              </div>
+            </fieldset>
+          </div>
+        </fieldset>
+
+        <!-- ================= 2. Contact & Address ================= -->
+        <fieldset class="form-section">
+          <legend>Contact &amp; Address</legend>
+
+          <div class="row">
+            <div class="q">
+              <label for="email" class="q-label">E-mail</label>
+              <input type="email" id="email" name="email"
+                     placeholder="ex: myname@example.com" required>
+              <span class="sublabel">example@example.com</span>
+            </div>
+            <div class="q">
+              <label for="phone" class="q-label">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="0412 345 678"
+                     pattern="[0-9 ]{8,12}" maxlength="12"
+                     title="8 to 12 digits (spaces allowed)" required>
+            </div>
+          </div>
+
+          <!-- Address: one question, four boxes with sub-labels -->
+          <fieldset class="q">
+            <legend class="q-label">Address</legend>
+            <div class="sub">
+              <input type="text" id="street" name="street" placeholder=" "
+                     maxlength="40" title="Maximum 40 characters" required>
+              <label for="street" class="sublabel">Street Address</label>
+            </div>
+            <div class="row">
+              <div class="sub">
+                <input type="text" id="suburb" name="suburb" placeholder=" "
+                       maxlength="40" title="Maximum 40 characters" required>
+                <label for="suburb" class="sublabel">Suburb/Town</label>
+              </div>
+              <div class="row row-tight">
+                <div class="sub">
+                  <select id="state" name="state" required>
+                    <option value="" selected disabled>Select</option>
+                    <option value="VIC">VIC</option>
+                    <option value="NSW">NSW</option>
+                    <option value="QLD">QLD</option>
+                    <option value="NT">NT</option>
+                    <option value="WA">WA</option>
+                    <option value="SA">SA</option>
+                    <option value="TAS">TAS</option>
+                    <option value="ACT">ACT</option>
+                  </select>
+                  <label for="state" class="sublabel">State</label>
+                </div>
+                <div class="sub">
+                  <input type="text" id="postcode" name="postcode" placeholder=" "
+                         pattern="[0-9]{4}" maxlength="4" inputmode="numeric"
+                         title="Exactly 4 digits" required>
+                  <label for="postcode" class="sublabel">Postcode</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </fieldset>
+
+        <!-- ================= 3. Educational Background ================= -->
+        <fieldset class="form-section">
+          <legend>Educational Background</legend>
+
+          <fieldset class="q">
+            <legend class="q-label">Highest Qualification</legend>
+            <div class="row">
+              <div class="sub">
+                <input type="text" id="edu_degree" name="edu_degree" placeholder=" " required>
+                <label for="edu_degree" class="sublabel">Degree / Course</label>
+              </div>
+              <div class="sub">
+                <input type="text" id="edu_school" name="edu_school" placeholder=" " required>
+                <label for="edu_school" class="sublabel">University / College</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="sub">
+                <input type="text" id="edu_year" name="edu_year" placeholder="YYYY"
+                       pattern="[0-9]{4}" maxlength="4" inputmode="numeric" title="4-digit year" required>
+                <label for="edu_year" class="sublabel">Year Graduated</label>
+              </div>
+            </div>
+          </fieldset>
+        </fieldset>
+
+        <!-- ================= 4. Employment History ================= -->
+        <fieldset class="form-section">
+          <legend>Employment History</legend>
+
+          <fieldset class="q">
+            <legend class="q-label">What is your current employment status?</legend>
+            <div class="options">
+              <label class="opt"><input type="radio" name="empstatus" value="employed" required> <span>Employed</span></label>
+              <label class="opt"><input type="radio" name="empstatus" value="unemployed"> <span>Unemployed</span></label>
+              <label class="opt"><input type="radio" name="empstatus" value="selfemployed"> <span>Self-Employed</span></label>
+              <label class="opt"><input type="radio" name="empstatus" value="student"> <span>Student</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="q">
+            <legend class="q-label">Most Recent Employment</legend>
+            <div class="row">
+              <div class="sub">
+                <input type="text" id="emp_company" name="emp_company" placeholder=" " required>
+                <label for="emp_company" class="sublabel">Company</label>
+              </div>
+              <div class="sub">
+                <input type="text" id="emp_position" name="emp_position" placeholder=" " required>
+                <label for="emp_position" class="sublabel">Position</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="sub">
+                <input type="text" id="emp_year" name="emp_year" placeholder="YYYY"
+                       pattern="[0-9]{4}" maxlength="4" inputmode="numeric" title="4-digit year" required>
+                <label for="emp_year" class="sublabel">Year</label>
+              </div>
+              <div class="sub">
+                <input type="text" id="emp_reason" name="emp_reason" placeholder=" " required>
+                <label for="emp_reason" class="sublabel">Reason for Leaving</label>
+              </div>
+            </div>
+          </fieldset>
+        </fieldset>
+
+        <!-- ================= 5. Skills ================= -->
+        <fieldset class="form-section">
+          <legend>Skills</legend>
+
+          <fieldset class="q">
+            <legend class="q-label">Which skills do you have?</legend>
+            <div class="options">
+              <label class="opt"><input type="checkbox" name="skills[]" value="html_css" checked> <span>HTML &amp; CSS</span></label>
+              <label class="opt"><input type="checkbox" name="skills[]" value="javascript"> <span>JavaScript</span></label>
+              <label class="opt"><input type="checkbox" name="skills[]" value="uxui"> <span>UX/UI Design</span></label>
+              <label class="opt"><input type="checkbox" name="skills[]" value="accessibility"> <span>Accessibility (WCAG)</span></label>
+              <label class="opt"><input type="checkbox" name="skills[]" value="testing"> <span>QA &amp; Testing</span></label>
+              <label class="opt"><input type="checkbox" name="skills[]" value="elearning"> <span>E-learning Content</span></label>
+            </div>
+
+            <!-- "Other skills": ticking the box expands the textarea (pure CSS, no JS) -->
+            <div class="other-skills">
+              <input type="checkbox" id="skill-other" name="skills[]" value="other" class="toggle">
+              <label for="skill-other" class="opt toggle-label"><span>Other skills</span></label>
+              <div class="expand">
+                <textarea id="otherskills" name="otherskills" rows="4"
+                          placeholder="e.g. cloud hosting, project management..."></textarea>
+                <label for="otherskills" class="sublabel">Describe your other skills</label>
+              </div>
+            </div>
+          </fieldset>
+        </fieldset>
+
+        <!-- ================= 6. Position Applied For ================= -->
+        <fieldset class="form-section">
+          <legend>Position Applied For</legend>
+
+          <div class="row">
+            <div class="q">
+              <label for="jobref" class="q-label">What position are you applying for?</label>
+              <!-- Each value is an exact 5-character alphanumeric job reference -->
+              <select id="jobref" name="jobref" required>
+                <option value="" selected disabled>Please Select</option>
+                <option value="WD101">WD101 &ndash; Front-End Developer</option>
+                <option value="UX202">UX202 &ndash; UX/UI Designer</option>
+                <option value="AQ303">AQ303 &ndash; Accessibility QA Specialist</option>
+                <option value="LC404">LC404 &ndash; Learning Content Developer</option>
+              </select>
+            </div>
+            <div class="q">
+              <label for="startdate" class="q-label">Available start date:</label>
+              <input type="date" id="startdate" name="startdate" min="2026-10-28" required>
+            </div>
+          </div>
+
+          <fieldset class="q">
+            <legend class="q-label">Employment Type</legend>
+            <div class="options">
+              <label class="opt"><input type="radio" name="emptype" value="fulltime" required> <span>Full-Time</span></label>
+              <label class="opt"><input type="radio" name="emptype" value="parttime"> <span>Part-Time</span></label>
+              <label class="opt"><input type="radio" name="emptype" value="contract"> <span>Contract</span></label>
+            </div>
+          </fieldset>
+        </fieldset>
+
+        <p class="form-note">Please review your details carefully before submitting your application.</p>
+
+        <!-- ===== Actions ===== -->
+        <div class="form-actions">
+          <input type="reset" value="Reset" class="btn btn-secondary">
+          <input type="submit" value="Submit Application" class="btn btn-primary">
+        </div>
+      </form>
+    </article>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 EduTech Solutions Team. <a href="mailto:info@edutechsolutions.com.au">info@edutechsolutions.com.au</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
