@@ -7,16 +7,13 @@
   <meta name="keywords" content="jobs, apply, application, careers">
   <meta name="author" content="Anh Thu">
   <title>Apply | Job Application</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/dl.css">
 </head>
-<body>
+<body class="apply-page">
 
-   <!-- ===== Header & Navigation (same as index.html) ===== -->
+  <!-- ===== Header & Navigation (same as index.html) ===== -->
   <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
       <a class="logo" href="index.html" aria-label="EduTech Solutions home">
@@ -33,18 +30,22 @@
     </nav>
   </header>
 
-  <!-- ===== Main Content ===== -->
-  <main class="container page-main">
-    <article class="form-card">
+  <!-- ===== Banner (reuses the team's .page-banner from the Jobs page) ===== -->
+  <section class="page-banner apply-banner">
+    <div class="apply-banner-inner">
+      <p class="banner-tag">Join our team</p>
+      <h1>Job Application</h1>
+      <p class="banner-text">
+        We are delighted by your interest in joining EduTech Solutions.
+        Please complete every section below, from your personal details
+        through to the position you wish to apply for.
+      </p>
+    </div>
+  </section>
 
-      <header class="form-title">
-        <h1>Job Application Form</h1>
-        <p>
-          We are delighted by your interest in joining our team.
-          Please complete every section below, from your personal details
-          through to the position you wish to apply for.
-        </p>
-      </header>
+  <!-- ===== Main Content ===== -->
+  <main>
+    <article class="form-card">
 
       <form class="app-form"
             action="https://mercury.swin.edu.au/it000000/formtest.php"
@@ -76,9 +77,9 @@
           <div class="row">
             <div class="q">
               <label for="dob" class="q-label">Date of Birth</label>
-              <input type="text" id="dob" name="dob" placeholder="DD/MM/YYYY"
-                     pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/[0-9]{4}"
-                     title="Use the format dd/mm/yyyy" required>
+              <input type="date" id="dob" name="dob"
+                     min="1946-10-30" max="2011-10-30"
+                     title="You must be between 15 and 80 years old" required>
             </div>
 
             <!-- Gender: semantic fieldset + legend -->
@@ -261,10 +262,11 @@
                 <option value="AQ303">AQ303 &ndash; Accessibility QA Specialist</option>
                 <option value="LC404">LC404 &ndash; Learning Content Developer</option>
               </select>
+              <span class="sublabel">Not sure? <a href="jobs.html">View all job descriptions</a></span>
             </div>
             <div class="q">
-              <label for="startdate" class="q-label">Available start date:</label>
-              <input type="date" id="startdate" name="startdate" min="2026-10-28" required>
+              <label for="startdate" class="q-label">Available start date</label>
+              <input type="date" id="startdate" name="startdate" min="2026-10-29" required>
             </div>
           </div>
 
@@ -280,17 +282,16 @@
 
         <p class="form-note">Please review your details carefully before submitting your application.</p>
 
-        <!-- ===== Actions ===== -->
+        <!-- ===== Actions (Submit reuses the team's .apply-btn) ===== -->
         <div class="form-actions">
-          <input type="reset" value="Reset" class="btn btn-secondary">
-          <input type="submit" value="Submit Application" class="btn btn-primary">
+          <input type="reset" value="Reset" class="btn-reset">
+          <input type="submit" value="Submit Application" class="apply-btn apply-btn-large">
         </div>
       </form>
     </article>
   </main>
 
-  <!-- ===== Footer ===== -->
-     <!-- ===== Footer (shared across all pages) ===== -->
+  <!-- ===== Footer (shared across all pages) ===== -->
   <footer class="site-footer">
     <div class="footer-inner container">
       <div class="footer-content">
@@ -305,5 +306,6 @@
       </ul>
     </div>
   </footer>
+
 </body>
 </html>

@@ -59,13 +59,14 @@ textarea:focus-visible {
    ================================================== */
 
 :root {
-    /* Homepage palette */
-    --navy: #10162f;
-    --purple: #3a10e5;
-    --cream: #fff0e5;
-    --yellow: #ffd400;
+    /* Homepage palette (softened to match Jobs / About / Apply).
+       Names are kept so existing rules still work. */
+    --navy: #0b1f33;      /* was #10162f — same navy as the Jobs banner */
+    --purple: #0066cc;    /* was #3a10e5 — calmer blue accent */
+    --cream: #f4f7fb;     /* was #fff0e5 — soft blue-grey background */
+    --yellow: #ffd166;    /* was #ffd400 — softer gold */
     --white: #ffffff;
-    --grey: #565b6d;
+    --grey: #4a5568;      /* was #565b6d — same secondary text as Jobs */
     --container: 1120px;
 
     /* Jobs / About / Apply palette (same colours used in dl.css) */
@@ -83,7 +84,6 @@ textarea:focus-visible {
     --site-gold-light: #ffe08f;  /* gold button hover */
     --site-banner-text: #dbe4ee; /* light text on navy banners */
     --site-line: #bdc3c7;        /* .job-container border */
-    --site-teal: #009879;        /* About: fun facts table */
 }
 
 /* ==================================================
@@ -112,16 +112,21 @@ textarea:focus-visible {
 }
 
 .home-page h1 {
-    margin-bottom: 22px;
-    font-size: clamp(2.6rem, 6vw, 5rem);
-    line-height: 1;
-    letter-spacing: -0.05em;
+    margin-bottom: 20px;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
 }
 
 .home-page h2 {
-    margin-bottom: 16px;
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    line-height: 1.1;
+    margin-bottom: 14px;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    line-height: 1.2;
+    color: var(--site-heading);
+}
+
+.home-page .cta h2 {
+    color: var(--white);
 }
 
 .home-page a:focus-visible,
@@ -131,7 +136,8 @@ textarea:focus-visible {
     outline-offset: 3px;
 }
 
-.home-page .skip-link {
+/* Skip link: hidden until focused with the keyboard (all pages) */
+.skip-link {
     position: absolute;
     top: -60px;
     left: 16px;
@@ -141,7 +147,7 @@ textarea:focus-visible {
     background-color: var(--navy);
 }
 
-.home-page .skip-link:focus {
+.skip-link:focus {
     top: 12px;
 }
 
@@ -150,7 +156,7 @@ textarea:focus-visible {
     color: var(--purple);
     font-size: 0.8rem;
     font-weight: bold;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 
