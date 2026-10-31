@@ -149,6 +149,7 @@ textarea:focus-visible {
 
 .skip-link:focus {
     top: 12px;
+    outline: 3px solid var(--yellow)
 }
 
 .home-page .eyebrow {
