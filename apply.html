@@ -7,6 +7,10 @@
   <meta name="keywords" content="jobs, apply, application, careers">
   <meta name="author" content="Anh Thu">
   <title>Apply | Job Application</title>
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/dl.css">
@@ -17,7 +21,7 @@
   <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
       <a class="logo" href="index.html" aria-label="EduTech Solutions home">
-        <span class="logo-mark" aria-hidden="true">ET</span>
+        <img class="logo-mark" src="images/favicon.svg" alt="" width="40" height="40">
         <span>EduTech Solutions</span>
       </a>
 
@@ -107,10 +111,10 @@
             </div>
             <div class="q">
               <label for="phone" class="q-label">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" placeholder="0412345678"
-                    pattern="[0-9]{10}" minlength="10" maxlength="10"
+                  <input type="tel" id="phone" name="phone" placeholder="0123456789"
+                    pattern="[0-9]{10}" minlength="8" maxlength="12"
                     inputmode="numeric"
-                    title="Exactly 10 digits, numbers only (e.g. 0412345678)" required>
+                    title="Exactly 10 digits, numbers only (e.g. 0123456789)" required>
             </div>
           </div>
 
@@ -177,6 +181,7 @@
               <label class="opt"><input type="radio" name="empstatus" value="unemployed"> <span>Unemployed</span></label>
               <label class="opt"><input type="radio" name="empstatus" value="selfemployed"> <span>Self-Employed</span></label>
               <label class="opt"><input type="radio" name="empstatus" value="student"> <span>Student</span></label>
+              <label class="opt"><input type="radio" name="empstatus" value="other"> <span>Other</span></label>
             </div>
           </fieldset>
 
@@ -218,6 +223,11 @@
             <div class="sub when-unemployed">
               <input type="text" id="emp_reason" name="emp_reason" placeholder=" " maxlength="100">
               <label for="emp_reason" class="sublabel">Reason for Leaving</label>
+            </div>
+            <div class="sub when-other">
+              <input type="text" id="empstatus_other" name="empstatus_other" placeholder=" "
+                     maxlength="60" title="Briefly describe your situation">
+              <label for="empstatus_other" class="sublabel">Please specify (e.g. freelancer, internship, career break, carer)</label>
             </div>
           </fieldset>
         </fieldset>
@@ -295,20 +305,19 @@
   </main>
 
   <!-- ===== Footer (shared across all pages) ===== -->
-  <footer class="site-footer">
-    <div class="footer-inner container">
-      <div class="footer-content">
-        <p><strong>EduTech Solutions</strong></p>
-        <p>&copy; 2026 EduTech Solutions Team. All rights reserved.</p>
-      </div>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="jobs.html">Jobs</a></li>
-        <li><a href="apply.html">Apply</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </div>
-  </footer>
+      <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <strong>EduTech Solutions</strong>
+                <p>&copy; 2026 GoatBH. Student project.</p>
+            </div>
 
+            <ul class="footer-links">
+                <li><a href="https://jira.swinburne.edu.au">Jira project</a></li>
+                <li><a href="https://github.com/NguyenPham023/GoatBH-WebProject">GitHub repository</a></li>
+                <li><a href="mailto:info@edutechsolutions.com">info@edutechsolutions.com</a></li>
+            </ul>
+        </div>
+      </footer>
 </body>
 </html>

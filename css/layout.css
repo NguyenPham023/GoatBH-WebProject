@@ -305,7 +305,7 @@ main::after {
 }
 
 /* Home footer: text | links */
-.home-page .site-footer .footer-content {
+.site-footer .footer-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -376,13 +376,40 @@ main::after {
 }
 
 /* Quick facts: a row of chips instead of a bulleted list */
+/* Quick facts: a stats bar (value on top, label below),
+   separated by thin dividers — information, not buttons */
 .quick-facts {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
-    margin: 28px 0 0;
-    padding: 0;
+    row-gap: 20px;
+    margin: 36px 0 0;
+    padding: 24px 0 0;
     list-style: none;
+}
+
+.quick-facts li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 0 36px;
+}
+
+.quick-facts li:first-child {
+    padding-left: 0;
+}
+
+@media (max-width: 600px) {
+    /* 2 x 2 grid on phones */
+    .quick-facts {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 24px;
+    }
+
+    .quick-facts li,
+    .quick-facts li:first-child {
+        padding: 0 0 0 16px;
+    }
 }
 
 /* Browse roles: 4 cards in a row */
