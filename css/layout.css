@@ -250,10 +250,18 @@ main::after {
 
 .home-page .search-box {
     display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    align-items: end;
-    gap: 32px;
-    padding: 32px 36px;
+    grid-template-columns: 1fr;   /* heading on top, search bar below */
+    gap: 24px;
+    padding: 36px 40px;
+}
+
+/* Heading (left) and a short "open roles" note (right) */
+.home-page .search-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 24px;
 }
 
 .home-page .search-row {
@@ -264,6 +272,24 @@ main::after {
 .home-page .search-row input {
     flex: 1;
     min-width: 0;
+}
+
+/* Popular searches: label + a row of links that wraps */
+.home-page .quick-search {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 12px;
+    margin-top: 16px;
+}
+
+.home-page .quick-search-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 /* Section headings */
@@ -290,9 +316,57 @@ main::after {
     overflow-x: auto;
 }
 
-/* Acknowledgement: text block with gold accent line */
+/* Acknowledgement: text block with an ochre accent line
+   (the border colour is in the embedded <style> of index.html) */
 .home-page .home-callout {
     padding-left: 28px;
+}
+
+/* Acknowledgement: one split panel, navy title (left) | content (right) */
+.home-page .ack-panel {
+    display: grid;
+    grid-template-columns: 5fr 8fr;
+    overflow: hidden;   /* keeps the navy side inside the rounded corners */
+}
+
+.home-page .ack-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 40px;
+}
+
+.home-page .ack-body {
+    padding: 44px 48px;
+}
+
+/* Commitments: a list of rows, icon | text */
+.home-page .ack-commitments {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.home-page .ack-item {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    align-items: start;
+    gap: 16px;
+    padding: 16px 0;
+}
+
+@media (max-width: 900px) {
+    .home-page .ack-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .home-page .ack-side {
+        padding: 36px 28px;
+    }
+
+    .home-page .ack-body {
+        padding: 32px 28px;
+    }
 }
 
 /* Call to action: text | button */
@@ -304,7 +378,8 @@ main::after {
     gap: 28px;
 }
 
-/* Home footer: text | links */
+
+/* Footer on every page: text | links */
 .site-footer .footer-content {
     display: flex;
     align-items: center;
@@ -344,6 +419,11 @@ main::after {
         flex-direction: column;
     }
 
+    .site-footer .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .home-page .benefit-grid,
     .home-page .voices-grid {
         grid-template-columns: 1fr;
@@ -375,7 +455,6 @@ main::after {
     max-width: 720px;
 }
 
-/* Quick facts: a row of chips instead of a bulleted list */
 /* Quick facts: a stats bar (value on top, label below),
    separated by thin dividers — information, not buttons */
 .quick-facts {
@@ -518,7 +597,8 @@ main::after {
     padding: 0;
 }
 
-/* Footer: text on the left, links on the right */
+/* Footer spacing (layout of its content is in the HOME PAGE section:
+   .site-footer .footer-content). .footer-inner is kept for older markup. */
 .site-footer {
     padding: 28px 0;
 }

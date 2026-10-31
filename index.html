@@ -6,10 +6,9 @@
     <meta name="description" content="EduTech Solutions careers: help us build accessible and inclusive digital learning tools.">
     <meta name="keywords" content="EdTech careers, web developer jobs, UX design jobs, accessible education">
     <meta name="author" content="GoatBH">
-    <title>EduTech Solutions | Careers</title>
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <title>Home | EduTech Solutions</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=2">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico?v=2">
 
     <!-- Shared external stylesheets used by every page -->
     <link rel="stylesheet" href="css/style.css">
@@ -19,7 +18,7 @@
     <!-- Required embedded CSS example: used only on this page -->
     <style>
         .home-callout {
-            border-left: 4px solid var(--yellow);
+            border-left: 4px solid var(--yellow);   /* gold accent, same as the site palette */
         }
     </style>
 </head>
@@ -71,21 +70,24 @@
             </div>
         </section>
 
-        <!-- Static job search: submits the search term to jobs.html -->
+        <!-- Job search: heading on top, full-width search bar, quick links below -->
         <section class="search-section" aria-labelledby="search-title">
             <div class="container search-box">
-                <div>
-                    <p class="eyebrow">Find your opportunity</p>
-                    <h2 id="search-title">Search our vacancies</h2>
+                <div class="search-head">
+                    <div>
+                        <p class="eyebrow">Find your opportunity</p>
+                        <h2 id="search-title">Search our vacancies</h2>
+                    </div>
                 </div>
 
                 <form class="job-search" action="jobs.html" method="get" role="search">
-                    <label for="job-search">Search by job title or skill</label>
                     <div class="search-row">
+                        <!-- No visible label: aria-label gives the box its name for screen readers -->
                         <input type="search" id="job-search" name="keyword"
-                               placeholder="Example: web developer" required list="job-titles"
-                               autocomplete="off">
-                    <!-- Suggestions shown while typing -->           
+                               placeholder="Search by job title or skill, e.g. web developer"
+                               aria-label="Search by job title or skill" list="job-titles"
+                               autocomplete="off" required>
+                        <!-- Suggestions shown while typing (pure HTML) -->
                         <datalist id="job-titles">
                             <option value="Front-End Developer">WD101 &middot; web, HTML, CSS, JavaScript, React</option>
                             <option value="UX/UI Designer">UX202 &middot; design, Figma, wireframe, prototype</option>
@@ -93,6 +95,17 @@
                             <option value="Learning Content Developer">LC404 &middot; e-learning, course, teaching, content</option>
                         </datalist>
                         <button type="submit">Search jobs</button>
+                    </div>
+
+                    <!-- Pure HTML: each link opens that job's description on jobs.html -->
+                    <div class="quick-search">
+                        <p class="quick-search-label">Popular:</p>
+                        <ul class="quick-search-links">
+                            <li><a href="jobs.html#WD101">Web / Front-End</a></li>
+                            <li><a href="jobs.html#UX202">UX/UI Design</a></li>
+                            <li><a href="jobs.html#AQ303">Accessibility / QA</a></li>
+                            <li><a href="jobs.html#LC404">Learning Content</a></li>
+                        </ul>
                     </div>
                 </form>
             </div>
@@ -235,20 +248,68 @@
             </div>
         </section>
 
-        <!-- Meaningful First Nations acknowledgement and employment commitment -->
-        <section class="acknowledgement">
-            <div class="container home-callout">
-                <p class="eyebrow">Acknowledgement and inclusion</p>
-                <h2>Acknowledgement of Country</h2>
-                <p>
-                    EduTech Solutions acknowledges the Wurundjeri people of the Kulin Nation as
-                    the Traditional Custodians of the lands on which our Melbourne team works. We
-                    pay respect to Elders past and present. We are committed to inclusive employment
-                    pathways and warmly encourage Aboriginal and Torres Strait Islander peoples to apply.
-                </p>
+        <!-- Acknowledgement of Country and inclusive hiring commitment -->
+        <section class="acknowledgement" aria-labelledby="ack-title">
+            <div class="container">
+                <div class="ack-panel">
+
+                    <!-- Left: title panel (soft blue) -->
+                    <div class="ack-side">
+                        <p class="eyebrow">Respect and inclusion</p>
+                        <h2 id="ack-title">Acknowledgement of Country</h2>
+                        <p class="ack-place">Wurundjeri Woi-wurrung Country &middot; Melbourne</p>
+                    </div>
+
+                    <!-- Right: the acknowledgement and our commitments -->
+                    <div class="ack-body">
+                        <div class="ack-text home-callout">
+                            <p class="ack-lead">
+                                EduTech Solutions acknowledges the Wurundjeri Woi-wurrung people of the
+                                Kulin Nation as the Traditional Custodians of the lands on which our
+                                Melbourne team works.
+                            </p>
+                            <p>
+                                We pay our respects to their Elders past and present, and extend that
+                                respect to all Aboriginal and Torres Strait Islander peoples.
+                            </p>
+                        </div>
+
+                        <h3 class="ack-subtitle">Our commitment to inclusive hiring</h3>
+                        <ul class="ack-commitments">
+                            <li class="ack-item">
+                                <span class="ack-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                </span>
+                                <div>
+                                    <h4>Everyone is welcome</h4>
+                                    <p>We warmly encourage Aboriginal and Torres Strait Islander peoples to apply for any of our roles.</p>
+                                </div>
+                            </li>
+                            <li class="ack-item">
+                                <span class="ack-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+                                </span>
+                                <div>
+                                    <h4>Adjustments on request</h4>
+                                    <p>Tell us what helps you in an interview, such as extra time, a support person or an online meeting.</p>
+                                </div>
+                            </li>
+                            <li class="ack-item">
+                                <span class="ack-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                </span>
+                                <div>
+                                    <h4>Talk to us first</h4>
+                                    <p>Questions about a role or the process? Email us at <a href="mailto:info@edutechsolutions.com">info@edutechsolutions.com</a>.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- Call to action -->
         <section class="cta" aria-labelledby="cta-title">
             <div class="container cta-content">
                 <div>
@@ -258,6 +319,7 @@
                 <a class="button button-yellow" href="apply.html">Start your application</a>
             </div>
         </section>
+
     </main>
 
     <footer class="site-footer">
@@ -268,8 +330,9 @@
             </div>
 
             <ul class="footer-links">
-                <li><a href="https://jira.swinburne.edu.au">Jira project</a></li>
+                <li><a href="https://student-team-goatbh.atlassian.net/?continue=https%3A%2F%2Fstudent-team-goatbh.atlassian.net%2Fwelcome%2Fsoftware%3FprojectId%3D10000&amp;atlOrigin=eyJpIjoiYWYyNTkyMDQ2NWUyNDBlM2JhNmYyNjc4ZGVjYTE0MTEiLCJwIjoiamlyYS1zb2Z0d2FyZSJ9">Jira project</a></li>
                 <li><a href="https://github.com/NguyenPham023/GoatBH-WebProject">GitHub repository</a></li>
+                <li><a href="https://nguyenpham023.github.io/GoatBH-WebProject/">Live website</a></li>
                 <li><a href="mailto:info@edutechsolutions.com">info@edutechsolutions.com</a></li>
             </ul>
         </div>

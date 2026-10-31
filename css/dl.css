@@ -8,26 +8,26 @@
         linear-gradient(135deg, var(--site-navy-light) 0%, var(--site-navy) 100%);
     color: var(--white);
 }
- 
+
 .hero-slogan {
     color: var(--site-gold);
     font-size: 1.1rem;
     margin: 0 0 8px;
 }
- 
+
 .hero h1 {
     font-size: clamp(2rem, 5vw, 3.2rem);
     line-height: 1.15;
     margin: 0 0 16px;
 }
- 
+
 .hero-mission {
     font-size: 1.15rem;
     line-height: 1.6;
     max-width: 55ch;
     margin: 0 0 28px;
 }
- 
+
 .hero-btn {
     display: inline-block;
     background-color: var(--site-gold);
@@ -37,16 +37,16 @@
     font-weight: bold;
     text-decoration: none;
 }
- 
+
 .hero-btn:hover {
     background-color: var(--site-gold-light);
 }
- 
+
 .hero-btn:focus-visible {
     outline: 3px solid var(--white);
     outline-offset: 3px;
 }
- 
+
 .hero-visual img {
     display: block;
     width: 100%;
@@ -55,13 +55,13 @@
     border-radius: 12px;
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
 }
- 
+
 .hero-visual figcaption {
     margin-top: 8px;
     font-size: 0.9rem;
     color: var(--site-banner-text);
 }
- 
+
 /*  Components: core values  */
 .values-section h2 {
     text-align: center;
@@ -69,14 +69,14 @@
     color: var(--site-heading);
     margin: 0 0 10px;
 }
- 
+
 .values-intro {
     text-align: center;
     color: var(--site-text);
     max-width: 60ch;
     margin: 0 auto;
 }
- 
+
 .value-card {
     background-color: var(--white);
     padding: 24px 20px;
@@ -84,12 +84,12 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
- 
+
 .value-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
- 
+
 .value-icon {
     width: 48px;
     height: 48px;
@@ -105,41 +105,41 @@
     stroke-linecap: round;
     stroke-linejoin: round;
 }
- 
+
 .value-card h3 {
     margin: 0 0 8px;
     font-size: 1.15rem;
     color: var(--site-ink);
 }
- 
+
 .value-card p {
     margin: 0;
     font-size: 0.95rem;
     line-height: 1.6;
     color: var(--site-text);
 }
- 
+
 /*  Components: story & vision  */
 /* (grid, padding and column layout moved to layout.css) */
 .story-section {
     background-color: var(--cream);
 }
- 
+
 /* Visuals - Collage styling */
 .collage-img {
     width: 100%;
     object-fit: cover;
     border-radius: 8px;
 }
- 
+
 .img-top {
     aspect-ratio: 4 / 3;
 }
- 
+
 .img-bottom {
     aspect-ratio: 1 / 1;
 }
- 
+
 /* Content styling */
 .story-content h2 {
     font-size: 2.5rem;
@@ -147,13 +147,13 @@
     color: #111;
     margin-bottom: 1.5rem;
 }
- 
+
 .story-origin h3 {
     font-size: 1.25rem;
     color: #555;
     margin-bottom: 1rem;
 }
- 
+
 .story-origin p {
     font-size: 1rem;
     line-height: 1.6;
@@ -166,7 +166,7 @@
     padding: 60px 20px;
     color: #333;
 }
- 
+
 .team-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -175,7 +175,7 @@
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
- 
+
 .team-section h2 {
     font-size: 2.2rem;
     margin-bottom: 30px;
@@ -183,7 +183,7 @@
     text-align: center;
     position: relative;
 }
- 
+
 .team-section h2::after {
     content: '';
     display: block;
@@ -193,7 +193,7 @@
     margin: 10px auto 0;
     border-radius: 2px;
 }
- 
+
 .team-content-wrapper {
     display: flex;
     align-items: center;
@@ -201,7 +201,7 @@
     gap: 40px;
     flex-wrap: wrap;
 }
- 
+
 .team-details-list {
     list-style: none;
     padding: 0;
@@ -209,7 +209,7 @@
     flex: 1;
     min-width: 280px;
 }
- 
+
 .team-details-list>li {
     font-size: 1.15rem;
     padding: 12px 16px;
@@ -218,17 +218,17 @@
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
- 
+
 .team-details-list>li strong {
     color: #222;
 }
- 
+
 .nested-members-list {
     list-style-type: disc;
     margin-top: 8px;
     padding-left: 20px;
 }
- 
+
 .nested-members-list li {
     font-size: 1rem;
     background-color: transparent;
@@ -237,7 +237,7 @@
     margin-bottom: 4px;
     color: var(--site-text);
 }
- 
+
 .student-id {
     font-size: 0.85rem;
     color: var(--site-blue);
@@ -247,7 +247,7 @@
     font-weight: 600;
     margin-left: 6px;
 }
- 
+
 .image-section {
     flex: 1;
     min-width: 280px;
@@ -259,7 +259,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     margin: 0;
 }
- 
+
 .image-section img {
     width: 100%;
     max-width: 420px;
@@ -268,7 +268,7 @@
     border-radius: 6px;
     object-fit: cover;
 }
- 
+
 .image-section figcaption {
     margin-top: 10px;
     font-size: 0.95rem;
@@ -276,25 +276,25 @@
     font-style: italic;
     font-weight: 600;
 }
- 
+
 /* Team Section & Hover Overlay Cards */
 .team {
     padding: 60px 20px;
     text-align: center;
 }
- 
+
 .team h1 {
     font-size: 2.2rem;
     margin-bottom: 10px;
     color: var(--site-heading);
 }
- 
+
 .section-hint {
     color: #64748b;
     font-size: 0.95rem;
     margin-bottom: 40px;
 }
- 
+
 .team-cards {
     display: flex;
     justify-content: center;
@@ -303,7 +303,7 @@
     max-width: 1300px;
     margin: 0 auto;
 }
- 
+
 .card {
     background: var(--white);
     border-radius: 10px;
@@ -316,23 +316,23 @@
     flex-direction: column;
     transition: box-shadow 0.3s ease;
 }
- 
+
 .card:hover {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
- 
+
 .card-img {
     width: 100%;
     height: 380px;
 }
- 
+
 .card-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center top;
 }
- 
+
 .card-info {
     position: absolute;
     bottom: 0;
@@ -351,32 +351,32 @@
     margin: 0;
     box-sizing: border-box;
 }
- 
+
 .card:hover .card-info {
     transform: translateY(0);
 }
- 
+
 .card-name {
     font-size: 1.3rem;
     margin: 0 0 4px 0;
     color: #111;
     font-weight: bold;
 }
- 
+
 .card-role {
     font-weight: 600;
     color: var(--site-blue);
     font-size: 0.95rem;
     margin: 0 0 8px 0;
 }
- 
+
 .card-contribution {
     font-size: 0.88rem;
     color: var(--site-text);
     margin: 0 0 8px 0;
     line-height: 1.4;
 }
- 
+
 .card-quote {
     font-size: 0.82rem;
     color: #718096;
@@ -385,21 +385,21 @@
     padding-top: 8px;
     border-top: 1px solid #edf2f7;
 }
- 
+
 /* Team Fun Facts Table */
 .fun-facts-section {
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
 }
- 
+
 .fun-facts-section h2 {
     text-align: center;
     color: var(--site-heading);
     margin-bottom: 20px;
     font-size: 2rem;
 }
- 
+
 .content-table {
     border-collapse: collapse;
     margin: 25px 0;
@@ -411,7 +411,7 @@
     box-shadow: 0 4px 14px rgba(11, 31, 51, 0.08);
     background-color: var(--white);
 }
- 
+
 .content-table caption {
     font-size: 1.1rem;
     font-weight: bold;
@@ -419,41 +419,41 @@
     color: #333;
     text-align: left;
 }
- 
+
 .content-table th {
     background-color: var(--site-navy);
     color: var(--white);
     text-align: left;
     font-weight: bold;
 }
- 
+
 .content-table th,
 .content-table td {
     padding: 12px 15px;
 }
- 
+
 .content-table tbody tr {
     border-bottom: 1px solid #dddddd;
     transition: background-color 0.2s ease;
 }
- 
+
 .content-table tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
- 
+
 .content-table tbody tr:hover {
     background-color: var(--site-blue-tint);
 }
- 
+
 .content-table tbody tr:last-of-type {
     border-bottom: 2px solid var(--site-blue);
 }
- 
+
 .content-table tbody tr.active-row {
     font-weight: bold;
     color: var(--site-blue-dark);
 }
- 
+
 /* Apply Button Styling */
 .apply-btn {
     display: inline-block;
@@ -464,24 +464,24 @@
     border-radius: 4px;
     font-weight: bold;
 }
- 
+
 .apply-btn:hover {
     background-color: var(--site-ink);
 }
- 
+
 /* --- Components: call to action --- */
 .cta-section {
     background-color: var(--site-navy);
     background-image: linear-gradient(135deg, var(--site-navy-light) 0%, var(--site-navy) 100%);
     color: var(--white);
 }
- 
+
 .cta-section h2 {
     font-size: clamp(1.7rem, 4vw, 2.4rem);
     line-height: 1.2;
     margin: 0 0 14px;
 }
- 
+
 .cta-section p {
     font-size: 1.1rem;
     line-height: 1.6;
@@ -489,7 +489,7 @@
     margin: 0 auto;
     max-width: 55ch;
 }
- 
+
 .cta-btn {
     display: inline-block;
     min-width: 200px;
@@ -501,41 +501,41 @@
     text-align: center;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
- 
+
 /* Primary: solid yellow */
 .cta-primary {
     background-color: var(--site-gold);
     color: var(--site-ink);
 }
- 
+
 .cta-primary:hover {
     background-color: var(--site-gold-light);
     border-color: var(--site-gold-light);
 }
- 
+
 /* Secondary: outline */
 .cta-secondary {
     background-color: transparent;
     color: var(--white);
     border-color: var(--white);
 }
- 
+
 .cta-secondary:hover {
     background-color: var(--white);
     color: var(--site-ink);
 }
- 
+
 .cta-btn:focus-visible {
     outline: 3px solid var(--white);
     outline-offset: 3px;
 }
- 
+
 /* ==================================================
    Homepage: colours, borders and reusable components
    Calm, professional palette shared with Jobs/About/Apply:
    navy text, blue accents, soft backgrounds, soft shadows.
    ================================================== */
- 
+
 /* ----- Hero: soft blue-grey background, no harsh grid ----- */
 .home-page .hero {
     color: var(--navy);
@@ -543,14 +543,14 @@
     background-image: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
     border-bottom: 1px solid var(--site-border);
 }
- 
+
 .home-page .hero h1 {
     margin: 0 0 20px;
     font-size: clamp(2.4rem, 5vw, 3.6rem);
     line-height: 1.1;
     letter-spacing: -0.02em;
 }
- 
+
 /* ----- Buttons: rounded, soft shadow instead of hard offset ----- */
 .home-page .button,
 .home-page button {
@@ -568,7 +568,7 @@
     text-decoration: none;
     transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
- 
+
 .home-page .button:hover,
 .home-page button:hover {
     background-color: var(--site-blue-dark);
@@ -576,98 +576,138 @@
     transform: translateY(-2px);
     box-shadow: 0 8px 18px rgba(11, 31, 51, 0.16);
 }
- 
+
 .home-page .button-light {
     color: var(--navy);
     background-color: var(--white);
     border-color: var(--site-border);
 }
- 
+
 .home-page .button-light:hover {
     color: var(--navy);
     background-color: var(--white);
     border-color: var(--purple);
 }
- 
+
 .home-page .button-yellow {
     color: var(--site-ink);
     background-color: var(--yellow);
     border-color: var(--yellow);
 }
- 
+
 .home-page .button-yellow:hover {
     color: var(--site-ink);
     background-color: var(--site-gold-light);
     border-color: var(--site-gold-light);
 }
- 
+
 /* ----- Hero image: rounded with a soft shadow ----- */
 .home-page .hero-image {
     margin: 0;
 }
- 
+
 .home-page .hero-image img {
     width: 100%;
     border: 0;
     border-radius: 12px;
     box-shadow: 0 18px 40px rgba(11, 31, 51, 0.18);
 }
- 
+
 .home-page .hero-image figcaption {
     margin-top: 14px;
     color: var(--grey);
     font-size: 0.9rem;
 }
- 
-/* ----- Search: light card instead of a dark band ----- */
+
+/* ----- Search: light blue card that overlaps the hero ----- */
 .home-page .search-section {
     color: var(--navy);
-    background-color: var(--white);
+    background-color: transparent;
 }
- 
+
 .home-page .search-box {
     background-color: var(--site-blue-tint);
     border: 1px solid #cfdcf5;
     border-radius: 12px;
 }
- 
+
 .home-page .acknowledgement .eyebrow {
-    color: #8a6d1d;
+    color: var(--purple);   /* blue eyebrow, like the other light sections */
 }
- 
+
 .home-page .cta .eyebrow {
     color: var(--yellow);
 }
- 
+
 .home-page .search-section h2 {
     margin-bottom: 0;
     font-size: 1.8rem;
 }
- 
-.home-page .job-search label {
+
+/* Visible label above the search bar, with space before the box
+   (a label with class="visually-hidden" stays hidden) */
+.home-page .job-search label:not(.visually-hidden) {
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+    margin-bottom: 14px;
+    font-weight: 600;
+    color: var(--site-heading);
 }
- 
+
+/* Big search bar with a magnifier icon inside */
 .home-page .search-row input {
-    padding: 12px 14px;
+    min-height: 54px;
+    padding: 12px 16px 12px 46px;
     border: 1px solid #b8c2cf;
-    border-radius: 6px;
+    border-radius: 8px;
     background-color: var(--white);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%234a5568' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 16px center;
     font: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
- 
+
 .home-page .search-row input:focus {
     outline: none;
     border-color: var(--purple);
+    background-color: var(--white);
     box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.18);
 }
- 
+
 .home-page .search-row button {
+    min-height: 54px;
+    padding: 0 28px;
+    border-radius: 8px;
     box-shadow: none;
 }
- 
+
+/* "Popular searches" links (pure HTML/CSS, no JavaScript) */
+.home-page .quick-search-label {
+    margin: 0;
+    color: var(--grey);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.home-page .quick-search-links a {
+    display: inline-block;
+    padding: 6px 14px;
+    color: var(--site-blue-dark);
+    background-color: var(--white);
+    border: 1px solid #cfdcf5;
+    border-radius: 999px;          /* pill shape = a tag/link, not a main button */
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.home-page .quick-search-links a:hover {
+    color: var(--white);
+    background-color: var(--site-blue);
+    border-color: var(--site-blue);
+}
+
 /* ----- Benefit cards: same style as .role-card on Jobs ----- */
 .home-page .card {
     position: static;
@@ -683,12 +723,12 @@
     text-align: left;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
- 
+
 .home-page .card:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
 }
- 
+
 .home-page .card-number {
     display: inline-grid;
     place-items: center;
@@ -700,30 +740,30 @@
     border-radius: 50%;
     font-weight: bold;
 }
- 
+
 .home-page .card h3 {
     margin-bottom: 10px;
     font-size: 1.25rem;
 }
- 
+
 .home-page .card p {
     margin-bottom: 0;
     color: var(--grey);
 }
- 
+
 /* ----- Team voices ----- */
 .home-page .voices-section {
     background-color: var(--cream);
 }
- 
+
 .home-page .voices-heading {
     text-align: center;
 }
- 
+
 .home-page .voices-heading p:last-child {
     color: var(--grey);
 }
- 
+
 .home-page .voice-card {
     padding: 30px;
     background-color: var(--white);
@@ -732,7 +772,7 @@
     box-shadow: 0 4px 14px rgba(11, 31, 51, 0.06);
     text-align: center;
 }
- 
+
 .home-page .voice-card img {
     width: 140px;
     height: 140px;
@@ -746,7 +786,7 @@
 .home-page .voice-card:nth-child(3) img {
     object-position: center top;
 }
- 
+
 .home-page .voice-card blockquote {
     min-height: 110px;
     margin: 0 0 24px;
@@ -756,120 +796,215 @@
     line-height: 1.5;
     color: var(--site-ink);
 }
- 
+
 .home-page .voice-card h3 {
     margin-bottom: 2px;
 }
- 
+
 .home-page .voice-card p {
     margin-bottom: 0;
     color: var(--purple);
     font-weight: 600;
     font-size: 0.95rem;
 }
- 
+
 /* ----- Vacancies table: navy header, soft rows ----- */
 .home-page .vacancies-section {
     background-color: var(--white);
 }
- 
+
 .home-page table {
     width: 100%;
     border-collapse: collapse;
     background-color: var(--white);
 }
- 
+
 .home-page caption {
     padding: 12px 0;
     font-weight: bold;
     text-align: left;
     color: var(--grey);
 }
- 
+
 .home-page th,
 .home-page td {
     padding: 14px 16px;
     border: 1px solid var(--site-border);
     text-align: left;
 }
- 
+
 .home-page thead tr:first-child th {
     color: var(--white);
     background-color: var(--navy);
     text-align: center;
     letter-spacing: 0.04em;
 }
- 
+
 .home-page thead tr:nth-child(2) th {
     color: var(--navy);
     background-color: var(--site-blue-tint);
 }
- 
+
 .home-page tbody th {
     background-color: var(--site-soft);
 }
- 
+
 .home-page tbody tr:hover td {
     background-color: var(--cream);
 }
- 
+
 .home-page .table-note {
     margin-top: 18px;
 }
- 
+
 .home-page .table-note a {
     color: var(--purple);
     font-weight: bold;
 }
- 
-/* ----- Acknowledgement: soft background, gold accent ----- */
+
+/* ----- Acknowledgement of Country: one split panel (soft blue | white) -----
+   Deliberately different from the benefit cards above:
+   one panel instead of three cards, rows with dividers instead of tiles. */
 .home-page .acknowledgement {
     color: var(--navy);
-    background-color: var(--site-soft);
-    border-top: 1px solid var(--site-border);
-    border-bottom: 1px solid var(--site-border);
+    background-color: var(--cream);
 }
- 
-.home-page .acknowledgement h2 {
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
+
+/* The panel: white, rounded, soft shadow */
+.home-page .ack-panel {
+    background-color: var(--white);
+    border: 1px solid var(--site-border);
+    border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(11, 31, 51, 0.08);
 }
- 
-.home-page .acknowledgement p:last-child {
-    max-width: 75ch;
-    margin-bottom: 0;
+
+/* Left side: soft blue panel (the CTA above and the footer below are navy,
+   so a light panel keeps the end of the page from feeling heavy) */
+.home-page .ack-side {
+    color: var(--navy);
+    background-color: var(--site-blue-tint);
+    background-image:
+        radial-gradient(circle at 100% 100%, rgba(0, 102, 204, 0.10) 0, rgba(0, 102, 204, 0.10) 120px, transparent 121px),
+        linear-gradient(160deg, #eef4ff 0%, var(--site-blue-tint) 100%);
+    border-right: 1px solid var(--site-border);
+}
+
+.home-page .ack-side h2 {
+    margin: 0 0 24px;
+    font-size: clamp(1.9rem, 3.2vw, 2.5rem);
+    line-height: 1.15;
+    color: var(--site-heading);
+}
+
+/* Place name under the title, with a short gold line above it */
+.home-page .ack-place {
+    margin: 0;
+    padding-top: 16px;
+    border-top: 3px solid var(--yellow);
+    width: fit-content;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--grey);
+}
+
+/* Right side: the acknowledgement text */
+.home-page .ack-text p {
+    margin: 0 0 12px;
     color: var(--site-text);
 }
- 
+
+.home-page .ack-text p:last-child {
+    margin-bottom: 0;
+}
+
+.home-page .ack-text .ack-lead {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--site-ink);
+}
+
+/* "Our commitment..." label: small uppercase, like a section label */
+.home-page .ack-subtitle {
+    margin: 36px 0 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--purple);
+}
+
+/* Each commitment row is separated by a thin line */
+.home-page .ack-item + .ack-item {
+    border-top: 1px solid var(--site-border);
+}
+
+.home-page .ack-item h4 {
+    margin: 0 0 4px;
+    font-size: 1.02rem;
+    color: var(--site-ink);
+}
+
+.home-page .ack-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--site-text);
+}
+
+.home-page .ack-item a {
+    color: var(--site-blue-dark);
+    font-weight: 600;
+    text-underline-offset: 3px;
+}
+
+/* Icon: outlined square badge (the benefit cards use filled circles) */
+.home-page .ack-icon {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    color: var(--purple);
+    border: 1.5px solid #cfdcf5;
+    border-radius: 12px;
+}
+
+.home-page .ack-icon svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+}
+
 /* ----- Call to action: same navy gradient as the Jobs banner ----- */
 .home-page .cta {
     color: var(--white);
     background-color: var(--site-navy);
     background-image: linear-gradient(135deg, var(--site-navy-light) 0%, var(--site-navy) 100%);
 }
- 
+
 .home-page .cta h2 {
     max-width: 700px;
     margin-bottom: 0;
     font-size: clamp(1.8rem, 3.5vw, 2.6rem);
 }
- 
+
 /* ----- Footer ----- */
 .home-page .site-footer {
     color: var(--white);
     background-color: var(--navy);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
- 
- 
+
+
 .home-page .footer-links a {
     color: var(--white);
     text-underline-offset: 4px;
 }
- 
+
 .home-page .footer-links a:hover {
     color: var(--yellow);
 }
- 
+
 /* ===== Components: jobs banner ===== */
 .page-banner {
     color: var(--white);
@@ -879,7 +1014,7 @@
         radial-gradient(circle at 8% 90%, rgba(255, 255, 255, 0.05) 0, rgba(255, 255, 255, 0.05) 90px, transparent 91px),
         linear-gradient(135deg, var(--site-navy-light) 0%, var(--site-navy) 100%);
 }
- 
+
 .banner-tag {
     display: inline-block;
     margin: 0 0 12px;
@@ -892,13 +1027,13 @@
     background-color: var(--site-gold);
     border-radius: 999px;
 }
- 
+
 .page-banner h1 {
     margin: 0 0 12px;
     font-size: clamp(2rem, 5vw, 3rem);
     line-height: 1.15;
 }
- 
+
 .banner-text {
     max-width: 60ch;
     margin: 0;
@@ -906,7 +1041,7 @@
     line-height: 1.6;
     color: var(--site-banner-text);
 }
- 
+
 /* Quick facts stats bar: no box, no fill — so it doesn't look clickable */
 .quick-facts {
     border-top: 1px solid rgba(255, 255, 255, 0.15);
@@ -944,13 +1079,13 @@
         font-size: 1.35rem;
     }
 }
- 
+
 /* ===== Components: role cards ===== */
 .role-nav h2 {
     margin: 0;
     color: var(--site-heading);
 }
- 
+
 .role-card {
     display: flex;
     flex-direction: column;
@@ -963,12 +1098,12 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
- 
+
 .role-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
- 
+
 .role-ref {
     align-self: flex-start;
     padding: 2px 10px;
@@ -978,19 +1113,19 @@
     border: 1px solid var(--site-blue);
     border-radius: 4px;
 }
- 
+
 .role-card h3 {
     margin: 0;
     font-size: 1.1rem;
     color: var(--site-ink);
 }
- 
+
 .role-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
 }
- 
+
 .role-tags span {
     padding: 2px 10px;
     font-size: 0.8rem;
@@ -998,52 +1133,63 @@
     background-color: #f1f3f5;
     border-radius: 999px;
 }
- 
+
 .role-card a {
     margin-top: 0px;
     /* pushes the link to the card bottom */
     font-weight: 600;
     color: var(--site-blue-dark);
 }
- 
+
 /* arrow */
 .role-card a:hover {
     text-decoration: underline;
 }
- 
+
 /* ===== Components: job sections ===== */
 .job-section {
     margin-bottom: 24px;
 }
- 
+
 .job-section h3 {
     margin: 0 0 8px;
     padding-bottom: 6px;
     color: var(--site-heading);
 }
- 
+
 .job-section h4 {
     margin: 16px 0 6px;
     color: var(--site-ink);
 }
- 
+
 .job-section ul {
     margin: 0;
     padding-left: 22px;
 }
- 
+
 .job-section li {
     margin-bottom: 8px;
     line-height: 1.6;
 }
- 
+
 .salary-line {
     padding: 10px 14px;
     background-color: var(--site-blue-tint);
     border-left: 4px solid var(--site-blue);
     border-radius: 4px;
 }
- 
+
+/* Highlight the job opened from a link such as jobs.html#WD101 */
+.job-container,
+.role-nav h2 {
+    scroll-margin-top: 24px;   /* small gap above the job after jumping to it */
+}
+
+.job-container:target {
+    border-color: var(--site-blue);
+    box-shadow: 0 0 0 3px var(--site-blue-tint), 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
 /* ===== Components: job header ===== */
 .job-ref {
     display: inline-block;
@@ -1056,13 +1202,13 @@
     border: 1px solid var(--site-blue);
     border-radius: 4px;
 }
- 
+
 .job-header h2 {
     margin: 0 0 8px;
     font-size: 1.8rem;
     color: var(--site-heading);
 }
- 
+
 /* Metadata bar */
 .meta-item {
     margin: 0;
@@ -1071,7 +1217,7 @@
     /* border-left: 4px solid var(--site-blue); */
     border-radius: 4px;
 }
- 
+
 .meta-item dt {
     margin: 0 0 2px;
     font-size: 0.8rem;
@@ -1080,54 +1226,54 @@
     letter-spacing: 0.5px;
     color: var(--site-text);
 }
- 
+
 .meta-item dd {
     margin: 0;
     font-weight: 600;
     color: var(--site-ink);
 }
- 
+
 /* Larger Apply button (extends your existing .apply-btn from jobs.css) */
 .apply-btn-large {
     padding: 14px 32px;
     font-size: 1.1rem;
 }
- 
+
 .apply-btn:focus-visible {
     outline: 3px solid var(--site-blue);
     outline-offset: 3px;
 }
- 
+
 /* ===== Components: sidebar ===== */
 .sidebar-aside h2 {
     margin-top: 0;
     font-size: 1.3rem;
     color: var(--site-heading);
 }
- 
+
 .sidebar-aside h3 {
     margin: 20px 0 8px;
     font-size: 1rem;
     color: var(--site-ink);
 }
- 
+
 .sidebar-aside .apply-btn {
     display: block;
     text-align: center;
 }
- 
+
 .apply-steps {
     margin: 0;
     padding-left: 20px;
     line-height: 1.6;
 }
- 
+
 .share-list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
- 
+
 .share-list a {
     display: flex;
     align-items: center;
@@ -1137,16 +1283,16 @@
     text-decoration: none;
     font-weight: 600;
 }
- 
+
 .share-list a:hover {
     text-decoration: underline;
 }
- 
+
 .share-list a:focus-visible {
     outline: 3px solid var(--site-blue);
     outline-offset: 2px;
 }
- 
+
 .share-list svg {
     width: 20px;
     height: 20px;
@@ -1157,7 +1303,7 @@
     stroke-linecap: round;
     stroke-linejoin: round;
 }
- 
+
 /* Text for screen readers only */
 .visually-hidden {
     position: absolute;
@@ -1170,77 +1316,85 @@
     white-space: nowrap;
     border: 0;
 }
- 
+
 /* =========================================================
    ===== SHARED HEADER & FOOTER (all pages) =====
    ========================================================= */
- 
+
 .site-header {
     background-color: var(--white);
     border-bottom: 1px solid var(--site-border);
 }
- 
+
 .logo {
     color: var(--navy);
     font-size: 1.15rem;
     font-weight: bold;
     text-decoration: none;
 }
- 
+
+/* Logo image (same file as the favicon) */
+.logo-mark {
+    display: block;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+}
+
 .nav-links,
 .footer-links {
     list-style: none;
 }
- 
+
 .nav-links a {
     color: var(--navy);
     font-weight: 600;
     text-decoration: none;
 }
- 
+
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--purple);
     text-decoration: underline;
     text-underline-offset: 6px;
 }
- 
+
 .site-footer {
     color: var(--white);
     background-color: var(--navy);
 }
- 
+
 .site-footer p {
     margin: 0;
 }
- 
-.footer-content p + p {
-    margin-top: 5px;
+
+.footer-content p {
+    margin: 5px 0 0;
     color: #bdc1d0;
     font-size: 0.9rem;
 }
- 
+
 .footer-links a {
     color: var(--white);
     text-underline-offset: 4px;
 }
- 
+
 .footer-links a:hover {
     color: var(--yellow);
 }
- 
+
 /* =========================================================
    ===== APPLY PAGE =====
    Components for apply.html only (scoped to .apply-page).
    Reuses the team's look: .page-banner, .role-card style,
    .job-ref chips and .apply-btn.
    ========================================================= */
- 
+
 /* ----- Banner text width (banner colours come from .page-banner) ----- */
 .apply-page .apply-banner .banner-text {
   max-width: 60ch;
 }
- 
+
 /* ----- Form card: same style as .role-card on the Jobs page ----- */
 .apply-page .form-card {
   padding: 48px 56px;
@@ -1250,22 +1404,22 @@
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
- 
+
 @media (max-width: 768px) {
   .apply-page .form-card {
     padding: 28px 20px;
   }
 }
- 
+
 /* ----- Section headings, auto-numbered with a CSS counter ----- */
 .apply-page .app-form {
   counter-reset: section;
 }
- 
+
 .apply-page .form-section {
   counter-increment: section;
 }
- 
+
 .apply-page .form-section > legend {
   display: flex;
   align-items: center;
@@ -1278,7 +1432,7 @@
   color: var(--ap-heading);
   border-bottom: 1px solid var(--ap-border);
 }
- 
+
 /* Number chip, same style as the .job-ref / .role-ref chips */
 .apply-page .form-section > legend::before {
   content: counter(section);
@@ -1292,24 +1446,24 @@
   border: 1px solid var(--ap-blue);
   border-radius: 4px;
 }
- 
+
 /* ----- Labels ----- */
 .apply-page .q-label {
   font-size: 1.05rem;
   font-weight: bold;
   color: var(--ap-ink);
 }
- 
+
 .apply-page legend.q-label {
   margin-bottom: 0.6rem;
 }
- 
+
 .apply-page .sublabel {
   font-size: 0.85rem;
   font-weight: 400;
   color: var(--ap-text);
 }
- 
+
 .apply-page .form-note {
   margin: 0;
   padding: 10px 14px;
@@ -1319,7 +1473,7 @@
   border-left: 4px solid var(--ap-blue);    /* same as .salary-line */
   border-radius: 4px;
 }
- 
+
 /* ----- Inputs, select, textarea ----- */
 .apply-page .app-form input[type="text"],
 .apply-page .app-form input[type="email"],
@@ -1337,17 +1491,17 @@
   font-size: 1rem;
   transition: border-color var(--ap-transition), box-shadow var(--ap-transition);
 }
- 
+
 .apply-page .app-form textarea {
   resize: vertical;
   min-height: 110px;
 }
- 
+
 .apply-page .app-form input::placeholder,
 .apply-page .app-form textarea::placeholder {
   color: #94a3b8;
 }
- 
+
 /* Dropdown with a custom chevron */
 .apply-page .app-form select {
   appearance: none;
@@ -1357,12 +1511,12 @@
   background-position: right 14px center;
   cursor: pointer;
 }
- 
+
 /* Date input: grey text until a date is picked */
 .apply-page .app-form input[type="date"]:invalid {
   color: #94a3b8;
 }
- 
+
 /* Focus state: blue accent */
 .apply-page .app-form input:focus,
 .apply-page .app-form select:focus,
@@ -1371,19 +1525,63 @@
   border-color: var(--ap-blue);
   box-shadow: 0 0 0 3px var(--ap-blue-tint);
 }
- 
+
 /* ----- Validation feedback -----
-   Red only once the user has typed something invalid. */
+   Red only when the user has typed something invalid,
+   or has left a required box empty (clicked in and out, or pressed Submit).
+   :user-invalid waits until the user has interacted with the box. */
 .apply-page .app-form :is([type="text"], [type="email"], [type="tel"]):not(:placeholder-shown):invalid,
-.apply-page .app-form input[type="date"]:user-invalid {
+.apply-page .app-form :is(input, select, textarea):user-invalid {
   border-color: var(--ap-invalid);
   background-color: #fdf4f4;
 }
- 
+
 .apply-page .app-form :is([type="text"], [type="email"], [type="tel"]):not(:placeholder-shown):invalid:focus {
   box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.15);
 }
- 
+
+/* ----- File upload (Resume / Cover Letter) ----- */
+.apply-page .app-form input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 0.95rem;
+  color: var(--ap-text);
+  background-color: var(--ap-soft);
+  border: 1px dashed #b8c2cf;      /* dashed = "drop or choose a file here" */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border-color var(--ap-transition), background-color var(--ap-transition);
+}
+
+.apply-page .app-form input[type="file"]:hover {
+  border-color: var(--ap-blue);
+  background-color: var(--ap-blue-tint);
+}
+
+.apply-page .app-form input[type="file"]:focus {
+  outline: none;
+  border-style: solid;
+  border-color: var(--ap-blue);
+  box-shadow: 0 0 0 3px var(--ap-blue-tint);
+}
+
+/* The "Choose File" button inside the box */
+.apply-page .app-form input[type="file"]::file-selector-button {
+  margin-right: 14px;
+  padding: 8px 16px;
+  color: #ffffff;
+  background-color: var(--ap-blue);
+  border: 0;
+  border-radius: 6px;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.apply-page .app-form input[type="file"]::file-selector-button:hover {
+  background-color: var(--ap-blue-dark);
+}
+
 /* ----- Radio & checkbox options ----- */
 .apply-page .opt {
   display: inline-flex;
@@ -1394,7 +1592,7 @@
   color: var(--ap-ink);
   cursor: pointer;
 }
- 
+
 .apply-page .opt input {
   appearance: none;
   flex-shrink: 0;
@@ -1408,24 +1606,24 @@
   cursor: pointer;
   transition: background-color var(--ap-transition), border-color var(--ap-transition);
 }
- 
+
 .apply-page .opt input[type="radio"] {
   border-radius: 50%;
 }
- 
+
 .apply-page .opt input[type="checkbox"] {
   border-radius: 4px;
 }
- 
+
 .apply-page .opt:hover input {
   border-color: var(--ap-blue);
 }
- 
+
 .apply-page .opt input:checked {
   background-color: var(--ap-blue);
   border-color: var(--ap-blue);
 }
- 
+
 /* Radio: white centre dot */
 .apply-page .opt input[type="radio"]:checked::before {
   content: "";
@@ -1434,7 +1632,7 @@
   border-radius: 50%;
   background-color: var(--white);
 }
- 
+
 /* Checkbox: white tick */
 .apply-page .opt input[type="checkbox"]:checked::before {
   content: "";
@@ -1444,24 +1642,24 @@
   border-width: 0 2px 2px 0;
   transform: translateY(-1px) rotate(45deg);
 }
- 
+
 .apply-page .opt input:focus-visible {
   outline: 3px solid var(--ap-blue);
   outline-offset: 2px;
 }
- 
+
 /* ----- "Other skills" expandable textarea (pure CSS) ----- */
 .apply-page .other-skills {
   margin-top: 0.85rem;
 }
- 
+
 .apply-page .other-skills .toggle {
   position: absolute;
   opacity: 0;
   width: 1px;
   height: 1px;
 }
- 
+
 .apply-page .toggle-label::before {
   content: "";
   flex-shrink: 0;
@@ -1472,18 +1670,18 @@
   background-color: var(--white);
   transition: background-color var(--ap-transition), border-color var(--ap-transition);
 }
- 
+
 .apply-page .toggle:checked + .toggle-label::before {
   background-color: var(--ap-blue);
   border-color: var(--ap-blue);
   box-shadow: inset 0 0 0 3px var(--white);
 }
- 
+
 .apply-page .toggle:focus-visible + .toggle-label {
   outline: 3px solid var(--ap-blue);
   outline-offset: 2px;
 }
- 
+
 .apply-page .expand {
   display: flex;
   flex-direction: column;
@@ -1493,13 +1691,13 @@
   opacity: 0;
   transition: max-height 0.35s ease, opacity 0.35s ease, margin-top 0.35s ease;
 }
- 
+
 .apply-page .toggle:checked ~ .expand {
   max-height: 260px;
   opacity: 1;
   margin-top: 1rem;
 }
- 
+
 /* ----- Buttons -----
    Submit: solid blue with white text so it stands out.
    Selectors include .form-card so they beat the
@@ -1518,19 +1716,19 @@
   box-shadow: 0 6px 16px rgba(0, 102, 204, 0.3);
   transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
- 
+
 .apply-page .form-card .form-actions .apply-btn:hover {
   background-color: var(--site-blue-dark);
   transform: translateY(-2px);
   box-shadow: 0 10px 22px rgba(0, 102, 204, 0.35);
 }
- 
+
 .apply-page .form-card .form-actions .apply-btn:focus-visible {
   outline: 3px solid var(--site-gold);
   outline-offset: 3px;
 }
- 
-/* Reset: white button with navy outline */
+
+/* Clear (type="reset"): white button with navy outline */
 .apply-page .form-card .form-actions .btn-reset {
   padding: 13px 28px;
   color: var(--site-heading);
@@ -1542,63 +1740,62 @@
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
- 
+
 .apply-page .form-card .form-actions .btn-reset:hover {
   color: #ffffff;
   background-color: var(--site-heading);
 }
- 
+
 .apply-page .form-card .form-actions .btn-reset:focus-visible {
   outline: 3px solid var(--site-blue);
   outline-offset: 3px;
 }
- 
+
 /* ----- Postcode hint (pure CSS) -----
-   Shown only while the Postcode box is focused (clicked),
-   and only the hint for the State that is currently selected. */
+   Shown while the State box OR the Postcode box is focused (clicked),
+   and only the hint for the State that is currently selected.
+   :focus-within = "something inside this box has focus". */
 .apply-page .postcode-hint {
   display: none;
   font-size: 0.8rem;
   color: var(--ap-blue-dark);
 }
 
-.apply-page .app-form:has(#state option[value=""]:checked)    #postcode:focus ~ .postcode-hint[data-state=""],
-.apply-page .app-form:has(#state option[value="VIC"]:checked) #postcode:focus ~ .postcode-hint[data-state="VIC"],
-.apply-page .app-form:has(#state option[value="NSW"]:checked) #postcode:focus ~ .postcode-hint[data-state="NSW"],
-.apply-page .app-form:has(#state option[value="QLD"]:checked) #postcode:focus ~ .postcode-hint[data-state="QLD"],
-.apply-page .app-form:has(#state option[value="NT"]:checked)  #postcode:focus ~ .postcode-hint[data-state="NT"],
-.apply-page .app-form:has(#state option[value="WA"]:checked)  #postcode:focus ~ .postcode-hint[data-state="WA"],
-.apply-page .app-form:has(#state option[value="SA"]:checked)  #postcode:focus ~ .postcode-hint[data-state="SA"],
-.apply-page .app-form:has(#state option[value="TAS"]:checked) #postcode:focus ~ .postcode-hint[data-state="TAS"],
-.apply-page .app-form:has(#state option[value="ACT"]:checked) #postcode:focus ~ .postcode-hint[data-state="ACT"] {
+.apply-page .row-tight:focus-within:has(#state option[value=""]:checked)    .postcode-hint[data-state=""],
+.apply-page .row-tight:focus-within:has(#state option[value="VIC"]:checked) .postcode-hint[data-state="VIC"],
+.apply-page .row-tight:focus-within:has(#state option[value="NSW"]:checked) .postcode-hint[data-state="NSW"],
+.apply-page .row-tight:focus-within:has(#state option[value="QLD"]:checked) .postcode-hint[data-state="QLD"],
+.apply-page .row-tight:focus-within:has(#state option[value="NT"]:checked)  .postcode-hint[data-state="NT"],
+.apply-page .row-tight:focus-within:has(#state option[value="WA"]:checked)  .postcode-hint[data-state="WA"],
+.apply-page .row-tight:focus-within:has(#state option[value="SA"]:checked)  .postcode-hint[data-state="SA"],
+.apply-page .row-tight:focus-within:has(#state option[value="TAS"]:checked) .postcode-hint[data-state="TAS"],
+.apply-page .row-tight:focus-within:has(#state option[value="ACT"]:checked) .postcode-hint[data-state="ACT"] {
   display: block;
 }
 
 /* ----- Employment details change with the chosen status (pure CSS) -----
-   Nothing shows until a status is picked. */
+   Nothing shows until a status is picked.
+   Employed / Self-Employed -> "Current Job": company, title, start year
+   Student                  -> short note only
+   Other                    -> "Please specify" + "Most Recent Job" (adds end year) */
 .apply-page .job-details,
 .apply-page .when-employed,
 .apply-page .when-unemployed,
-.apply-page .when-student {
+.apply-page .when-student,
+.apply-page .when-other {
   display: none;
 }
 
-/* Employed or Self-Employed: show "Current Job" (company, title, start year) */
+/* Employed or Self-Employed: show the job boxes ... */
 .apply-page .app-form:has([name="empstatus"][value="employed"]:checked) .job-details,
-.apply-page .app-form:has([name="empstatus"][value="selfemployed"]:checked) .job-details,
-.apply-page .app-form:has([name="empstatus"][value="unemployed"]:checked) .job-details {
+.apply-page .app-form:has([name="empstatus"][value="selfemployed"]:checked) .job-details {
   display: flex;
 }
 
+/* ... with the title "Current Job" */
 .apply-page .app-form:has([name="empstatus"][value="employed"]:checked) span.when-employed,
-.apply-page .app-form:has([name="empstatus"][value="selfemployed"]:checked) span.when-employed,
-.apply-page .app-form:has([name="empstatus"][value="unemployed"]:checked) span.when-unemployed {
+.apply-page .app-form:has([name="empstatus"][value="selfemployed"]:checked) span.when-employed {
   display: inline;
-}
-
-/* Unemployed: also show End Year and Reason for Leaving */
-.apply-page .app-form:has([name="empstatus"][value="unemployed"]:checked) .sub.when-unemployed {
-  display: flex;
 }
 
 /* Student: short note instead of the job boxes */
@@ -1607,17 +1804,13 @@
   margin: 0;
 }
 
-/* ----- "Other" employment status: ask the applicant to specify ----- */
-.apply-page .when-other {
-  display: none;
-}
-
-.apply-page .app-form:has([name="empstatus"][value="other"]:checked) .sub.when-other {
+/* Other: ask the applicant to specify (last box of the section).
+   Works whether the box is a .q or a .sub. */
+.apply-page .app-form:has([name="empstatus"][value="other"]:checked) .when-other {
   display: flex;
-  margin-top: 0.75rem;
 }
 
-/* "Other" may still have past work, so show the optional "Most Recent Job" boxes */
+/* Other may still have past work: show the optional "Most Recent Job" boxes */
 .apply-page .app-form:has([name="empstatus"][value="other"]:checked) .job-details {
   display: flex;
 }
@@ -1630,11 +1823,79 @@
   display: flex;
 }
 
-/* Footer */
-.footer-content p {
-    margin: 5px 0 0;
-    color: #bdc1d0;
-    font-size: 0.9rem;
+/* "(optional)" next to a question title: lighter and smaller than the title */
+.apply-page .optional-tag {
+  margin-left: 6px;
+  color: var(--ap-text);
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
+/* ----- Error messages under each box -----
+   Hidden until the box is :user-invalid, i.e. after the user presses
+   Submit with it empty, or types something that does not match. */
+.apply-page .error-msg {
+  display: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ap-invalid);
+}
 
+/* Text boxes, selects, dates and files: message sits next to its box */
+.apply-page .sub:has(> :user-invalid) > .error-msg,
+.apply-page .q:has(> :user-invalid) > .error-msg,
+
+/* Radio groups: message under the options */
+.apply-page fieldset.q:has(.options input:user-invalid) > .error-msg {
+  display: block;
+}
+
+/* ----- Employment boxes that depend on the chosen status (no JavaScript) -----
+   HTML cannot make a box "required" only for one radio choice, so instead:
+   once the user has pressed Submit (the form then contains a :user-invalid box),
+   any EMPTY box that the chosen status needs is flagged red with its message.
+   Employed / Self-Employed -> Company, Job Title, Start Year
+   Other                    -> Please specify */
+.apply-page .app-form:has(:user-invalid):has([name="empstatus"][value="employed"]:checked) .job-details :is(#emp_company, #emp_position, #emp_start):placeholder-shown,
+.apply-page .app-form:has(:user-invalid):has([name="empstatus"][value="selfemployed"]:checked) .job-details :is(#emp_company, #emp_position, #emp_start):placeholder-shown,
+.apply-page .app-form:has(:user-invalid):has([name="empstatus"][value="other"]:checked) #empstatus_other:placeholder-shown {
+  border-color: var(--ap-invalid);
+  background-color: #fdf4f4;
+}
+
+.apply-page .app-form:has(:user-invalid):has([name="empstatus"][value="employed"]:checked) .job-details .sub:has(> :is(#emp_company, #emp_position, #emp_start):placeholder-shown) > .error-msg,
+.apply-page .app-form:has(:user-invalid):has([name="empstatus"][value="selfemployed"]:checked) .job-details .sub:has(> :is(#emp_company, #emp_position, #emp_start):placeholder-shown) > .error-msg,
+.apply-page .app-form:has(:user-invalid):has([name="empstatus"][value="other"]:checked) .when-other:has(> #empstatus_other:placeholder-shown) > .error-msg {
+  display: block;
+}
+
+/* ----- Intro line at the top of the form ----- */
+.apply-page .form-intro {
+  margin: 0;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: var(--ap-text);
+  background-color: var(--ap-soft);
+  border: 1px solid var(--ap-border);
+  border-radius: 6px;
+}
+
+.apply-page .form-intro .optional-tag {
+  margin-left: 0;
+}
+
+/* ----- Required marker: red asterisk after the question label ----- */
+.apply-page .req {
+  margin-left: 2px;
+  color: var(--ap-invalid);
+  font-weight: bold;
+}
+s
+/* ----- Names are shown in CAPITAL letters while typing -----
+   text-transform only changes how the text LOOKS: "thu" is displayed as "THU".
+   The value sent to the server is still what was typed, so in Part 2
+   PHP should store it with strtoupper(). */
+.apply-page #firstname,
+.apply-page #lastname {
+  text-transform: uppercase;
+}
