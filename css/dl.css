@@ -330,6 +330,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
 }
  
 .card-info {
@@ -739,6 +740,11 @@
     border: 4px solid var(--site-blue-tint);
     border-radius: 50%;
     object-fit: cover;
+}
+
+/* Keep Morgan's full hairstyle and the space above her head visible. */
+.home-page .voice-card:nth-child(3) img {
+    object-position: center top;
 }
  
 .home-page .voice-card blockquote {
