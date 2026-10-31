@@ -6,11 +6,9 @@
   <meta name="description" content="Apply for a position at EduTech Solutions">
   <meta name="keywords" content="jobs, apply, application, careers">
   <meta name="author" content="Anh Thu">
-  <title>Apply | Job Application</title>
-
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  
+  <title>Apply | EduTech Solutions</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=2">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico?v=2">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/dl.css">
@@ -42,7 +40,7 @@
       <p class="banner-text">
         We are delighted by your interest in joining EduTech Solutions.
         Please complete every section below, from your personal details
-        through to the position you wish to apply for.
+        through to the position you wish to apply for and your resume.
       </p>
     </div>
   </section>
@@ -51,9 +49,15 @@
   <main>
     <article class="form-card">
 
+      <!-- enctype="multipart/form-data" is needed so the uploaded files are sent -->
       <form class="app-form"
             action="https://mercury.swin.edu.au/it000000/formtest.php"
-            method="post">
+            method="post" enctype="multipart/form-data">
+
+        <!-- Shown at the top so applicants know what must be filled in -->
+        <p class="form-intro">Fields marked with <span class="req" aria-hidden="true">*</span> are required;
+          fields marked <span class="optional-tag">(optional)</span> can be left blank.
+          If something is missing, a red message will appear under that box when you press Submit.</p>
 
         <!-- ================= 1. Personal Information ================= -->
         <fieldset class="form-section">
@@ -61,39 +65,44 @@
 
           <!-- Full Name: one question, two boxes with sub-labels -->
           <fieldset class="q">
-            <legend class="q-label">Full Name</legend>
+            <legend class="q-label">Full Name <span class="req" aria-hidden="true">*</span></legend>
             <div class="row">
               <div class="sub">
                 <input type="text" id="firstname" name="firstname"
                        pattern="[A-Za-z]{1,20}" maxlength="20"
-                       title="Up to 20 letters only" placeholder=" " required>
+                       title="Up to 20 letters only" placeholder="e.g. ANH" required>
                 <label for="firstname" class="sublabel">First Name</label>
+                <span class="error-msg">Please enter your first name (letters only, up to 20).</span>
               </div>
               <div class="sub">
                 <input type="text" id="lastname" name="lastname"
                        pattern="[A-Za-z]{1,20}" maxlength="20"
-                       title="Up to 20 letters only" placeholder=" " required>
+                       title="Up to 20 letters only" placeholder="e.g. NGUYEN" required>
                 <label for="lastname" class="sublabel">Last Name</label>
+                <span class="error-msg">Please enter your last name (letters only, up to 20).</span>
               </div>
             </div>
           </fieldset>
 
           <div class="row">
             <div class="q">
-              <label for="dob" class="q-label">Date of Birth</label>
+              <label for="dob" class="q-label">Date of Birth <span class="req" aria-hidden="true">*</span></label>
               <input type="date" id="dob" name="dob"
-                     min="1946-10-30" max="2011-10-30"
+                     min="1946-10-31" max="2011-10-31"
                      title="You must be between 15 and 80 years old" required>
+              <span class="error-msg">Please choose your date of birth (age 15 to 80).</span>
             </div>
 
             <!-- Gender: semantic fieldset + legend -->
             <fieldset class="q">
-              <legend class="q-label">Gender</legend>
+              <legend class="q-label">Gender <span class="req" aria-hidden="true">*</span></legend>
               <div class="options">
                 <label class="opt"><input type="radio" name="gender" value="female" required> <span>Female</span></label>
                 <label class="opt"><input type="radio" name="gender" value="male"> <span>Male</span></label>
                 <label class="opt"><input type="radio" name="gender" value="other"> <span>Other</span></label>
+                <label class="opt"><input type="radio" name="gender" value="none"> <span>Prefer not to say</span></label>
               </div>
+              <span class="error-msg">Please select your gender.</span>
             </fieldset>
           </div>
         </fieldset>
@@ -104,33 +113,39 @@
 
           <div class="row">
             <div class="q">
-              <label for="email" class="q-label">E-mail</label>
+              <label for="email" class="q-label">E-mail <span class="req" aria-hidden="true">*</span></label>
               <input type="email" id="email" name="email"
-                     placeholder="ex: myname@example.com" required>
-              <span class="sublabel">example@example.com</span>
+                     placeholder="e.g. name@example.com"
+                     pattern="[^@\s]+@[^@\s]+\.[A-Za-z]{2,}"
+                     title="Enter a full email address, e.g. name@example.com"
+                     required>
+              <span class="error-msg">Please enter a valid email, e.g. name@example.com.</span>
             </div>
             <div class="q">
-              <label for="phone" class="q-label">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" placeholder="0123456789"
-                    pattern="[0-9]{10}" minlength="8" maxlength="12"
-                    inputmode="numeric"
-                    title="Exactly 10 digits, numbers only (e.g. 0123456789)" required>
+              <label for="phone" class="q-label">Phone Number <span class="req" aria-hidden="true">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g. 0123456789"
+                     pattern="[0-9]{10}" minlength="10" maxlength="10"
+                     inputmode="numeric"
+                     title="Exactly 10 digits, numbers only (e.g. 0123456789)" required>
+              <span class="error-msg">Please enter exactly 10 digits, e.g. 0123456789.</span>
             </div>
           </div>
 
           <!-- Address: one question, four boxes with sub-labels -->
           <fieldset class="q">
-            <legend class="q-label">Address</legend>
+            <legend class="q-label">Address <span class="req" aria-hidden="true">*</span></legend>
             <div class="sub">
-              <input type="text" id="street" name="street" placeholder=" "
+              <input type="text" id="street" name="street" placeholder="e.g. 123 John Street"
                      maxlength="40" title="Maximum 40 characters" required>
               <label for="street" class="sublabel">Street Address</label>
+              <span class="error-msg">Please enter your street address.</span>
             </div>
             <div class="row">
               <div class="sub">
-                <input type="text" id="suburb" name="suburb" placeholder=" "
+                <input type="text" id="suburb" name="suburb" placeholder="e.g. Hawthorn"
                        maxlength="40" title="Maximum 40 characters" required>
                 <label for="suburb" class="sublabel">Suburb/Town</label>
+                <span class="error-msg">Please enter your suburb or town.</span>
               </div>
               <div class="row row-tight">
                 <div class="sub">
@@ -146,90 +161,100 @@
                     <option value="ACT">ACT</option>
                   </select>
                   <label for="state" class="sublabel">State</label>
+                  <span class="error-msg">Please select a state.</span>
                 </div>
                 <div class="sub">
-                    <input type="text" id="postcode" name="postcode" placeholder=" "
-                      pattern="02[0-9]{2}|0[89][0-9]{2}|[1-9][0-9]{3}"
-                      minlength="4" maxlength="4" inputmode="numeric"
-                      title="A valid 4-digit Australian postcode (e.g. 3122)" required>
-                    <label for="postcode" class="sublabel">Postcode</label>
-                  <!-- Hint changes with the selected State (pure CSS, see dl.css) -->
-                    <small class="postcode-hint" data-state="">Select a State first to see its postcode format</small>
-                    <small class="postcode-hint" data-state="VIC">VIC: starts with 3 or 8 (e.g. 3122)</small>
-                    <small class="postcode-hint" data-state="NSW">NSW: starts with 1 or 2 (e.g. 2000)</small>
-                    <small class="postcode-hint" data-state="QLD">QLD: starts with 4 or 9 (e.g. 4000)</small>
-                    <small class="postcode-hint" data-state="NT">NT: starts with 0 (e.g. 0800)</small>
-                    <small class="postcode-hint" data-state="WA">WA: starts with 6 (e.g. 6000)</small>
-                    <small class="postcode-hint" data-state="SA">SA: starts with 5 (e.g. 5000)</small>
-                    <small class="postcode-hint" data-state="TAS">TAS: starts with 7 (e.g. 7000)</small>
-                    <small class="postcode-hint" data-state="ACT">ACT: starts with 0 or 2 (e.g. 2600)</small>
+                  <input type="text" id="postcode" name="postcode" placeholder="e.g. 3122"
+                         pattern="02[0-9]{2}|0[89][0-9]{2}|[1-9][0-9]{3}"
+                         minlength="4" maxlength="4" inputmode="numeric"
+                         title="A valid 4-digit Australian postcode (e.g. 3122)" required>
+                  <label for="postcode" class="sublabel">Postcode</label>
+                  <span class="error-msg">Please enter a valid 4-digit postcode.</span>
+                  <!-- Hint for the selected State, shown while State or Postcode is focused (pure CSS, see dl.css) -->
+                  <small class="postcode-hint" data-state="">Select a State first to see its postcode format</small>
+                  <small class="postcode-hint" data-state="VIC">VIC: starts with 3 or 8 (e.g. 3122)</small>
+                  <small class="postcode-hint" data-state="NSW">NSW: starts with 1 or 2 (e.g. 2000)</small>
+                  <small class="postcode-hint" data-state="QLD">QLD: starts with 4 or 9 (e.g. 4000)</small>
+                  <small class="postcode-hint" data-state="NT">NT: starts with 0 (e.g. 0800)</small>
+                  <small class="postcode-hint" data-state="WA">WA: starts with 6 (e.g. 6000)</small>
+                  <small class="postcode-hint" data-state="SA">SA: starts with 5 (e.g. 5000)</small>
+                  <small class="postcode-hint" data-state="TAS">TAS: starts with 7 (e.g. 7000)</small>
+                  <small class="postcode-hint" data-state="ACT">ACT: starts with 0 or 2 (e.g. 2600)</small>
                 </div>
               </div>
             </div>
           </fieldset>
         </fieldset>
 
-
         <!-- ================= 3. Employment History ================= -->
         <fieldset class="form-section">
           <legend>Employment History</legend>
 
           <fieldset class="q">
-            <legend class="q-label">What is your current employment status?</legend>
+            <legend class="q-label">What is your current employment status? <span class="req" aria-hidden="true">*</span></legend>
             <div class="options">
               <label class="opt"><input type="radio" name="empstatus" value="employed" required> <span>Employed</span></label>
-              <label class="opt"><input type="radio" name="empstatus" value="unemployed"> <span>Unemployed</span></label>
               <label class="opt"><input type="radio" name="empstatus" value="selfemployed"> <span>Self-Employed</span></label>
               <label class="opt"><input type="radio" name="empstatus" value="student"> <span>Student</span></label>
               <label class="opt"><input type="radio" name="empstatus" value="other"> <span>Other</span></label>
             </div>
+            <span class="error-msg">Please select your employment status.</span>
           </fieldset>
 
-                    <!-- Job details: which boxes show depends on the status above (pure CSS, see dl.css).
-               Employed / Self-Employed -> current job (no end year, no reason for leaving)
-               Unemployed              -> most recent job (with end year and reason)
+          <!-- Job details: which boxes show depends on the status above (pure CSS, see dl.css).
+               Employed / Self-Employed -> "Current Job": company, job title, start year (flagged red if empty after Submit)
+               Other                   -> "Most Recent Job (optional)" + end year, then "Please specify" (flagged red if empty after Submit)
                Student                 -> hidden, a short note is shown instead -->
           <p class="sublabel when-student">No work history needed &ndash; you can continue to the next section.</p>
 
           <fieldset class="q job-details">
             <legend class="q-label">
-              <span class="when-employed">Current Job</span>
+              <span class="when-employed">Current Job <span class="req" aria-hidden="true">*</span></span>
               <span class="when-unemployed">Most Recent Job</span>
+              <span class="optional-tag when-unemployed">(optional)</span>
             </legend>
             <div class="row">
               <div class="sub">
-                <input type="text" id="emp_company" name="emp_company" placeholder=" " maxlength="60">
+                <input type="text" id="emp_company" name="emp_company" placeholder="e.g. FPT Software"
+                       maxlength="60" pattern="[A-Za-z0-9 &amp;.,'\(\)\-]{2,60}"
+                       title="2 to 60 characters: letters, numbers, spaces and &amp; . , ' ( ) -">
                 <label for="emp_company" class="sublabel">Company</label>
+                <span class="error-msg">Please enter your company name (2 to 60 characters).</span>
               </div>
               <div class="sub">
-                <input type="text" id="emp_position" name="emp_position" placeholder=" " maxlength="60">
+                <input type="text" id="emp_position" name="emp_position" placeholder="e.g. Web Developer"
+                       maxlength="60" pattern="[A-Za-z \/&amp;.,'\(\)\-]{2,60}"
+                       title="2 to 60 characters: letters, spaces and / &amp; . , ' ( ) -">
                 <label for="emp_position" class="sublabel">Job Title</label>
+                <span class="error-msg">Please enter your job title (2 to 60 characters).</span>
               </div>
             </div>
             <div class="row">
               <div class="sub">
-                <input type="text" id="emp_start" name="emp_start" placeholder="YYYY"
+                <input type="text" id="emp_start" name="emp_start" placeholder="e.g. 2022"
                        pattern="(19[5-9][0-9]|20[0-2][0-9])" maxlength="4" inputmode="numeric"
                        title="A year between 1950 and 2029, e.g. 2022">
                 <label for="emp_start" class="sublabel">Start Year</label>
+                <span class="error-msg">Please enter a start year, e.g. 2022.</span>
               </div>
               <div class="sub when-unemployed">
-                <input type="text" id="emp_end" name="emp_end" placeholder="YYYY"
+                <input type="text" id="emp_end" name="emp_end" placeholder="e.g. 2025"
                        pattern="(19[5-9][0-9]|20[0-2][0-9])" maxlength="4" inputmode="numeric"
                        title="A year between 1950 and 2029, e.g. 2025">
                 <label for="emp_end" class="sublabel">End Year</label>
+                <span class="error-msg">Please enter a valid year, e.g. 2025.</span>
               </div>
             </div>
-            <div class="sub when-unemployed">
-              <input type="text" id="emp_reason" name="emp_reason" placeholder=" " maxlength="100">
-              <label for="emp_reason" class="sublabel">Reason for Leaving</label>
-            </div>
-            <div class="sub when-other">
-              <input type="text" id="empstatus_other" name="empstatus_other" placeholder=" "
-                     maxlength="60" title="Briefly describe your situation">
-              <label for="empstatus_other" class="sublabel">Please specify (e.g. freelancer, internship, career break, carer)</label>
-            </div>
           </fieldset>
+
+          <!-- Other: the only box we ask for, placed last (shown and flagged by CSS, see dl.css) -->
+          <div class="q when-other">
+            <label for="empstatus_other" class="q-label">Please specify your current situation <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="empstatus_other" name="empstatus_other"
+                   placeholder="e.g. freelancer, internship, career break"
+                   maxlength="60" title="Briefly describe your situation">
+            <span class="error-msg">Please tell us your current situation.</span>
+          </div>
         </fieldset>
 
         <!-- ================= 4. Skills ================= -->
@@ -237,7 +262,7 @@
           <legend>Skills</legend>
 
           <fieldset class="q">
-            <legend class="q-label">Which skills do you have?</legend>
+            <legend class="q-label">Which skills do you have? <span class="optional-tag">(optional)</span></legend>
             <div class="options">
               <label class="opt"><input type="checkbox" name="skills[]" value="html_css" checked> <span>HTML &amp; CSS</span></label>
               <label class="opt"><input type="checkbox" name="skills[]" value="javascript"> <span>JavaScript</span></label>
@@ -266,7 +291,7 @@
 
           <div class="row">
             <div class="q">
-              <label for="jobref" class="q-label">What position are you applying for?</label>
+              <label for="jobref" class="q-label">What position are you applying for? <span class="req" aria-hidden="true">*</span></label>
               <!-- Each value is an exact 5-character alphanumeric job reference -->
               <select id="jobref" name="jobref" required>
                 <option value="" selected disabled>Please Select</option>
@@ -275,49 +300,73 @@
                 <option value="AQ303">AQ303 &ndash; Accessibility QA Specialist</option>
                 <option value="LC404">LC404 &ndash; Learning Content Developer</option>
               </select>
+              <span class="error-msg">Please select a position.</span>
               <span class="sublabel">Not sure? <a href="jobs.html">View all job descriptions</a></span>
             </div>
             <div class="q">
-              <label for="startdate" class="q-label">Available start date</label>
-              <input type="date" id="startdate" name="startdate" min="2026-10-29" required>
+              <label for="startdate" class="q-label">Available start date <span class="req" aria-hidden="true">*</span></label>
+              <input type="date" id="startdate" name="startdate" min="2026-10-31" required>
+              <span class="error-msg">Please choose a start date from today onwards.</span>
             </div>
           </div>
 
           <fieldset class="q">
-            <legend class="q-label">Employment Type</legend>
+            <legend class="q-label">Employment Type <span class="req" aria-hidden="true">*</span></legend>
             <div class="options">
               <label class="opt"><input type="radio" name="emptype" value="fulltime" required> <span>Full-Time</span></label>
               <label class="opt"><input type="radio" name="emptype" value="parttime"> <span>Part-Time</span></label>
               <label class="opt"><input type="radio" name="emptype" value="contract"> <span>Contract</span></label>
             </div>
+            <span class="error-msg">Please select an employment type.</span>
           </fieldset>
+        </fieldset>
+
+        <!-- ================= 6. Documents (file upload) ================= -->
+        <fieldset class="form-section">
+          <legend>Documents</legend>
+
+          <div class="q">
+            <label for="resume" class="q-label">Resume / CV <span class="req" aria-hidden="true">*</span></label>
+            <input type="file" id="resume" name="resume"
+                   accept=".pdf,.doc,.docx" required>
+            <span class="error-msg">Please upload your resume.</span>
+            <span class="sublabel">PDF or Word file (.pdf, .doc, .docx)</span>
+          </div>
+
+          <div class="q">
+            <label for="coverletter" class="q-label">Cover Letter <span class="optional-tag">(optional)</span></label>
+            <input type="file" id="coverletter" name="coverletter"
+                   accept=".pdf,.doc,.docx">
+            <span class="sublabel">PDF or Word file (.pdf, .doc, .docx)</span>
+          </div>
         </fieldset>
 
         <p class="form-note">Please review your details carefully before submitting your application.</p>
 
-        <!-- ===== Actions (Submit reuses the team's .apply-btn) ===== -->
+        <!-- ===== Actions: Clear (type="reset") and Submit ===== -->
         <div class="form-actions">
-          <input type="reset" value="Reset" class="btn-reset">
+          <input type="reset" value="Clear" class="btn-reset">
           <input type="submit" value="Submit Application" class="apply-btn apply-btn-large">
         </div>
       </form>
     </article>
   </main>
 
-  <!-- ===== Footer (shared across all pages) ===== -->
-      <footer class="site-footer">
-        <div class="container footer-content">
-            <div>
-                <strong>EduTech Solutions</strong>
-                <p>&copy; 2026 GoatBH. Student project.</p>
-            </div>
+  <!-- ===== Footer (same as index.html) ===== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <strong>EduTech Solutions</strong>
+        <p>&copy; 2026 GoatBH. Student project.</p>
+      </div>
 
-            <ul class="footer-links">
-                <li><a href="https://jira.swinburne.edu.au">Jira project</a></li>
-                <li><a href="https://github.com/NguyenPham023/GoatBH-WebProject">GitHub repository</a></li>
-                <li><a href="mailto:info@edutechsolutions.com">info@edutechsolutions.com</a></li>
-            </ul>
-        </div>
-      </footer>
+      <ul class="footer-links">
+        <li><a href="https://student-team-goatbh.atlassian.net/?continue=https%3A%2F%2Fstudent-team-goatbh.atlassian.net%2Fwelcome%2Fsoftware%3FprojectId%3D10000&amp;atlOrigin=eyJpIjoiYWYyNTkyMDQ2NWUyNDBlM2JhNmYyNjc4ZGVjYTE0MTEiLCJwIjoiamlyYS1zb2Z0d2FyZSJ9">Jira project</a></li>
+        <li><a href="https://github.com/NguyenPham023/GoatBH-WebProject">GitHub repository</a></li>
+        <li><a href="mailto:info@edutechsolutions.com">info@edutechsolutions.com</a></li>
+      </ul>
+    </div>
+  </footer>
+
 </body>
 </html>
