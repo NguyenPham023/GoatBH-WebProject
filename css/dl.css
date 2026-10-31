@@ -236,6 +236,10 @@
     padding: 3px 0;
     margin-bottom: 4px;
     color: var(--site-text);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
 }
 
 .student-id {
@@ -246,6 +250,16 @@
     border-radius: 4px;
     font-weight: 600;
     margin-left: 6px;
+    display: block;
+    width: fit-content;
+}
+
+@media (max-width: 480px) {
+    .nested-members-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
 }
 
 .image-section {
