@@ -1,0 +1,224 @@
+/* =========================================================
+   style.css — Global & Base Styles
+   Universal rules, shared colour variables, base typography
+   and default element styling for ALL pages.
+   ========================================================= */
+
+/* ===== Universal ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* One font for the whole site (set once on body, inherited everywhere) */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: #333333;
+}
+
+/* Form controls don't inherit the font by default, so force it */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* Images never overflow their container */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Visible keyboard focus on every interactive element */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--site-blue);
+    outline-offset: 3px;
+}
+
+/* Respect users who turn off animations */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ==================================================
+   Shared colour variables
+   ================================================== */
+
+:root {
+    /* Homepage palette (softened to match Jobs / About / Apply).
+       Names are kept so existing rules still work. */
+    --navy: #0b1f33;      /* was #10162f — same navy as the Jobs banner */
+    --purple: #0066cc;    /* was #3a10e5 — calmer blue accent */
+    --cream: #f4f7fb;     /* was #fff0e5 — soft blue-grey background */
+    --yellow: #ffd166;    /* was #ffd400 — softer gold */
+    --white: #ffffff;
+    --grey: #4a5568;      /* was #565b6d — same secondary text as Jobs */
+    --container: 1120px;
+
+    /* Jobs / About / Apply palette (same colours used in dl.css) */
+    --site-navy: #0b1f33;        /* .page-banner, .cta-section background */
+    --site-heading: #2c3e50;     /* section headings, .apply-btn */
+    --site-ink: #1a252f;         /* main dark text */
+    --site-text: #4a5568;        /* secondary text */
+    --site-blue: #0066cc;        /* accent: borders, focus, chips */
+    --site-blue-dark: #0b4f9c;   /* links (.role-card a, .share-list a) */
+    --site-blue-tint: #e8f0fe;   /* soft accent (.job-ref, .salary-line) */
+    --site-gold: #ffd166;        /* .banner-tag, .hero-btn */
+    --site-border: #dde3ea;      /* .role-card border */
+    --site-soft: #f8f9fa;        /* .meta-item, .sidebar-aside */
+    --site-navy-light: #1a3a5c;  /* banner / CTA gradient */
+    --site-gold-light: #ffe08f;  /* gold button hover */
+    --site-banner-text: #dbe4ee; /* light text on navy banners */
+    --site-line: #bdc3c7;        /* .job-container border */
+}
+
+/* ==================================================
+   Homepage: typography and accessibility
+   ================================================== */
+
+.home-page {
+    color: var(--navy);
+    background-color: var(--white);
+}
+
+.home-page img {
+    display: block;
+    max-width: 100%;
+}
+
+.home-page a {
+    color: inherit;
+}
+
+.home-page h1,
+.home-page h2,
+.home-page h3,
+.home-page p {
+    margin-top: 0;
+}
+
+.home-page h1 {
+    margin-bottom: 20px;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.home-page h2 {
+    margin-bottom: 14px;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    line-height: 1.2;
+    color: var(--site-heading);
+}
+
+.home-page .cta h2 {
+    color: var(--white);
+}
+
+.home-page a:focus-visible,
+.home-page button:focus-visible,
+.home-page input:focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: 3px;
+}
+
+/* Skip link: hidden until focused with the keyboard (all pages) */
+.skip-link {
+    position: absolute;
+    top: -60px;
+    left: 16px;
+    z-index: 100;
+    padding: 10px 14px;
+    color: var(--white);
+    background-color: var(--navy);
+}
+
+.skip-link:focus {
+    top: 12px;
+}
+
+.home-page .eyebrow {
+    margin: 0 0 10px;
+    color: var(--purple);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.home-page .hero-content > p:not(.eyebrow) {
+    max-width: 58ch;
+    color: #34394d;
+    font-size: 1.1rem;
+}
+
+.home-page .section-heading > p:not(.eyebrow) {
+    color: var(--grey);
+    font-size: 1.05rem;
+}
+
+/* ==================================================
+   Apply page: base styles
+   Scoped to <body class="apply-page">; uses the same
+   --site-* colours as the Jobs page so both match.
+   ================================================== */
+
+.apply-page {
+    --ap-navy: var(--site-navy);
+    --ap-heading: var(--site-heading);
+    --ap-ink: var(--site-ink);
+    --ap-text: var(--site-text);
+    --ap-blue: var(--site-blue);
+    --ap-blue-dark: var(--site-blue-dark);
+    --ap-blue-tint: var(--site-blue-tint);
+    --ap-yellow: var(--site-gold);
+    --ap-border: var(--site-border);
+    --ap-soft: var(--site-soft);
+    --ap-invalid: #c62828;
+    --ap-transition: 0.2s ease;
+}
+
+.apply-page .form-card {
+    line-height: 1.5;
+    color: var(--ap-ink);
+}
+
+.apply-page .form-card p {
+    margin: 0 0 1rem;
+}
+
+.apply-page .form-card a {
+    color: var(--ap-blue-dark);
+    font-weight: 600;
+}
+
+.apply-page .form-card input,
+.apply-page .form-card select,
+.apply-page .form-card textarea {
+    color: inherit;
+}
+
+.apply-page .form-card fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    min-width: 0;
+}
+
+.apply-page .form-card legend {
+    padding: 0;
+}
