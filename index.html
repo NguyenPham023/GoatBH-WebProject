@@ -7,6 +7,9 @@
     <meta name="keywords" content="EdTech careers, web developer jobs, UX design jobs, accessible education">
     <meta name="author" content="GoatBH">
     <title>EduTech Solutions | Careers</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
     <!-- Shared external stylesheets used by every page -->
     <link rel="stylesheet" href="css/style.css">
@@ -27,7 +30,7 @@
     <header class="site-header">
         <nav class="nav container" aria-label="Main navigation">
             <a class="logo" href="index.html" aria-label="EduTech Solutions home">
-                <span class="logo-mark" aria-hidden="true">ET</span>
+                <img class="logo-mark" src="images/favicon.svg" alt="" width="40" height="40">
                 <span>EduTech Solutions</span>
             </a>
 
@@ -80,7 +83,15 @@
                     <label for="job-search">Search by job title or skill</label>
                     <div class="search-row">
                         <input type="search" id="job-search" name="keyword"
-                               placeholder="Example: web developer" required>
+                               placeholder="Example: web developer" required list="job-titles"
+                               autocomplete="off" required>
+                    <!-- Suggestions shown while typing -->           
+                        <datalist id="job-titles">
+                            <option value="Front-End Developer">WD101 &middot; web, HTML, CSS, JavaScript, React</option>
+                            <option value="UX/UI Designer">UX202 &middot; design, Figma, wireframe, prototype</option>
+                            <option value="Accessibility QA Specialist">AQ303 &middot; WCAG, accessibility, testing, QA</option>
+                            <option value="Learning Content Developer">LC404 &middot; e-learning, course, teaching, content</option>
+                        </datalist>
                         <button type="submit">Search jobs</button>
                     </div>
                 </form>

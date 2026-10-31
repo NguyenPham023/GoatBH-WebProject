@@ -854,11 +854,6 @@
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
  
-.home-page .footer-content p {
-    margin: 5px 0 0;
-    color: #bdc1d0;
-    font-size: 0.9rem;
-}
  
 .home-page .footer-links a {
     color: var(--white);
@@ -906,17 +901,42 @@
     color: var(--site-banner-text);
 }
  
-.quick-facts li {
-    padding: 8px 16px;
-    color: var(--white);
-    background-color: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    border-radius: 8px;
+/* Quick facts stats bar: no box, no fill — so it doesn't look clickable */
+.quick-facts {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
- 
+
+.quick-facts li {
+    color: var(--site-banner-text);
+    font-size: 0.95rem;
+    line-height: 1.3;
+}
+
+/* Thin vertical divider between facts */
+.quick-facts li + li {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* The key value: large gold text on its own line */
 .quick-facts strong {
+    display: block;
     color: var(--site-gold);
-    margin-right: 4px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+@media (max-width: 600px) {
+    /* In the 2 x 2 grid every fact gets a left accent line */
+    .quick-facts li,
+    .quick-facts li + li {
+        border-left: 2px solid rgba(255, 209, 102, 0.5);
+    }
+
+    .quick-facts strong {
+        font-size: 1.35rem;
+    }
 }
  
 /* ===== Components: role cards ===== */
@@ -1159,16 +1179,6 @@
     font-size: 1.15rem;
     font-weight: bold;
     text-decoration: none;
-}
- 
-.logo-mark {
-    display: grid;
-    width: 40px;
-    height: 40px;
-    place-items: center;
-    color: var(--white);
-    background-color: var(--purple);
-    border-radius: 8px;
 }
  
 .nav-links,
@@ -1589,4 +1599,33 @@
 .apply-page .app-form:has([name="empstatus"][value="student"]:checked) .when-student {
   display: block;
   margin: 0;
+}
+/* ----- "Other" employment status: ask the applicant to specify ----- */
+.apply-page .when-other {
+  display: none;
+}
+
+.apply-page .app-form:has([name="empstatus"][value="other"]:checked) .sub.when-other {
+  display: flex;
+  margin-top: 0.75rem;
+}
+
+/* "Other" may still have past work, so show the optional "Most Recent Job" boxes */
+.apply-page .app-form:has([name="empstatus"][value="other"]:checked) .job-details {
+  display: flex;
+}
+
+.apply-page .app-form:has([name="empstatus"][value="other"]:checked) span.when-unemployed {
+  display: inline;
+}
+
+.apply-page .app-form:has([name="empstatus"][value="other"]:checked) .sub.when-unemployed {
+  display: flex;
+}
+
+/* Footer */
+.footer-content p {
+    margin: 5px 0 0;
+    color: #bdc1d0;
+    font-size: 0.9rem;
 }
