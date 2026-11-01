@@ -1915,3 +1915,11 @@ s
 .apply-page #lastname {
   text-transform: none;
 }
+
+/* ----- Skip link: white text on navy (fixes WAVE contrast error) -----
+   ".home-page a { color: inherit }" was turning the text navy on a navy background. */
+.home-page a.skip-link,
+a.skip-link {
+    color: #ffffff;
+    background-color: #0b1f33;
+}
