@@ -236,6 +236,10 @@
     padding: 3px 0;
     margin-bottom: 4px;
     color: var(--site-text);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
 }
 
 .student-id {
@@ -246,6 +250,16 @@
     border-radius: 4px;
     font-weight: 600;
     margin-left: 6px;
+    display: block;
+    width: fit-content;
+}
+
+@media (max-width: 480px) {
+    .nested-members-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
 }
 
 .image-section {
@@ -607,6 +621,9 @@
 
 .home-page .hero-image img {
     width: 100%;
+    aspect-ratio: 596 / 335;  
+    object-fit: cover;         
+    object-position: center;  
     border: 0;
     border-radius: 12px;
     box-shadow: 0 18px 40px rgba(11, 31, 51, 0.18);
@@ -1897,4 +1914,33 @@ s
 .apply-page #firstname,
 .apply-page #lastname {
   text-transform: none;
+}
+
+/* ----- Skip link: white text on navy (fixes WAVE contrast error) -----
+   ".home-page a { color: inherit }" was turning the text navy on a navy background. */
+.home-page a.skip-link,
+a.skip-link {
+    color: #ffffff;
+    background-color: #0b1f33;
+}
+
+/* ----- Keep every form field inside the form card on phones (iPhone and Android) ----- */
+.apply-page .app-form :is(input, select, textarea) {
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Date boxes: remove the phone's own style so they match the other inputs */
+.apply-page .app-form input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+/* Keep the chosen date on the left (some phones centre it) */
+.apply-page .app-form input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
 }
