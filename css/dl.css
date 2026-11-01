@@ -1896,5 +1896,5 @@ s
    PHP should store it with strtoupper(). */
 .apply-page #firstname,
 .apply-page #lastname {
-  text-transform: uppercase;
+  text-transform: none;
 }
