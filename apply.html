@@ -9,15 +9,14 @@
   <title>Apply | EduTech Solutions</title>
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=2">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico?v=2">
+
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/dl.css">
 
+    <!-- Required embedded CSS example: page-specific tweak -->
   <style>
-    body.apply-page {
-    background-color: #f8fafc;
-    font-family: system-ui, sans-serif;
-  }
+    .apply-page .form-intro { font-style: italic; }
   </style>
 </head>
 <body class="apply-page">
@@ -43,7 +42,9 @@
   <section class="page-banner apply-banner" style="color: #ffffff">
     <div class="apply-banner-inner">
       <p class="banner-tag">Join our team</p>
-      <h1>Job Application</h1>
+      
+      <!-- Required inline CSS example -->
+      <h1 style="letter-spacing: 0.01em;">Job Application</h1>
       <p class="banner-text">
         We are delighted by your interest in joining EduTech Solutions.
         Please complete every section below, from your personal details
@@ -311,7 +312,7 @@
               <span class="sublabel">Not sure? <a href="jobs.html">View all job descriptions</a></span>
             </div>
             <div class="q">
-              <label for="startdate" class="q-label">Available start date <span class="req" aria-hidden="true">*</span></label>
+              <label for="startdate" class="q-label">Available for work <span class="req" aria-hidden="true">*</span></label>
               <input type="date" id="startdate" name="startdate" min="2026-10-31" required>
               <span class="error-msg">Please choose a start date from today onwards.</span>
             </div>

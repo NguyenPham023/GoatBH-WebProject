@@ -512,7 +512,8 @@ main::after {
 /* Job list (left) + sticky sidebar (right), inside the same width */
 .jobs-list {
     float: left;
-    width: calc((100% - 2 * var(--gutter)) * 0.69);
+    /* takes the space left after the 25% aside, both gutters and a 3% gap */
+    width: calc(72% - 2 * var(--gutter));
     margin: 32px 0 40px var(--gutter);
     padding-left: 0;
 }
@@ -520,7 +521,7 @@ main::after {
 .sidebar-aside {
     box-sizing: border-box;
     float: right;
-    width: calc((100% - 2 * var(--gutter)) * 0.28);
+    width: 25%;   /* assignment: aside is 25% wide */
     margin: 32px var(--gutter) 40px 0;
     padding: 20px;
     border: 1px solid var(--site-border);

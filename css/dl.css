@@ -555,7 +555,6 @@
     color: var(--navy);
     background-color: var(--cream);
     background-image: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
-    border-bottom: 1px solid var(--site-border);
 }
 
 .home-page .hero h1 {
@@ -1911,5 +1910,5 @@ s
    PHP should store it with strtoupper(). */
 .apply-page #firstname,
 .apply-page #lastname {
-  text-transform: uppercase;
+  text-transform: none;
 }
