@@ -1923,3 +1923,24 @@ a.skip-link {
     color: #ffffff;
     background-color: #0b1f33;
 }
+
+/* ----- Keep every form field inside the form card on phones (iPhone and Android) ----- */
+.apply-page .app-form :is(input, select, textarea) {
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Date boxes: remove the phone's own style so they match the other inputs */
+.apply-page .app-form input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+/* Keep the chosen date on the left (some phones centre it) */
+.apply-page .app-form input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+}
